@@ -10,7 +10,6 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 import { Note } from "@/lib/notes/types";
-import { getDisplayDateByCategory } from "@/lib/notes/note-utils";
 import { Dispatch, SetStateAction } from "react";
 
 function previewContent(content: string): string {
@@ -105,18 +104,16 @@ export const NoteItem = React.memo(function NoteItem({
       </h2>
       <p
         className={`text-xs pl-2 break-words line-clamp-1 ${
-          !isMobile && (
-            (isSearching && isHighlighted) ||
-            (!isSearching && item.slug === selectedNoteSlug)
-          )
+          !isMobile &&
+          ((isSearching && isHighlighted) ||
+            (!isSearching && item.slug === selectedNoteSlug))
             ? "text-muted-foreground dark:text-white/80"
             : "text-muted-foreground"
         }`}
       >
         <span className="text-black dark:text-white">
-          {getDisplayDateByCategory(item.category, item.id).toLocaleDateString("en-US")}
-        </span>{" "}
-        {previewContent(item.content)}
+          {new Date(item.created_at).toLocaleDateString("en-US")}
+        </span>
       </p>
     </>
   );

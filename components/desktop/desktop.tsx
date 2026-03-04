@@ -266,7 +266,9 @@ function DesktopContent({ initialNoteSlug, initialTextEditFile, initialPreviewFi
       const parts = relativePath.split("/");
       const repo = parts[0];
       const repoPath = parts.slice(1).join("/");
-      const fileUrl = `https://raw.githubusercontent.com/alanagoyal/${repo}/main/${repoPath}`;
+      const fileUrl = `/api/github/raw?repo=${encodeURIComponent(
+        repo
+      )}&path=${encodeURIComponent(repoPath)}`;
       const ext = initialPreviewFile.split(".").pop()?.toLowerCase() || "";
       const fileType: PreviewFileType = ext === "pdf" ? "pdf" : "image";
 

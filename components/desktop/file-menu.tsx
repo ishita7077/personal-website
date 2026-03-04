@@ -11,6 +11,7 @@ interface FileMenuProps {
   onPinNote?: () => void;
   onDeleteNote?: () => void;
   noteIsPinned?: boolean;
+  noteIsPublic?: boolean;
   onNewChat?: () => void;
   onPinChat?: () => void;
   onHideAlerts?: () => void;
@@ -33,6 +34,7 @@ export function FileMenu({
   onDeleteChat,
   chatIsPinned,
   hideAlertsActive,
+  noteIsPublic,
 }: FileMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -61,17 +63,23 @@ export function FileMenu({
           <MenuItem
             label={noteIsPinned ? "Unpin Note" : "Pin Note"}
             shortcut="P"
+            disabled={noteIsPublic}
             onClick={() => {
-              onPinNote?.();
-              onClose();
+              if (!noteIsPublic) {
+                onPinNote?.();
+                onClose();
+              }
             }}
           />
           <MenuItem
             label="Delete Note"
             shortcut="D"
+            disabled={noteIsPublic}
             onClick={() => {
-              onDeleteNote?.();
-              onClose();
+              if (!noteIsPublic) {
+                onDeleteNote?.();
+                onClose();
+              }
             }}
           />
         </>
@@ -120,16 +128,23 @@ export function FileMenu({
 function MenuItem({
   label,
   shortcut,
+  disabled = false,
   onClick,
 }: {
   label: string;
   shortcut?: string;
+  disabled?: boolean;
   onClick: () => void;
 }) {
   return (
     <button
-      onClick={onClick}
-      className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-left hover:bg-blue-500 hover:text-white transition-colors group"
+      onClick={disabled ? () => {} : onClick}
+      disabled={disabled}
+      className={`w-full flex items-center justify-between px-3 py-1.5 text-xs text-left transition-colors group ${
+        disabled
+          ? "text-muted-foreground cursor-default"
+          : "hover:bg-blue-500 hover:text-white"
+      }`}
     >
       <span>{label}</span>
       {shortcut && (

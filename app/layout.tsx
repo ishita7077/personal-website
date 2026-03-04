@@ -5,15 +5,29 @@ import "./globals.css";
 import { SystemSettingsProvider } from "@/lib/system-settings-context";
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: "Personal website of Ishita",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s · Ishita Srivastava",
+  },
+  description: siteConfig.description,
   icons: {
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'><path d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'/></svg>",
   },
   openGraph: {
+    type: "website",
     title: siteConfig.title,
-    siteName: siteConfig.title,
+    siteName: siteConfig.name,
     url: siteConfig.url,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  alternates: {
+    canonical: siteConfig.url,
   },
 };
 
@@ -28,6 +42,20 @@ export default function RootLayout({
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, interactive-widget=resizes-content"
+        />
+        <script
+          type="application/ld+json"
+          // Basic structured data so crawlers & AI have clearer context.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ishita Srivastava",
+              url: siteConfig.url,
+              description: siteConfig.description,
+              sameAs: [siteConfig.substackUrl],
+            }),
+          }}
         />
       </head>
       <body className="h-dvh">

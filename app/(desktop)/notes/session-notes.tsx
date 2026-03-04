@@ -37,8 +37,24 @@ export function SessionNotesProvider({
 
   const refreshSessionNotes = useCallback(async () => {
     if (!supabase || !sessionId) {
-      if (!supabase) {
-        logger.warn("session-notes", "No Supabase; clearing session notes");
+      if (!supabase && sessionId) {
+        try {
+          const storageKey = `session_notes_${sessionId}`;
+          const existingRaw =
+            typeof window !== "undefined"
+              ? window.localStorage.getItem(storageKey)
+              : null;
+          const existing: Note[] = existingRaw ? JSON.parse(existingRaw) : [];
+          setNotes(existing);
+        } catch (e) {
+          logger.error(
+            "session-notes",
+            "Failed to read local session notes",
+            { sessionId, error: e }
+          );
+          setNotes([]);
+        }
+      } else if (!sessionId) {
         setNotes([]);
       }
       return;

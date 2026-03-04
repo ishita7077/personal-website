@@ -8,6 +8,7 @@ interface FileMenuActions {
   onPinNote?: () => void;
   onDeleteNote?: () => void;
   noteIsPinned?: boolean;
+  noteIsPublic?: boolean;
   // Messages actions
   onNewChat?: () => void;
   onPinChat?: () => void;
@@ -25,7 +26,7 @@ interface FileMenuContextValue {
     onDeleteNote: () => void;
   }) => void;
   unregisterNotesActions: () => void;
-  updateNotesState: (state: { noteIsPinned: boolean }) => void;
+  updateNotesState: (state: { noteIsPinned: boolean; noteIsPublic?: boolean }) => void;
   registerMessagesActions: (actions: {
     onNewChat: () => void;
     onPinChat: () => void;
@@ -65,12 +66,16 @@ export function FileMenuProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  const updateNotesState = useCallback((state: { noteIsPinned: boolean }) => {
-    actionsRef.current = {
-      ...actionsRef.current,
-      noteIsPinned: state.noteIsPinned,
-    };
-  }, []);
+  const updateNotesState = useCallback(
+    (state: { noteIsPinned: boolean; noteIsPublic?: boolean }) => {
+      actionsRef.current = {
+        ...actionsRef.current,
+        noteIsPinned: state.noteIsPinned,
+        noteIsPublic: state.noteIsPublic ?? actionsRef.current.noteIsPublic,
+      };
+    },
+    []
+  );
 
   const registerMessagesActions = useCallback((messagesActions: {
     onNewChat: () => void;

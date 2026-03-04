@@ -30,6 +30,8 @@ import { cn } from "@/lib/utils";
 import { useFileMenu } from "@/lib/file-menu-context";
 import { createNote } from "@/lib/notes/create-note";
 
+const HIDDEN_PUBLIC_SLUGS = new Set(["on-repeat", "favorite-blogs", "bookmarks"]);
+
 const labels = {
   pinned: (
     <>
@@ -116,7 +118,10 @@ export default function Sidebar({
   } = useContext(SessionNotesContext);
 
   const notes = useMemo(
-    () => [...publicNotes, ...sessionNotes],
+    () =>
+      [...publicNotes, ...sessionNotes].filter(
+        (note) => !(note.public && HIDDEN_PUBLIC_SLUGS.has(note.slug))
+      ),
     [publicNotes, sessionNotes]
   );
 
@@ -269,18 +274,32 @@ export default function Sidebar({
       if (noteToDelete.public) {
         return;
       }
-      if (!supabase) {
-        logger.warn("sidebar/handleDeleteNote", "No Supabase; delete skipped");
-        return;
-      }
-
       try {
-        if (noteToDelete.id && sessionId) {
-          const { error: deleteError } = await supabase.rpc("delete_note", {
-            uuid_arg: noteToDelete.id,
-            session_arg: sessionId,
-          });
-          if (deleteError) logger.error("sidebar/handleDeleteNote", "delete_note RPC failed", { noteId: noteToDelete.id, error: deleteError });
+        if (!supabase) {
+          // Local-only delete when Supabase is not configured.
+          if (!sessionId) return;
+          const storageKey = `session_notes_${sessionId}`;
+          const existingRaw =
+            typeof window !== "undefined"
+              ? window.localStorage.getItem(storageKey)
+              : null;
+          const existing: Note[] = existingRaw ? JSON.parse(existingRaw) : [];
+          const updated = existing.filter((n) => n.slug !== noteToDelete.slug);
+          if (typeof window !== "undefined") {
+            window.localStorage.setItem(storageKey, JSON.stringify(updated));
+          }
+        } else {
+          if (noteToDelete.id && sessionId) {
+            const { error: deleteError } = await supabase.rpc("delete_note", {
+              uuid_arg: noteToDelete.id,
+              session_arg: sessionId,
+            });
+            if (deleteError)
+              logger.error("sidebar/handleDeleteNote", "delete_note RPC failed", {
+                noteId: noteToDelete.id,
+                error: deleteError,
+              });
+          }
         }
 
         setGroupedNotes((prevGroupedNotes: Record<string, Note[]>) => {
@@ -388,7 +407,8 @@ export default function Sidebar({
   useEffect(() => {
     if (!fileMenu) return;
     const isPinned = highlightedNote ? pinnedNotes.has(highlightedNote.slug) : false;
-    fileMenu.updateNotesState({ noteIsPinned: isPinned });
+    const isPublic = highlightedNote ? !!highlightedNote.public : false;
+    fileMenu.updateNotesState({ noteIsPinned: isPinned, noteIsPublic: isPublic });
   }, [fileMenu, highlightedNote, pinnedNotes]);
 
   useEffect(() => {

@@ -59,7 +59,7 @@ const connectivityItems = [
   { id: "battery", name: "Battery", icon: <Battery className="w-5 h-5 text-white" />, iconBg: "bg-green-500", type: "static" as const },
 ];
 
-const appleAccountKeywords = ["alana", "goyal", "apple", "account", "personal", "information", "name", "birthday"];
+const appleAccountKeywords = ["apple", "account", "personal", "information", "name", "birthday", "icloud"];
 
 export function Sidebar({
   selectedCategory,

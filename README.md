@@ -172,7 +172,7 @@ this project uses [supabase](https://supabase.com) as a backend. to set up the d
 1. create a [new project](https://database.new) and enter your project details
 2. wait for the database to launch
 3. navigate to the sql editor in the dashboard
-4. paste the sql from the [migration file](https://github.com/alanagoyal/alanagoyal/blob/main/supabase/migrations/20240710180237_initial.sql) into the sql editor and press run
+4. paste the sql from your own Supabase migration (or the `supabase/migrations` folder in this repo if you adopt the same schema) into the sql editor and press run
 
 alternatively, use the supabase cli to run migrations locally:
 ```bash
@@ -341,8 +341,6 @@ you can also manually add images:
 ---
 ```
 
-## license & credits
+## license
 
 licensed under the mit license.
-
-**h/t** to [Alana Goyal](https://github.com/alanagoyal/alanagoyal) for the original macOS personal OS this project is inspired by.

@@ -12,7 +12,6 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Badge } from "@/components/ui/badge";
 import { Icons } from "./icons";
-import { getDisplayDateByCategory } from "@/lib/notes/note-utils";
 
 export default function NoteHeader({
   note,
@@ -67,11 +66,9 @@ export default function NoteHeader({
   }, [emojiPickerLoaded, emojiPickerLoading]);
 
   useEffect(() => {
-    const displayDate = getDisplayDateByCategory(note.category, note.id);
-    setFormattedDate(
-      format(displayDate, "MMMM d, yyyy 'at' h:mm a")
-    );
-  }, [note.category, note.id]);
+    const createdDate = new Date(note.created_at);
+    setFormattedDate(format(createdDate, "MMMM d, yyyy 'at' h:mm a"));
+  }, [note.created_at]);
 
   const handleEmojiSelect = (emojiObject: { native: string }) => {
     const newEmoji = emojiObject.native;

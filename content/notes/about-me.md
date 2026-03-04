@@ -1,5 +1,3 @@
-👋 about me
-
 for long-form writing, see [The Numismatica](https://ishita7077.substack.com/).
 
 # about me
