@@ -14,8 +14,6 @@ export const FALLBACK_PUBLIC_NOTES: Note[] = [
     content: [
       substackLine,
       "",
-      "# about me",
-      "",
       "my name is ishita.",
       "",
       "i build at the intersection of crypto infrastructure and AI-native workflows.",

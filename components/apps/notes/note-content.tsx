@@ -302,7 +302,7 @@ export default function NoteContent({
               img: renderImage,
             }}
           >
-            {note.content || "Start writing..."}
+            {(note.content || "Start writing...").replace(/^\s*#{1,6}\s+.*\n+/, "")}
           </ReactMarkdown>
         </div>
       )}
