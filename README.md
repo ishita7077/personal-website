@@ -161,6 +161,17 @@ upload photos directly from your iphone using the share sheet:
 
 when you share a photo, the shortcut uploads it to supabase storage and ai automatically categorizes it into collections (flowers, food, friends).
 
+## Interview Room
+
+Practice MBA admissions interviews (Haas format) with video recording and live transcription. Runs entirely in your browser — no data is uploaded.
+
+| | Link |
+|---|-----|
+| **Live** | [ishitasrivastava.xyz/InterviewRoom](https://ishitasrivastava.xyz/InterviewRoom) |
+| **Source** | [github.com/ishita7077/personal-website/tree/main/public/InterviewRoom](https://github.com/ishita7077/personal-website/tree/main/public/InterviewRoom) |
+
+The app lives in `public/InterviewRoom/`. Fork or copy that folder to use it standalone.
+
 ## clone the repo
 
 `git clone <your-repo-url-here>`

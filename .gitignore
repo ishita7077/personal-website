@@ -43,6 +43,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# root InterviewRoom (canonical copy is public/InterviewRoom)
+/InterviewRoom
+
 # internal documentation
 IMPLEMENTATION.md
 ARCHITECTURE.md

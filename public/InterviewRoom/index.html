@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Interview Room — Practice MBA admissions interviews with video recording and live transcription. Everything runs locally on your device.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Interview Room — Practice Interviews</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+  <div class="ir-app" id="app">
+    <nav class="ir-nav">
+      <a class="ir-logo" id="navLogo" role="button" tabindex="0" aria-label="Interview Room home">
+        <svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="8" stroke="#c9600a" stroke-width="2"/><path d="M12 10v12l10-6-10-6z" fill="#c9600a"/><path d="M26 8a18 18 0 0 1-20 18" stroke="#c9600a" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.4"/></svg>
+        <span class="ir-logo-text">Interview <span>Room</span></span>
+      </a>
+      <div class="ir-nav-right">
+        <a href="#" class="ir-btn ir-btn-ghost ir-btn-sm" id="resourcesBtn" title="Haas resources">Resources</a>
+        <button class="ir-btn ir-btn-ghost ir-btn-sm ir-btn-help" id="guideBtn" aria-label="Help" title="View guide and shortcuts">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 115.12 2.13c-.57.52-1.12 1.1-1.12 1.87v.5"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
+        </button>
+        <div class="ir-nav-status" id="navStatus" data-status="idle">READY</div>
+      </div>
+    </nav>
+
+    <section class="ir-screen ir-home active" id="screen-home">
+      <div class="ir-home-hero">
+        <h1 class="ir-h1">Practice interviews that feel real</h1>
+        <p class="ir-home-tagline">Simulate the Haas MBA interview format with timed questions, video recording, and live transcription. Everything runs on your device — nothing is uploaded.</p>
+        <div class="ir-label ir-label-select">SELECT INTERVIEW</div>
+        <div class="ir-school-card" id="schoolCardHaas" role="button" tabindex="0" title="Start Haas MBA interview · 6 questions">
+          <div class="ir-school-info">
+            <div class="ir-school-name">UC Berkeley Haas</div>
+            <div class="ir-school-detail">Full-Time MBA · 6 questions · 45s prep · 3 min answer</div>
+          </div>
+          <div class="ir-school-arrow">→</div>
+        </div>
+        <div class="ir-home-features">
+          <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Video recording</div>
+          <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>Live transcription</div>
+          <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>100% on-device</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ir-screen ir-resources" id="screen-resources">
+      <div class="ir-resources-header">
+        <div>
+          <h1 class="ir-h1">Haas resources</h1>
+          <p class="ir-body">Use this page as a launchpad when you are researching fit, shaping your story, or double-checking anything you plan to say about Berkeley Haas.</p>
+        </div>
+        <button class="ir-btn ir-btn-ghost ir-btn-sm" id="resourcesBackBtn" type="button" title="Go back to practice">Back</button>
+      </div>
+      <div id="resourcesList" class="ir-resources-list"></div>
+    </section>
+
+    <section class="ir-screen ir-techcheck" id="screen-techcheck">
+      <div class="ir-techcheck-grid">
+        <div class="ir-techcheck-left">
+          <div class="ir-preview-container" id="previewContainer">
+            <video class="ir-preview-video" id="previewVideo" autoplay muted playsinline></video>
+            <div class="ir-preview-placeholder" id="previewPlaceholder">
+              <span id="placeholderText">Requesting camera access...</span>
+              <div class="ir-perm-block" id="permBlock">
+                <div class="ir-perm-icon denied" id="permIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
+                <div class="ir-perm-title" id="permTitle">Interview Room needs your camera and microphone to record practice sessions. All recordings stay on your device.</div>
+                <div class="ir-perm-desc" id="permDesc">Interview Room needs access to your camera and microphone to record your practice session. All recordings stay on your device.</div>
+                <div class="ir-perm-steps" id="permSteps"><strong>To fix this:</strong><br>1. Click the camera/lock icon in your browser's address bar<br>2. Find Camera and Microphone permissions<br>3. Change both to "Allow"</div>
+                <button class="ir-btn ir-btn-primary" id="retryPermBtn">Retry camera &amp; microphone</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ir-techcheck-right">
+          <div class="ir-techcheck-header">
+            <h1 class="ir-h2">Device check</h1>
+            <p class="ir-body ir-techcheck-desc">Verify your camera and microphone. You only need to grant permission once.</p>
+          </div>
+          <div class="ir-device-select" id="deviceSelect">
+            <select id="cameraSelect" aria-label="Select camera"></select>
+            <select id="micSelect" aria-label="Select microphone"></select>
+          </div>
+          <div class="ir-device-checks">
+            <div class="ir-check-row"><div class="ir-check-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Camera</div><span class="ir-check-status" id="checkCamera">Checking...</span></div>
+            <div class="ir-check-row"><div class="ir-check-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/></svg>Mic</div><div class="ir-check-right-inner"><div class="ir-mic-level"><div class="ir-mic-level-fill" id="micLevel"></div></div><span class="ir-check-status" id="checkMic">Checking...</span></div></div>
+            <div class="ir-check-row"><div class="ir-check-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Browser</div><span class="ir-check-status" id="checkBrowser">Checking...</span></div>
+          </div>
+          <div class="ir-format-info"><div class="ir-label">INTERVIEW FORMAT</div><div id="formatInfo" class="ir-format-grid"></div></div>
+        </div>
+      </div>
+      <div id="tcAlerts"></div>
+      <div class="ir-tc-actions">
+        <button class="ir-btn ir-btn-ghost" id="techcheckBackBtn" title="Return to home">Back</button>
+        <button class="ir-btn ir-btn-primary ir-btn-lg" id="beginBtn" disabled title="Start your interview session">Begin interview →</button>
+      </div>
+    </section>
+
+    <section class="ir-screen ir-waiting" id="screen-waiting">
+      <div class="ir-waiting-header">
+        <h1 class="ir-h1">Waiting room</h1>
+        <p class="ir-body">Pick a question to answer. Completed questions are locked — you can't re-record. No timer until you start.</p>
+      </div>
+      <p class="ir-nudge" id="waitingNudge">Click a question to begin</p>
+      <div id="waitingList" class="ir-waiting-list"></div>
+      <div class="ir-waiting-footer">
+        <button class="ir-btn ir-btn-ghost" id="waitingExitBtn" title="Leave waiting room. Your answers are only saved if you go to Finish & review first. Leaving now will end this session.">Leave</button>
+        <button class="ir-btn ir-btn-primary" id="waitingReviewBtn" disabled title="View all your responses">Finish &amp; review</button>
+      </div>
+    </section>
+
+    <section class="ir-screen ir-session" id="screen-session">
+      <div class="ir-session-top"><span class="ir-label" id="sessionQLabel">Q1 / 6</span></div>
+      <div class="ir-progress" id="sessionProgress"></div>
+      <div class="ir-phase-indicator"><div class="ir-phase-label" id="phaseLabel">PREPARATION</div></div>
+      <div class="ir-timer" id="sessionTimer">0:45</div>
+      <div class="ir-question-card" id="questionCard" data-phase="prep"><p class="ir-question-text" id="questionText"></p></div>
+      <div class="ir-session-media" id="sessionMedia"><div class="ir-cam-preview-small" id="camPreviewSmall"><video id="sessionCamVideo" autoplay muted playsinline></video></div><div><div class="ir-rec-indicator" id="recIndicator"><div class="ir-rec-dot"></div><span class="ir-rec-text">RECORDING</span></div></div></div>
+      <div class="ir-live-transcript" id="liveTranscript"><span class="ir-transcript-placeholder">Your words will appear here as you speak.</span></div>
+      <div class="ir-session-controls">
+        <button class="ir-btn ir-btn-ghost" id="skipBtn" title="Skip prep or submit your answer">Skip to answer →</button>
+        <button class="ir-btn ir-btn-danger ir-btn-sm" id="endSessionBtn" title="End session and go to review">End session</button>
+      </div>
+      <div class="ir-session-shortcuts"><span class="ir-mono ir-shortcuts-text" title="Keyboard shortcuts"><span class="ir-kbd">Space</span> skip · <span class="ir-kbd">Esc</span> end</span></div>
+    </section>
+
+    <section class="ir-screen ir-review" id="screen-review">
+      <div class="ir-review-header"><h1 class="ir-h1">Session complete</h1><p class="ir-body">Review your responses. Click a question to expand and watch your recording or read the transcript.</p></div>
+      <div id="reviewCards"></div>
+      <div class="ir-review-footer">
+        <button class="ir-btn ir-btn-ghost ir-btn-icon" id="exportTranscriptsBtn" title="Copy all transcripts to clipboard"><span class="ir-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span> Copy all transcripts</button>
+        <button class="ir-btn ir-btn-ghost ir-btn-icon" id="downloadAllVideosBtn" title="Download all recordings as video files"><span class="ir-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span> Download all recordings</button>
+        <button class="ir-btn ir-btn-primary" id="newSessionBtn" title="Start a new practice session">New session →</button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="ir-footer">
+    <p>Remember to breathe while you practice. If you have any questions, suggestions, or feedback, you can reach us at <a href="mailto:ishita@polkafoundation.com">ishita@polkafoundation.com</a>.</p>
+  </footer>
+
+  <div class="ir-guide-backdrop" id="guideBackdrop"></div>
+  <aside class="ir-guide" id="guidePanel">
+    <div class="ir-guide-header"><span class="ir-h3">Guide</span><button class="ir-guide-close" id="guideCloseBtn" aria-label="Close">&times;</button></div>
+    <div class="ir-guide-section">
+      <h3>How it works</h3>
+      <p>Each Haas practice session runs like the official interview: you complete a short device check, then answer 6 timed questions drawn from one of seven curated Haas question sets.</p>
+      <p>Within a set, the prompts are fixed so you can build real muscle memory, while different sets emphasize different themes such as career story, leadership, and school fit. Every question is mapped to a Haas category and a small set of bullet-point recommendations sourced from official Haas pages.</p>
+      <p>During each answer, your webcam records locally and speech-to-text generates a live transcript. After the session, the review screen shows your recording, a cleaned-up transcript, and the Haas recommendations for that exact question so you can compare what you said with what the school emphasizes.</p>
+    </div>
+    <div class="ir-guide-section">
+      <h3>What we are adding next</h3>
+      <p>We are working on short, on-device summaries for individual answers and full sessions that highlight patterns in how you tell your story.</p>
+      <p>Over time, we will layer in a small set of targeted prompts&mdash;for example, to tighten a specific answer or connect it more clearly to Haas&mdash;while keeping all processing on your device.</p>
+    </div>
+    <div class="ir-guide-section"><h3>Privacy</h3><p>All processing happens in your browser. Video, audio, and transcripts never leave your device. Closing the tab clears all data unless you download or copy it.</p></div>
+    <div class="ir-guide-section"><h3>Interview format</h3><p>6 questions from one of seven sets (Haas Question Bank). For each: 45 seconds prep, up to 3 minutes to answer. You can submit early. In review, each answer shows your notes and Haas recommendations with official sources.</p></div>
+    <div class="ir-guide-section"><h3>Keyboard shortcuts</h3><p><span class="ir-kbd">Space</span> — Skip current phase</p><p><span class="ir-kbd">Esc</span> — End session and go to review</p></div>
+    <div class="ir-guide-section"><h3>Troubleshooting</h3><p><strong>Camera not detected:</strong> Ensure no other app is using it. Try a different device from the dropdown.</p><p><strong>Microphone not working:</strong> Check browser permissions. The level bar should move when you speak.</p><p><strong>Transcription not appearing:</strong> Live transcription requires Chrome or Edge. On phones, offline transcription may be slower; for the full experience use a desktop browser.</p><p><strong>Mobile:</strong> Recording and review work on phones and tablets. For live transcription and faster offline notes, use Chrome or Edge on a desktop.</p></div>
+  </aside>
+
+  <div class="ir-modal-overlay" id="modalOverlay"><div class="ir-modal"><div class="ir-modal-title" id="modalTitle"></div><div class="ir-modal-body" id="modalBody"></div><div class="ir-modal-actions" id="modalActions"></div></div></div>
+
+  <div class="ir-ai-overlay" id="aiOverlay" aria-live="polite" aria-label="AI status">
+    <div class="ir-ai-label" id="aiOverlayLabel">Preparing offline transcription…</div>
+    <div class="ir-ai-bar">
+      <div class="ir-ai-bar-fill" id="aiOverlayFill"></div>
+    </div>
+  </div>
+
+  <div class="ir-toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="src/js/config-haas.js"></script>
+  <script src="src/js/haas-data.js"></script>
+  <script src="src/js/media.js"></script>
+  <script src="src/js/speech.js"></script>
+  <script src="src/js/timer.js"></script>
+  <script src="src/js/ui.js"></script>
+  <script src="src/js/convert.js"></script>
+  <script src="src/js/transcription-queue.js"></script>
+  <script src="src/js/ai.js"></script>
+  <script src="src/js/app.js"></script>
+</body>
+</html>
