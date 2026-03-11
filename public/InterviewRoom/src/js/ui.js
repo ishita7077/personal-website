@@ -631,7 +631,7 @@
 
         const questionForNotes = IR.state.sessionQuestions[i];
         const questionText = questionForNotes && questionForNotes.text ? questionForNotes.text : '';
-        const hasHaas = IR.getHaasRecommendation && IR.getHaasRecommendation(questionText);
+        const hasHaas = !IR.state.customMode && IR.getHaasRecommendation && IR.getHaasRecommendation(questionText);
         if (hasHaas) {
           const notesWrap = document.createElement('div');
           notesWrap.className = 'ir-review-notes-wrap';

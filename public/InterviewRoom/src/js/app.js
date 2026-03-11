@@ -42,7 +42,8 @@
   sessionSummary: null,
   customQuestions: null,
   customPrepTime: null,
-  customAnswerTime: null
+  customAnswerTime: null,
+  customMode: false
   };
 
   IR.handleResourcesClick = function () {
@@ -167,6 +168,7 @@
       startPracticeBtn.addEventListener('click', () => IR.startConfiguredFlow());
     }
 
+    IR.updateTopNav();
     IR.updateConfigFromDom();
 
     window.addEventListener('beforeunload', e => {
@@ -189,16 +191,19 @@
     if (screen !== 'review') {
       IR.revokeReviewBlobUrls();
     }
+    IR.updateTopNav();
   };
 
   IR.selectSchool = async function (id) {
     IR.state.selectedSchool = id;
+    IR.state.customMode = false;
     IR.state.permState = 'idle';
     IR.navigateTo('techcheck');
     IR.ui.renderFormatInfo(id);
     IR.ui.renderAlerts();
     document.getElementById('placeholderText').style.display = '';
     document.getElementById('permBlock').classList.remove('active');
+    IR.updateTopNav();
     await IR.media.requestAccess();
   };
 
@@ -378,8 +383,10 @@
     }
 
     IR.state.selectedSchool = 'haas-mba';
+    IR.state.customMode = true;
     IR.state.permState = 'idle';
     IR.navigateTo('techcheck');
+    IR.updateTopNav();
     if (IR.ui && IR.ui.renderFormatInfo) {
       IR.ui.renderFormatInfo('haas-mba');
     }
@@ -524,6 +531,10 @@
     IR.state.sessionId = null;
     IR.state.aiReviews = [];
     IR.state.sessionSummary = null;
+    IR.state.customQuestions = null;
+    IR.state.customPrepTime = null;
+    IR.state.customAnswerTime = null;
+    IR.state.customMode = false;
     IR.navigateTo('home');
     IR.media.stopAll();
   };
@@ -568,6 +579,14 @@
     const u = URL.createObjectURL(blob);
     IR.state.reviewBlobUrls[index] = u;
     return u;
+  };
+
+  IR.updateTopNav = function () {
+    const resourcesBtn = document.getElementById('resourcesBtn');
+    if (!resourcesBtn) return;
+    // Hide Haas resources entry whenever a custom session is active
+    const hide = !!IR.state.customMode;
+    resourcesBtn.style.display = hide ? 'none' : '';
   };
 
   IR.requestReview = function () {
