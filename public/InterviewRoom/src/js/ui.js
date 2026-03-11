@@ -269,19 +269,12 @@
     },
 
     renderFormatInfo(id) {
-      const base = IR.config[id];
-      if (!base) return;
-      const customCount = IR.state.customQuestions && IR.state.customQuestions.length
-        ? IR.state.customQuestions.length
-        : null;
-      const totalQuestions = customCount || base.totalQuestions;
-      const prepTime = IR.state.customPrepTime || base.prepTime;
-      const answerTime = IR.state.customAnswerTime || base.answerTime;
-      const totalMin = Math.ceil(totalQuestions * (prepTime + answerTime) / 60);
+      const c = IR.config[id];
+      const totalMin = Math.ceil(c.totalQuestions * (c.prepTime + c.answerTime) / 60);
       document.getElementById('formatInfo').innerHTML =
-        `<div class="ir-format-item"><div class="ir-format-value">${totalQuestions}</div><div class="ir-format-label">Questions</div></div>` +
-        `<div class="ir-format-item"><div class="ir-format-value">${prepTime}s</div><div class="ir-format-label">Prep Time</div></div>` +
-        `<div class="ir-format-item"><div class="ir-format-value">${Math.floor(answerTime / 60)}m</div><div class="ir-format-label">Answer Time</div></div>` +
+        `<div class="ir-format-item"><div class="ir-format-value">${c.totalQuestions}</div><div class="ir-format-label">Questions</div></div>` +
+        `<div class="ir-format-item"><div class="ir-format-value">${c.prepTime}s</div><div class="ir-format-label">Prep Time</div></div>` +
+        `<div class="ir-format-item"><div class="ir-format-value">${Math.floor(c.answerTime / 60)}m</div><div class="ir-format-label">Answer Time</div></div>` +
         `<div class="ir-format-item"><div class="ir-format-value">~${totalMin}m</div><div class="ir-format-label">Total Duration</div></div>`;
     },
 
@@ -444,16 +437,26 @@
     },
 
     buildTranscriptViews(text, index) {
-      const emptyMsg = 'No transcript available.';
+      const status = (IR.state.transcriptionStatus || [])[index];
+      const isFailed = status === (IR.TRANSCRIPTION_STATUS && IR.TRANSCRIPTION_STATUS.FAILED);
+      const isPending = status === (IR.TRANSCRIPTION_STATUS && IR.TRANSCRIPTION_STATUS.PENDING) ||
+        status === (IR.TRANSCRIPTION_STATUS && IR.TRANSCRIPTION_STATUS.TRANSCRIBING);
+      const emptyMsg = isFailed
+        ? ((IR.state.transcriptionError && IR.state.transcriptionError[index]) ||
+          'Transcription could not be generated. Your recording was saved — you can download it. For best results use Chrome or Edge on a desktop.')
+        : isPending
+          ? 'Preparing transcript…'
+          : 'No transcript available.';
       const enhanced = IR.state.transcriptEnhanced && IR.state.transcriptEnhanced[index];
 
       const container = document.createElement('div');
       container.className = 'ir-review-transcript';
+      if (isFailed) container.classList.add('ir-transcript-failed');
 
       if (!text || !text.trim()) {
         container.classList.add('empty');
         const msg = document.createElement('p');
-        msg.className = 'ir-transcript-empty';
+        msg.className = isFailed ? 'ir-transcript-empty ir-transcript-error' : 'ir-transcript-empty';
         msg.textContent = emptyMsg;
         container.appendChild(msg);
       } else {
@@ -478,6 +481,123 @@
         container.appendChild(badge);
       }
       return container;
+    },
+
+    buildAIReviewBlock(index) {
+      const i = index;
+      const tq = IR.state.transcriptQuality && IR.state.transcriptQuality[i];
+      const transcript = (IR.state.transcripts || [])[i];
+      const enhStatus = (IR.state.enhancedAnswerStatus || {})[i];
+      const enhReview = (IR.state.enhancedAnswerReviews || {})[i];
+
+      const aiSection = document.createElement('div');
+      aiSection.className = 'ir-ai-review-block';
+
+      const titleEl = document.createElement('div');
+      titleEl.className = 'ir-ai-review-title';
+      titleEl.textContent = 'Answer insights';
+      aiSection.appendChild(titleEl);
+
+      if (tq && tq.quality) {
+        const qualityStr = typeof tq.quality === 'string' ? tq.quality : String(tq.quality);
+        const tqLine = document.createElement('p');
+        tqLine.className = 'ir-ai-review-meta';
+        tqLine.textContent = 'Transcript quality: ' + qualityStr;
+        aiSection.appendChild(tqLine);
+      }
+
+      const note = document.createElement('p');
+      note.className = 'ir-ai-review-meta';
+      note.textContent = 'AI feedback is generated with OpenAI using only your transcript (no video or audio).';
+      aiSection.appendChild(note);
+
+      // If we have no transcript, just explain why there is no AI feedback.
+      if (typeof transcript !== 'string' || !transcript.trim()) {
+        const p = document.createElement('p');
+        p.className = 'ir-ai-review-status';
+        p.textContent = 'No transcript available for this answer, so AI feedback is not available.';
+        aiSection.appendChild(p);
+        return aiSection;
+      }
+
+      const enhWrap = document.createElement('div');
+      enhWrap.className = 'ir-ai-review-subsection ir-enhanced-feedback-wrap';
+
+      if (enhStatus === 'loading') {
+        const p = document.createElement('p');
+        p.className = 'ir-ai-review-status';
+        p.textContent = 'Generating AI feedback…';
+        enhWrap.appendChild(p);
+      } else if (enhStatus === 'failed') {
+        const p = document.createElement('p');
+        p.className = 'ir-ai-review-status';
+        p.textContent = 'AI feedback failed. You can try again.';
+        enhWrap.appendChild(p);
+        const retryBtn = document.createElement('button');
+        retryBtn.type = 'button';
+        retryBtn.className = 'ir-btn ir-btn-ghost ir-btn-sm';
+        retryBtn.dataset.action = 'enhanced-feedback-retry';
+        retryBtn.dataset.index = String(i);
+        retryBtn.textContent = 'Try again';
+        enhWrap.appendChild(retryBtn);
+      } else if (enhStatus === 'ready' && enhReview) {
+        if (enhReview.summary && enhReview.summary.trim()) {
+          const summaryP = document.createElement('p');
+          summaryP.className = 'ir-ai-review-summary';
+          summaryP.textContent = enhReview.summary;
+          enhWrap.appendChild(summaryP);
+        }
+
+        const bullets = function (label, items, cls) {
+          if (!items || !items.length) return;
+          const sub = document.createElement('div');
+          sub.className = 'ir-ai-review-subsection' + (cls ? ' ' + cls : '');
+          const t = document.createElement('div');
+          t.className = 'ir-ai-review-subtitle';
+          t.textContent = label;
+          sub.appendChild(t);
+          const ul = document.createElement('ul');
+          items.forEach(function (x) {
+            const li = document.createElement('li');
+            li.textContent = x;
+            ul.appendChild(li);
+          });
+          sub.appendChild(ul);
+          enhWrap.appendChild(sub);
+        };
+
+        bullets('Strengths', enhReview.strengths || [], '');
+        bullets('Suggestions', enhReview.suggestions || enhReview.gaps || [], 'ir-ai-review-improve');
+
+        if (enhReview.coaching && enhReview.coaching.note) {
+          const coach = document.createElement('div');
+          coach.className = 'ir-ai-review-subsection ir-ai-review-coaching';
+          const ct = document.createElement('div');
+          ct.className = 'ir-ai-review-subtitle';
+          ct.textContent = 'Coaching';
+          coach.appendChild(ct);
+          const p = document.createElement('p');
+          p.textContent = enhReview.coaching.note;
+          coach.appendChild(p);
+          enhWrap.appendChild(coach);
+        }
+      } else {
+        const p = document.createElement('p');
+        p.className = 'ir-ai-review-status';
+        p.textContent = 'No AI feedback generated yet for this answer.';
+        enhWrap.appendChild(p);
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'ir-btn ir-btn-ghost ir-btn-sm';
+        btn.dataset.action = 'enhanced-feedback';
+        btn.dataset.index = String(i);
+        btn.textContent = 'Generate AI feedback';
+        btn.title = 'Send this answer\'s transcript to OpenAI for summary and suggestions (optional)';
+        enhWrap.appendChild(btn);
+      }
+
+      aiSection.appendChild(enhWrap);
+      return aiSection;
     },
 
     buildHaasRecommendationView(questionText) {
@@ -520,7 +640,13 @@
       const c = document.getElementById('reviewCards');
       c.innerHTML = '';
       c.removeEventListener('click', this._reviewCardClickHandler);
+      c.parentElement.removeEventListener('click', this._reviewCardClickHandler);
       this._reviewCardClickHandler = (e) => {
+        const enhSessionBtn = e.target.closest('[data-action="enhanced-session-summary"]');
+        if (enhSessionBtn && IR.aiFeedback && IR.aiFeedback.requestEnhancedSessionSummary) {
+          IR.aiFeedback.requestEnhancedSessionSummary();
+          return;
+        }
         const header = e.target.closest('.ir-review-card-header');
         if (header) {
           header.parentElement.classList.toggle('open');
@@ -530,6 +656,16 @@
         if (dl) { IR.downloadVideo(Number(dl.dataset.index)); return; }
         const cp = e.target.closest('[data-action="copy-transcript"]');
         if (cp) { IR.copyTranscript(Number(cp.dataset.index)); return; }
+        const enhBtn = e.target.closest('[data-action="enhanced-feedback"]');
+        if (enhBtn && IR.aiFeedback && IR.aiFeedback.requestEnhancedAnswerFeedback) {
+          IR.aiFeedback.requestEnhancedAnswerFeedback(Number(enhBtn.dataset.index));
+          return;
+        }
+        const enhRetry = e.target.closest('[data-action="enhanced-feedback-retry"]');
+        if (enhRetry && IR.aiFeedback && IR.aiFeedback.requestEnhancedAnswerFeedback) {
+          IR.aiFeedback.requestEnhancedAnswerFeedback(Number(enhRetry.dataset.index));
+          return;
+        }
         const notesTab = e.target.closest('.ir-notes-tab');
         if (notesTab) {
           const tabRow = notesTab.closest('.ir-notes-tabs');
@@ -545,7 +681,7 @@
           return;
         }
       };
-      c.addEventListener('click', this._reviewCardClickHandler);
+      c.parentElement.addEventListener('click', this._reviewCardClickHandler);
 
       const statuses = IR.state.questionStatuses || [];
 
@@ -631,7 +767,7 @@
 
         const questionForNotes = IR.state.sessionQuestions[i];
         const questionText = questionForNotes && questionForNotes.text ? questionForNotes.text : '';
-        const hasHaas = !IR.state.customMode && IR.getHaasRecommendation && IR.getHaasRecommendation(questionText);
+        const hasHaas = IR.getHaasRecommendation && IR.getHaasRecommendation(questionText);
         if (hasHaas) {
           const notesWrap = document.createElement('div');
           notesWrap.className = 'ir-review-notes-wrap';
@@ -665,6 +801,10 @@
           body.appendChild(IR.ui.buildTranscriptViews(tr, i));
         }
 
+        // AI review section: one block under NOTES, same visual language as transcript/Haas.
+        const aiSection = this.buildAIReviewBlock(i);
+        body.appendChild(aiSection);
+
         const actions = document.createElement('div');
         actions.className = 'ir-review-actions-row';
         if (url) {
@@ -690,12 +830,268 @@
         c.appendChild(card);
       });
 
-      // session summary is a static \"coming soon\" card in HTML now
+      // Session summary: render if a local summary is available.
+      const summary = IR.state.sessionSummary;
+      const summaryStatus = IR.state.sessionSummaryStatus;
+      if (summary || summaryStatus === 'running' || summaryStatus === 'failed' || summaryStatus === 'unavailable') {
+        const wrap = document.createElement('div');
+        wrap.className = 'ir-session-summary-card';
+        wrap.id = 'irSessionSummaryCard';
+
+        const header = document.createElement('div');
+        header.className = 'ir-session-summary-header';
+        const h = document.createElement('h2');
+        h.className = 'ir-h2';
+        h.textContent = 'Session summary';
+        header.appendChild(h);
+        const status = document.createElement('span');
+        status.className = 'ir-session-summary-status';
+        let statusText = '';
+        if (summaryStatus === 'running') statusText = 'Generating locally…';
+        else if (summaryStatus === 'ready') statusText = 'Ready';
+        else if (summaryStatus === 'unavailable') statusText = 'Local AI unavailable — transcripts only';
+        else if (summaryStatus === 'failed') statusText = 'Summary failed — see per-answer reviews';
+        else if (summaryStatus === 'skipped') statusText = 'Skipped (no valid reviews)';
+        status.textContent = statusText;
+        header.appendChild(status);
+        wrap.appendChild(header);
+
+        if (summaryStatus === 'ready' && summary) {
+          const body = document.createElement('div');
+          body.className = 'ir-session-summary-body';
+
+          const overall = document.createElement('p');
+          overall.className = 'ir-session-summary-overall';
+          overall.textContent = summary.overall_assessment || '';
+          body.appendChild(overall);
+
+          const listBlock = (label, items, cls) => {
+            if (!items || !items.length) return;
+            const sec = document.createElement('div');
+            sec.className = cls;
+            const t = document.createElement('div');
+            t.className = 'ir-session-summary-subtitle';
+            t.textContent = label;
+            sec.appendChild(t);
+            const ul = document.createElement('ul');
+            items.forEach(x => {
+              const li = document.createElement('li');
+              li.textContent = x;
+              ul.appendChild(li);
+            });
+            sec.appendChild(ul);
+            body.appendChild(sec);
+          };
+
+          listBlock('Top strengths', summary.top_strengths, 'ir-session-summary-strengths');
+          listBlock('Top issues', summary.top_issues, 'ir-session-summary-issues');
+          listBlock('Recurring patterns', summary.recurring_patterns, 'ir-session-summary-patterns');
+
+          if (summary.highest_priority_fix) {
+            const hp = document.createElement('div');
+            hp.className = 'ir-session-summary-priority';
+            const t = document.createElement('div');
+            t.className = 'ir-session-summary-subtitle';
+            t.textContent = 'Highest-priority fix';
+            hp.appendChild(t);
+            const p1 = document.createElement('p');
+            p1.textContent = summary.highest_priority_fix.issue || '';
+            hp.appendChild(p1);
+            if (summary.highest_priority_fix.why_it_matters) {
+              const p2 = document.createElement('p');
+              p2.textContent = 'Why it matters: ' + summary.highest_priority_fix.why_it_matters;
+              hp.appendChild(p2);
+            }
+            if (summary.highest_priority_fix.practice_drill) {
+              const p3 = document.createElement('p');
+              p3.textContent = 'Practice drill: ' + summary.highest_priority_fix.practice_drill;
+              hp.appendChild(p3);
+            }
+            body.appendChild(hp);
+          }
+
+          if (Array.isArray(summary.next_session_plan) && summary.next_session_plan.length) {
+            const plan = document.createElement('div');
+            plan.className = 'ir-session-summary-plan';
+            const t = document.createElement('div');
+            t.className = 'ir-session-summary-subtitle';
+            t.textContent = 'Next session plan';
+            plan.appendChild(t);
+            const ul = document.createElement('ul');
+            summary.next_session_plan.forEach(step => {
+              const li = document.createElement('li');
+              const parts = [];
+              if (step.focus) parts.push('Focus: ' + step.focus);
+              if (step.exercise) parts.push('Exercise: ' + step.exercise);
+              if (step.goal) parts.push('Goal: ' + step.goal);
+              li.textContent = parts.join(' · ');
+              ul.appendChild(li);
+            });
+            plan.appendChild(ul);
+            body.appendChild(plan);
+          }
+
+          wrap.appendChild(body);
+        }
+
+        c.parentElement.insertBefore(wrap, c);
+      }
+
+      this.updateSessionSummaryCard();
     },
 
     refreshTranscriptForIndex(index) {
       if (IR.state.screen !== 'review') return;
       this.renderReview();
+    },
+
+    /** Update only the AI block for one card (keeps card open/closed and scroll). */
+    updateReviewCardAI(index) {
+      if (IR.state.screen !== 'review') return;
+      const c = document.getElementById('reviewCards');
+      if (!c) return;
+      const card = c.querySelector('.ir-review-card[data-card-index="' + index + '"]');
+      if (!card) return;
+      const body = card.querySelector('.ir-review-card-body');
+      if (!body) return;
+      const oldBlock = body.querySelector('.ir-ai-review-block');
+      const newBlock = this.buildAIReviewBlock(index);
+      if (oldBlock && oldBlock.parentNode) {
+        oldBlock.parentNode.replaceChild(newBlock, oldBlock);
+      } else {
+        body.appendChild(newBlock);
+      }
+    },
+
+    updateEnhancedBlock(index) {
+      this.updateReviewCardAI(index);
+    },
+
+    updateEnhancedSessionCard() {
+      this.updateSessionSummaryCard();
+    },
+
+    /** Session summary card — OpenAI-only (no local model). */
+    updateSessionSummaryCard() {
+      if (IR.state.screen !== 'review') return;
+      const c = document.getElementById('reviewCards');
+      if (!c || !c.parentElement) return;
+
+      const transcripts = IR.state.transcripts || [];
+      const hasAnyTranscript = transcripts.some(function (t) { return typeof t === 'string' && t.trim(); });
+      let wrap = document.getElementById('irSessionSummaryCard');
+      if (hasAnyTranscript && IR.aiFeedback) {
+        if (!wrap) {
+          wrap = document.createElement('div');
+          wrap.className = 'ir-session-summary-card';
+          wrap.id = 'irSessionSummaryCard';
+          c.parentElement.insertBefore(wrap, c);
+        }
+
+        wrap.innerHTML = '';
+        const enhStatus = IR.state.enhancedSessionSummaryStatus || 'idle';
+        const enhSummary = IR.state.enhancedSessionSummary;
+        const enhError = IR.state.enhancedSessionSummaryError;
+
+        const header = document.createElement('div');
+        header.className = 'ir-session-summary-header';
+        const h = document.createElement('h2');
+        h.className = 'ir-h2';
+        h.textContent = 'Session summary';
+        header.appendChild(h);
+        const status = document.createElement('span');
+        status.className = 'ir-session-summary-status';
+        if (enhStatus === 'loading') status.textContent = 'Generating…';
+        else if (enhStatus === 'ready') status.textContent = 'Ready';
+        else if (enhStatus === 'failed') status.textContent = 'Failed';
+        else status.textContent = '';
+        header.appendChild(status);
+        wrap.appendChild(header);
+
+        if (enhStatus === 'loading') {
+          const p = document.createElement('p');
+          p.className = 'ir-ai-review-status';
+          p.textContent = 'Sending transcripts to OpenAI for a deeper summary…';
+          wrap.appendChild(p);
+        } else if (enhStatus === 'failed') {
+          const p = document.createElement('p');
+          p.className = 'ir-ai-review-status';
+          p.textContent = enhError || 'Session summary failed.';
+          wrap.appendChild(p);
+          const retryBtn = document.createElement('button');
+          retryBtn.type = 'button';
+          retryBtn.className = 'ir-btn ir-btn-ghost ir-btn-sm';
+          retryBtn.dataset.action = 'enhanced-session-summary';
+          retryBtn.textContent = 'Try again';
+          wrap.appendChild(retryBtn);
+        } else if (enhStatus === 'ready' && enhSummary) {
+          const body = document.createElement('div');
+          body.className = 'ir-session-summary-body';
+          const overall = document.createElement('p');
+          overall.className = 'ir-session-summary-overall';
+          overall.textContent = enhSummary.overall_assessment || '';
+          body.appendChild(overall);
+          const listBlock = function (label, items, cls) {
+            if (!items || !items.length) return;
+            const sec = document.createElement('div');
+            sec.className = cls || '';
+            const t = document.createElement('div');
+            t.className = 'ir-session-summary-subtitle';
+            t.textContent = label;
+            sec.appendChild(t);
+            const ul = document.createElement('ul');
+            items.forEach(function (x) { const li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
+            sec.appendChild(ul);
+            body.appendChild(sec);
+          };
+          listBlock('Top strengths', enhSummary.top_strengths, 'ir-session-summary-strengths');
+          listBlock('Top issues', enhSummary.top_issues, 'ir-session-summary-issues');
+          listBlock('Recurring patterns', enhSummary.recurring_patterns, 'ir-session-summary-patterns');
+          if (enhSummary.highest_priority_fix && (enhSummary.highest_priority_fix.issue || enhSummary.highest_priority_fix.why_it_matters || enhSummary.highest_priority_fix.practice_drill)) {
+            const hp = document.createElement('div');
+            hp.className = 'ir-session-summary-priority';
+            const t = document.createElement('div');
+            t.className = 'ir-session-summary-subtitle';
+            t.textContent = 'Highest-priority fix';
+            hp.appendChild(t);
+            if (enhSummary.highest_priority_fix.issue) { const p1 = document.createElement('p'); p1.textContent = enhSummary.highest_priority_fix.issue; hp.appendChild(p1); }
+            if (enhSummary.highest_priority_fix.why_it_matters) { const p2 = document.createElement('p'); p2.textContent = 'Why it matters: ' + enhSummary.highest_priority_fix.why_it_matters; hp.appendChild(p2); }
+            if (enhSummary.highest_priority_fix.practice_drill) { const p3 = document.createElement('p'); p3.textContent = 'Practice drill: ' + enhSummary.highest_priority_fix.practice_drill; hp.appendChild(p3); }
+            body.appendChild(hp);
+          }
+          if (Array.isArray(enhSummary.next_session_plan) && enhSummary.next_session_plan.length) {
+            const plan = document.createElement('div');
+            plan.className = 'ir-session-summary-plan';
+            const pt = document.createElement('div');
+            pt.className = 'ir-session-summary-subtitle';
+            pt.textContent = 'Next session plan';
+            plan.appendChild(pt);
+            const ul = document.createElement('ul');
+            enhSummary.next_session_plan.forEach(function (step) {
+              const li = document.createElement('li');
+              const parts = [];
+              if (step.focus) parts.push('Focus: ' + step.focus);
+              if (step.exercise) parts.push('Exercise: ' + step.exercise);
+              if (step.goal) parts.push('Goal: ' + step.goal);
+              li.textContent = parts.join(' · ');
+              ul.appendChild(li);
+            });
+            plan.appendChild(ul);
+            body.appendChild(plan);
+          }
+          wrap.appendChild(body);
+        } else {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'ir-btn ir-btn-ghost ir-btn-sm';
+          btn.dataset.action = 'enhanced-session-summary';
+          btn.textContent = 'Generate summary';
+          btn.title = 'Send your transcripts to OpenAI for a deeper session summary (optional)';
+          wrap.appendChild(btn);
+        }
+      } else {
+        if (wrap) wrap.remove();
+      }
     },
 
     renderResources() {

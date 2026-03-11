@@ -22,6 +22,18 @@
       if (!Array.isArray(IR.state.transcriptionStatus)) {
         IR.state.transcriptionStatus = [];
       }
+      if (!Array.isArray(IR.state.transcriptionError)) {
+        IR.state.transcriptionError = [];
+      }
+    },
+
+    _userFriendlyTranscriptionError(e) {
+      if (!e) return 'Transcription could not be generated for this recording.';
+      const msg = (e.message || String(e)).toLowerCase();
+      if (msg.includes('unavailable') || msg.includes('transcription')) return 'Transcription is not available on this device. Your recording was saved — you can download it.';
+      if (msg.includes('decode') || msg.includes('audio')) return 'Could not process the recording. Try Chrome or Edge on a desktop for best support.';
+      if (msg.includes('load') || msg.includes('model')) return 'Transcription model could not be loaded. Your recording was saved.';
+      return 'Transcription could not be generated. Your recording was saved — you can download it. For best results use Chrome or Edge on a desktop.';
     },
 
     enqueue(index, blob) {
@@ -55,15 +67,24 @@
           IR.state.transcripts[job.questionIndex] = cleaned;
           job.status = TRANSCRIPTION_STATUS.READY;
           IR.state.transcriptionStatus[job.questionIndex] = TRANSCRIPTION_STATUS.READY;
+          if (IR.state.transcriptionError[job.questionIndex] !== undefined) {
+            IR.state.transcriptionError[job.questionIndex] = null;
+          }
+          // When a final transcript is ready, the review UI and any
+          // OpenAI-backed flows can use IR.state.transcripts directly.
         } else {
           job.status = TRANSCRIPTION_STATUS.FAILED;
           IR.state.transcriptionStatus[job.questionIndex] = TRANSCRIPTION_STATUS.FAILED;
+          IR.state.transcriptionError[job.questionIndex] = IR.transcription._userFriendlyTranscriptionError(
+            IR.ai && IR.ai.whisper && IR.ai.whisper.error
+          );
         }
       } catch (e) {
         console.error('Transcription job failed', e);
         job.status = TRANSCRIPTION_STATUS.FAILED;
         this.ensureStateArray();
         IR.state.transcriptionStatus[job.questionIndex] = TRANSCRIPTION_STATUS.FAILED;
+        IR.state.transcriptionError[job.questionIndex] = this._userFriendlyTranscriptionError(e);
       } finally {
         this.activeJob = null;
         // If we are in the waiting room, refresh to update button states / messages
@@ -107,6 +128,10 @@
       const arr = IR.state.transcriptionStatus || [];
       for (let i = 0; i < arr.length; i++) {
         arr[i] = TRANSCRIPTION_STATUS.IDLE;
+      }
+      const errArr = IR.state.transcriptionError || [];
+      for (let i = 0; i < errArr.length; i++) {
+        errArr[i] = null;
       }
     }
   };

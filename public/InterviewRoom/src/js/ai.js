@@ -58,7 +58,9 @@
 
     async transcribeWithWhisper(index, blob, provisionalText) {
       await this.ensureWhisperLoaded();
-      if (!this.whisper.ready || !this.whisper.pipeline) return provisionalText;
+      if (!this.whisper.ready || !this.whisper.pipeline) {
+        throw new Error('Transcription unavailable');
+      }
       let wavUrl = null;
       try {
         const wavBlob = await IR.convert.webmToWav(blob);

@@ -42,6 +42,34 @@ Practice MBA admissions interviews with video recording and live transcription. 
 
 All processing happens in your browser. No data is sent to any server. Closing the tab clears everything unless you download recordings or copy transcripts.
 
+### Local AI review (InterviewRoom Phase 2)
+
+InterviewRoom now includes an optional, fully local AI review layer:
+
+- **Per-answer review**: For each completed answer, the app can generate a structured review with a text-only conversation flow graph, scores, strengths/gaps, coaching notes, and a faithful rewrite of your answer.
+- **Session summary**: Once per-answer reviews are ready, the app can synthesize a session-level summary from those review objects (not from raw transcripts).
+- **Transcript-first, AI-optional**: Transcripts and recordings continue to work everywhere InterviewRoom runs today, even if local AI review is unavailable.
+
+Implementation details:
+
+- **No external AI APIs**: All AI analysis runs locally in your browser using WebLLM and open models. Only model weights are downloaded from the CDN; your audio, video, and transcripts are never sent to a server for analysis.
+- **Supported devices/browsers**: Local AI review requires a reasonably recent browser with WebAssembly and either WebGPU or SharedArrayBuffer support (Chrome/Edge on desktop recommended). On unsupported or low-powered devices, InterviewRoom automatically falls back to transcript-only mode.
+- **First-run download**: The first time you trigger local review, the browser may download model weights. This can take time depending on your connection and hardware.
+- **Quality gating**: If a transcript is too short, clearly corrupted, or extremely low quality, InterviewRoom will skip AI review for that answer, keep the transcript visible, and show a message like “Transcript quality too low for reliable AI feedback.”
+- **Rambling detector**: A lightweight, deterministic “rambling” heuristic runs before AI review to flag structurally weak answers (e.g., heavy filler, looping, weak closure). This signal is conservative and used as metadata alongside AI review.
+
+Developer notes:
+
+- Per-answer analysis runs in a small review queue to avoid freezing the tab; only one local generation runs at a time.
+- The session summary is computed from compact per-answer review JSON only (never by re-feeding the full raw transcripts).
+- If the local review engine fails to initialize or validation of the model output fails, InterviewRoom falls back to transcript-only review and surfaces clear status messages.
+
+### Local testing (mock data)
+
+You can run the AI pipeline end-to-end **without WebLLM** using fixture data:
+
+The local WebLLM-based review engine and its test harness have been removed. AI feedback now uses a consent-driven OpenAI flow only.
+
 ## License
 
 MIT
