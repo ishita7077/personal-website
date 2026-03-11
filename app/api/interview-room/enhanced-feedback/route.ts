@@ -6,18 +6,32 @@ import {
   type EnhancedSessionPayload
 } from "./prompts1";
 
-function getOpenAIClient(): OpenAI | null {
-  const key = process.env.OPENAI_API_KEY?.trim();
-  if (!key) return null;
-  return new OpenAI({ apiKey: key });
+function getOpenAIClient(): { client: OpenAI | null; source: string } {
+  const rawKey =
+    process.env.OPENAI_API_KEY ||
+    // fallback names in case the env var was configured differently on Vercel
+    (process.env as any).Open_AI_Key ||
+    process.env.OPENAI_API_KEY_PROD ||
+    "";
+
+  const key = rawKey.trim();
+  if (!key) {
+    return { client: null, source: "missing" };
+  }
+
+  return { client: new OpenAI({ apiKey: key }), source: "env" };
 }
 
 export async function POST(req: Request) {
   try {
-    const client = getOpenAIClient();
+    const { client } = getOpenAIClient();
     if (!client) {
       return NextResponse.json(
-        { error: "AI feedback is not configured." },
+        {
+          error: "AI feedback is not configured.",
+          hint:
+            "Server could not see an OpenAI API key in the environment. Add a valid key to your deployment configuration and redeploy."
+        },
         { status: 503 }
       );
     }
