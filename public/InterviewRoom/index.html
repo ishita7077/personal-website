@@ -291,13 +291,20 @@
     <div class="ir-guide-section"><h3>Privacy</h3><p>All processing happens in your browser. Video, audio, and transcripts never leave your device. Closing the tab clears all data unless you download or copy it.</p></div>
     <div class="ir-guide-section"><h3>Interview format</h3><p><strong>Haas:</strong> 6 questions from one of seven sets. 45s prep, up to 3 min per answer. <strong>Custom:</strong> Your own questions and timing. In review you see recordings, transcripts, and optional AI feedback.</p></div>
     <div class="ir-guide-section"><h3>Keyboard shortcuts</h3><p><span class="ir-kbd">Space</span> — Skip current phase</p><p><span class="ir-kbd">Esc</span> — End session and go to review</p></div>
-    <div class="ir-guide-section"><h3>Troubleshooting</h3><p><strong>Camera not detected:</strong> Ensure no other app is using it. Try a different device from the dropdown.</p><p><strong>Microphone not working:</strong> Check browser permissions. The level bar should move when you speak.</p><p><strong>Transcription not appearing:</strong> Live transcription requires Chrome or Edge. On phones, offline transcription may be slower; for the full experience use a desktop browser.</p><p><strong>Transcription failed for an answer:</strong> Your recording was still saved — use "Download recording" to keep it. For best results use Chrome or Edge on a desktop and ensure the page has finished loading the transcription model before you start.</p>
-<p><strong>Review screen — when does it say "Skipped" or "Skipped (no valid reviews)"?</strong></p><ul style="margin:0.5em 0 0 1.2em;padding:0">
-<li><strong>Question card "Skipped":</strong> You did not submit a recording for that question (you left it out or ended the session before answering). No "not good enough" — it simply means no answer was recorded.</li>
-<li><strong>Session summary "Skipped (no valid reviews)":</strong> The overall summary needs at least one successful per-answer AI review. It shows this when every answered question either had no transcript, transcript quality too low for AI, or the per-answer review failed/timed out. So you see this when there isn’t enough usable data to summarize, not because your answers were "not good enough."</li>
-<li><strong>Per-answer "Transcript quality too low" / no AI insights:</strong> The transcript was empty, very short (under ~20 words), or flagged as corrupted/repetitive. That answer is not sent to the AI; you still see notes and can download the recording.</li>
-</ul>
-<p><strong>AI review or summary seems off:</strong> Add <code>#ai-dev</code> to the page URL (e.g. …/InterviewRoom/#ai-dev) and open Developer Tools → Console to see prompts and model responses for debugging.</p><p><strong>Mobile:</strong> Recording and review work on phones and tablets. For live transcription and faster offline notes, use Chrome or Edge on a desktop.</p></div>
+    <div class="ir-guide-section">
+      <h3>Troubleshooting</h3>
+      <p><strong>Camera not detected:</strong> Ensure no other app is using it. Try a different device from the dropdown.</p>
+      <p><strong>Microphone not working:</strong> Check browser permissions. The level bar should move when you speak.</p>
+      <p><strong>Transcription not appearing:</strong> Live transcription requires Chrome or Edge. On phones, offline transcription may be slower; for the full experience use a desktop browser.</p>
+      <p><strong>Transcription failed for an answer:</strong> Your recording was still saved — use "Download recording" to keep it. For best results use Chrome or Edge on a desktop and ensure the page has finished loading the transcription model before you start.</p>
+      <p><strong>Mobile:</strong> Recording and review work on phones and tablets. For live transcription and faster offline notes, use Chrome or Edge on a desktop.</p>
+    </div>
+    <div class="ir-guide-section">
+      <h3>Review screen labels</h3>
+      <p><strong>Question card "Skipped":</strong> No recording was submitted for that question. It does not mean the answer was "not good enough."</p>
+      <p><strong>Session summary "Skipped (no valid reviews)":</strong> There was not enough usable transcript data for a reliable AI summary (for example, every answer had no transcript, very low-quality text, or a review error).</p>
+      <p><strong>Per-answer "Transcript quality too low" / no AI insights:</strong> The transcript was empty, extremely short, or clearly corrupted. That answer is not sent to the AI, but you still see notes and can download the recording.</p>
+    </div>
   </aside>
 
   <div class="ir-modal-overlay" id="modalOverlay"><div class="ir-modal"><div class="ir-modal-title" id="modalTitle"></div><div class="ir-modal-body" id="modalBody"></div><div class="ir-modal-actions" id="modalActions"></div></div></div>
