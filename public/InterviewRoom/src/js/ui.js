@@ -269,12 +269,25 @@
     },
 
     renderFormatInfo(id) {
-      const c = IR.config[id];
-      const totalMin = Math.ceil(c.totalQuestions * (c.prepTime + c.answerTime) / 60);
+      const base = IR.config[id];
+      if (!base) return;
+
+      const isCustom = !!(IR.state && IR.state.customMode);
+      const questionCount = isCustom
+        ? (IR.state.customQuestions && IR.state.customQuestions.length) || base.totalQuestions
+        : base.totalQuestions;
+      const prepTime = isCustom
+        ? (IR.state.customPrepTime != null ? IR.state.customPrepTime : base.prepTime)
+        : base.prepTime;
+      const answerTime = isCustom
+        ? (IR.state.customAnswerTime != null ? IR.state.customAnswerTime : base.answerTime)
+        : base.answerTime;
+
+      const totalMin = Math.ceil(questionCount * (prepTime + answerTime) / 60);
       document.getElementById('formatInfo').innerHTML =
-        `<div class="ir-format-item"><div class="ir-format-value">${c.totalQuestions}</div><div class="ir-format-label">Questions</div></div>` +
-        `<div class="ir-format-item"><div class="ir-format-value">${c.prepTime}s</div><div class="ir-format-label">Prep Time</div></div>` +
-        `<div class="ir-format-item"><div class="ir-format-value">${Math.floor(c.answerTime / 60)}m</div><div class="ir-format-label">Answer Time</div></div>` +
+        `<div class="ir-format-item"><div class="ir-format-value">${questionCount}</div><div class="ir-format-label">Questions</div></div>` +
+        `<div class="ir-format-item"><div class="ir-format-value">${prepTime}s</div><div class="ir-format-label">Prep Time</div></div>` +
+        `<div class="ir-format-item"><div class="ir-format-value">${Math.floor(answerTime / 60)}m</div><div class="ir-format-label">Answer Time</div></div>` +
         `<div class="ir-format-item"><div class="ir-format-value">~${totalMin}m</div><div class="ir-format-label">Total Duration</div></div>`;
     },
 

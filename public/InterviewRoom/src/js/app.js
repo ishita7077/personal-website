@@ -175,6 +175,33 @@
     if (qInput) {
       qInput.addEventListener('input', () => IR.updateConfigFromDom());
     }
+    const questionsList = document.getElementById('questionsList');
+    const addQuestionBtn = document.getElementById('addQuestionBtn');
+    const questionsPaste = document.getElementById('questionsPaste');
+    if (addQuestionBtn) {
+      addQuestionBtn.addEventListener('click', () => IR.addCustomQuestionRow());
+    }
+    if (questionsList) {
+      questionsList.addEventListener('input', () => IR.updateConfigFromDom());
+      questionsList.addEventListener('click', (e) => {
+        const removeBtn = e.target.closest('.ir-question-remove');
+        if (removeBtn) {
+          const row = removeBtn.closest('.ir-question-row');
+          if (row && questionsList.querySelectorAll('.ir-question-row').length > 1) {
+            row.remove();
+            IR.updateQuestionIndices();
+            IR.updateConfigFromDom();
+          }
+        }
+      });
+    }
+    if (questionsPaste) {
+      questionsPaste.addEventListener('input', () => IR.syncPasteToQuestionRows());
+    }
+    const addPastedBtn = document.getElementById('addPastedQuestionsBtn');
+    if (addPastedBtn) {
+      addPastedBtn.addEventListener('click', () => IR.addPastedQuestions());
+    }
     const prepInput = document.getElementById('prepTimeInput');
     if (prepInput) {
       prepInput.addEventListener('input', () => IR.updateConfigFromDom());
@@ -378,7 +405,9 @@
   };
 
   IR.updateConfigFromDom = function () {
-    const ta = document.getElementById('questionsInput');
+    const questions = IR.getCustomQuestionsFromDom();
+    const qCount = questions.length;
+
     const prepInput = document.getElementById('prepTimeInput');
     const answerInput = document.getElementById('answerTimeInput');
     const countLabel = document.getElementById('questionCountLabel');
@@ -389,10 +418,7 @@
     const prevTotal = document.getElementById('previewTotal');
     const footer = document.getElementById('configFooter');
     const startNudge = document.getElementById('startNudge');
-
-    const rawLines = ta ? ta.value.split(/\r?\n/) : [];
-    const questions = rawLines.map(s => s.trim()).filter(Boolean);
-    const qCount = questions.length;
+    const startPracticeBtn = document.getElementById('startPracticeBtn');
 
     const prepRaw = prepInput && prepInput.value.trim() !== '' ? Number(prepInput.value) : NaN;
     const answerRaw = answerInput && answerInput.value.trim() !== '' ? Number(answerInput.value) : NaN;
@@ -425,22 +451,171 @@
     if (footer) {
       footer.classList.toggle('ir-config-footer-ready', ready);
     }
-    if (startNudge) {
-      startNudge.textContent = ready ? 'You are ready — start your practice interview.' : '';
+    if (startPracticeBtn) {
+      startPracticeBtn.disabled = !hasQuestions;
     }
+    if (startNudge) {
+      if (!hasQuestions) {
+        startNudge.textContent = 'Add at least one question to start your practice interview.';
+        startNudge.classList.remove('ir-nudge-ready');
+      } else if (!timersValid) {
+        startNudge.textContent = 'Set prep time (at least 5 sec) and answer time (at least 1 min).';
+        startNudge.classList.remove('ir-nudge-ready');
+      } else if (qCount === 1) {
+        startNudge.textContent = 'You’ve added 1 question. Add more for a fuller practice, or start when ready.';
+        startNudge.classList.add('ir-nudge-ready');
+      } else if (qCount === 2) {
+        startNudge.textContent = 'You’ve added 2 questions. Consider adding more, or start when ready.';
+        startNudge.classList.add('ir-nudge-ready');
+      } else {
+        startNudge.textContent = 'You are ready — start your practice interview.';
+        startNudge.classList.add('ir-nudge-ready');
+      }
+    }
+    IR.updateQuestionRemoveVisibility();
+  };
+
+  IR.getCustomQuestionsFromDom = function () {
+    const list = document.getElementById('questionsList');
+    if (!list) return [];
+    const inputs = list.querySelectorAll('.ir-question-input');
+    const raw = Array.from(inputs).map(inp => (inp.value || '').trim()).filter(Boolean);
+    return raw;
+  };
+
+  IR.addCustomQuestionRow = function () {
+    const list = document.getElementById('questionsList');
+    if (!list) return;
+    const count = list.querySelectorAll('.ir-question-row').length;
+    const row = document.createElement('div');
+    row.className = 'ir-question-row';
+    row.setAttribute('role', 'listitem');
+    row.setAttribute('data-question-index', String(count));
+    row.innerHTML =
+      '<input type="text" class="ir-question-input" placeholder="e.g. Why this school?" aria-label="Question ' + (count + 1) + '" />' +
+      '<button type="button" class="ir-question-remove" aria-label="Remove question" title="Remove question">×</button>';
+    list.appendChild(row);
+    IR.updateQuestionIndices();
+    IR.updateQuestionRemoveVisibility();
+    IR.updateConfigFromDom();
+    row.querySelector('.ir-question-input').focus();
+  };
+
+  IR.updateQuestionIndices = function () {
+    const list = document.getElementById('questionsList');
+    if (!list) return;
+    list.querySelectorAll('.ir-question-row').forEach((r, i) => {
+      r.setAttribute('data-question-index', String(i));
+      const inp = r.querySelector('.ir-question-input');
+      if (inp) inp.setAttribute('aria-label', 'Question ' + (i + 1));
+    });
+  };
+
+  IR.updateQuestionRemoveVisibility = function () {
+    const list = document.getElementById('questionsList');
+    if (!list) return;
+    const rows = list.querySelectorAll('.ir-question-row');
+    rows.forEach((row, i) => {
+      const removeBtn = row.querySelector('.ir-question-remove');
+      if (removeBtn) {
+        removeBtn.style.display = rows.length > 1 ? '' : 'none';
+      }
+    });
+  };
+
+  IR.syncPasteToQuestionRows = function () { /* no-op: paste applied via Add these questions button */ };
+
+  IR.addPastedQuestions = function () {
+    const pasteEl = document.getElementById('questionsPaste');
+    const list = document.getElementById('questionsList');
+    if (!pasteEl || !list) return;
+    const text = (pasteEl.value || '').trim();
+    if (!text) {
+      IR.ui.toast('Paste one or more questions (one per line), then click Add these questions.', 'info');
+      return;
+    }
+    const lines = text.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+    if (lines.length === 0) {
+      IR.ui.toast('No non-empty lines found. Add one question per line.', 'info');
+      return;
+    }
+    const existingRows = list.querySelectorAll('.ir-question-row');
+    let linesToAdd = lines;
+    if (existingRows.length === 1 && lines.length > 0) {
+      const firstInput = existingRows[0].querySelector('.ir-question-input');
+      if (firstInput && !firstInput.value.trim()) {
+        firstInput.value = lines[0];
+        linesToAdd = lines.slice(1);
+      }
+    }
+    linesToAdd.forEach((line) => {
+      IR.addCustomQuestionRow();
+      const rows = list.querySelectorAll('.ir-question-row');
+      const lastRow = rows[rows.length - 1];
+      const inp = lastRow.querySelector('.ir-question-input');
+      if (inp) inp.value = line;
+    });
+    pasteEl.value = '';
+    IR.updateConfigFromDom();
+    IR.ui.toast(lines.length === 1 ? '1 question added.' : lines.length + ' questions added.', 'success');
   };
 
   IR.startConfiguredFlow = async function () {
-    const ta = document.getElementById('questionsInput');
+    const questions = IR.getCustomQuestionsFromDom();
     const prepInput = document.getElementById('prepTimeInput');
     const answerInput = document.getElementById('answerTimeInput');
-    const rawLines = ta ? ta.value.split(/\r?\n/) : [];
-    const questions = rawLines.map(s => s.trim()).filter(Boolean);
 
-    IR.state.customQuestions = questions.length ? questions : null;
+    const prepRaw = prepInput && prepInput.value.trim() !== '' ? Number(prepInput.value) : NaN;
+    const answerRaw = answerInput && answerInput.value.trim() !== '' ? Number(answerInput.value) : NaN;
+    const timersValid = prepRaw >= 5 && answerRaw >= 1;
 
-    let prepSeconds = prepInput ? Number(prepInput.value) || 0 : 0;
-    let answerMinutes = answerInput ? Number(answerInput.value) || 0 : 0;
+    if (questions.length === 0) {
+      IR.ui.showModal(
+        'Add questions to continue',
+        'Add at least one question to start your practice interview. Use the field above or paste multiple questions (one per line) and click "Add these questions".',
+        [{ label: 'OK', class: 'ir-btn-primary' }]
+      );
+      return;
+    }
+
+    if (!timersValid) {
+      IR.ui.showModal(
+        'Set prep and answer time',
+        'Set a prep time of at least 5 seconds and an answer time of at least 1 minute before starting your practice interview.',
+        [{ label: 'OK', class: 'ir-btn-primary' }]
+      );
+      return;
+    }
+
+    if (questions.length <= 2) {
+      IR.ui.showModal(
+        questions.length === 1 ? 'Only 1 question added' : 'Only 2 questions added',
+        'For a fuller practice we recommend adding more questions. You can add more now or start with what you have.',
+        [
+          { label: 'Add more questions', class: 'ir-btn-ghost' },
+          {
+            label: 'Start anyway',
+            class: 'ir-btn-primary',
+            action: () => IR._continueStartConfiguredFlow(prepInput, answerInput)
+          }
+        ]
+      );
+      return;
+    }
+
+    IR._continueStartConfiguredFlow(prepInput, answerInput);
+  };
+
+  IR._continueStartConfiguredFlow = async function (prepInput, answerInput) {
+    const questions = IR.getCustomQuestionsFromDom();
+    if (questions.length === 0) return;
+
+    IR.state.customQuestions = questions;
+
+    const prepEl = prepInput != null ? prepInput : document.getElementById('prepTimeInput');
+    const answerEl = answerInput != null ? answerInput : document.getElementById('answerTimeInput');
+    let prepSeconds = prepEl ? Number(prepEl.value) || 0 : 0;
+    let answerMinutes = answerEl ? Number(answerEl.value) || 0 : 0;
     if (prepSeconds >= 5) {
       IR.state.customPrepTime = prepSeconds;
     } else {

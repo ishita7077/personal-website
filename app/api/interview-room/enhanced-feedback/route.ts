@@ -6,6 +6,60 @@ import {
   type EnhancedSessionPayload
 } from "./prompts1";
 
+const RATE_LIMIT_PER_IP = 50;
+const MAX_TRANSCRIPT_CHARS = 8000;
+
+type RateEntry = {
+  count: number;
+  day: string;
+};
+
+const rateStore = new Map<string, RateEntry>();
+
+function getClientIp(req: Request): string {
+  const forwarded = req.headers.get("x-forwarded-for");
+  if (forwarded) {
+    const parts = forwarded.split(",").map((p) => p.trim());
+    if (parts[0]) return parts[0];
+  }
+  const real = req.headers.get("x-real-ip");
+  if (real) return real;
+  return "unknown";
+}
+
+function checkRateLimit(req: Request) {
+  const ip = getClientIp(req);
+  const today = new Date().toISOString().slice(0, 10);
+  const existing = rateStore.get(ip);
+  if (!existing || existing.day !== today) {
+    rateStore.set(ip, { count: 1, day: today });
+    return { ok: true };
+  }
+  if (existing.count >= RATE_LIMIT_PER_IP) {
+    return { ok: false };
+  }
+  existing.count += 1;
+  rateStore.set(ip, existing);
+  return { ok: true };
+}
+
+function isAllowedOrigin(req: Request): boolean {
+  const origin = req.headers.get("origin");
+  const host = req.headers.get("host");
+  if (!origin || !host) return true;
+  const allowed: string[] = [`https://${host}`, `http://${host}`];
+  if (host.startsWith("localhost")) {
+    allowed.push("http://localhost:3000");
+  }
+  return allowed.some((base) => origin.startsWith(base));
+}
+
+function truncateTranscript(text: string): string {
+  if (!text) return text;
+  if (text.length <= MAX_TRANSCRIPT_CHARS) return text;
+  return text.slice(0, MAX_TRANSCRIPT_CHARS);
+}
+
 function getOpenAIClient(): { client: OpenAI | null; source: string } {
   const rawKey =
     process.env.OPENAI_API_KEY ||
@@ -24,6 +78,25 @@ function getOpenAIClient(): { client: OpenAI | null; source: string } {
 
 export async function POST(req: Request) {
   try {
+    if (!isAllowedOrigin(req)) {
+      return NextResponse.json(
+        { error: "Unauthorized origin for AI feedback request." },
+        { status: 403 }
+      );
+    }
+
+    const rate = checkRateLimit(req);
+    if (!rate.ok) {
+      return NextResponse.json(
+        {
+          error: "AI feedback limit reached for today.",
+          hint:
+            "If you need additional access for serious practice, please reach out with a short note on how you're using Interview Room."
+        },
+        { status: 429 }
+      );
+    }
+
     const { client } = getOpenAIClient();
     if (!client) {
       return NextResponse.json(
@@ -67,7 +140,12 @@ export async function POST(req: Request) {
         );
       }
 
-      const messages = prompts1.buildEnhancedAnswerReviewMessages(payload);
+      const safePayload: EnhancedPerAnswerPayload = {
+        ...payload,
+        transcript: truncateTranscript(payload.transcript)
+      };
+
+      const messages = prompts1.buildEnhancedAnswerReviewMessages(safePayload);
 
       const completion = await client.chat.completions.create({
         model: "gpt-4o-mini",
@@ -98,9 +176,19 @@ export async function POST(req: Request) {
       );
     }
 
-    const answers: EnhancedSessionPayload["answers"] = sessionPayload.answers.filter((a) => {
-      return a && typeof a.questionId === "string" && typeof a.questionText === "string" && typeof a.transcript === "string";
-    });
+    const answers: EnhancedSessionPayload["answers"] = sessionPayload.answers
+      .filter((a) => {
+        return (
+          a &&
+          typeof a.questionId === "string" &&
+          typeof a.questionText === "string" &&
+          typeof a.transcript === "string"
+        );
+      })
+      .map((a) => ({
+        ...a,
+        transcript: truncateTranscript(a.transcript)
+      }));
 
     if (answers.length === 0) {
       return NextResponse.json(

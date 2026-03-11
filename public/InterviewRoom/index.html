@@ -28,8 +28,8 @@
     </nav>
 
     <div class="ir-announcement" id="announcementBar">
-      <span class="ir-announcement-label">Update</span>
-      <span class="ir-announcement-text">AI feedback is now live for individual answers and full-session summaries. Transcripts only are sent securely to OpenAI when you choose to use it.</span>
+      <span class="ir-announcement-label">New</span>
+      <span class="ir-announcement-text">Custom practice with your own questions; AI feedback on answers and session summary (transcripts only, via OpenAI).</span>
     </div>
 
     <section class="ir-screen ir-home active" id="screen-home">
@@ -68,21 +68,31 @@
                 <span class="ir-label"><span class="ir-config-step-num">1.</span> Questions</span>
                 <span class="ir-config-count" id="questionCountLabel">0 questions added</span>
               </div>
-              <p class="ir-config-note">Questions are counted by line break — add one question per line.</p>
-              <textarea
-                id="questionsInput"
-                class="ir-config-textarea"
-                rows="9"
-                placeholder="Paste interview questions (one per line)"
-              ></textarea>
-              <div class="ir-config-examples">
-                <div class="ir-config-examples-label">Example:</div>
-                <ul class="ir-config-examples-list">
-                  <li>Tell me about your journey so far</li>
-                  <li>Why this school?</li>
-                  <li>Describe a leadership moment that defines you</li>
-                </ul>
+              <p class="ir-config-note">Add your interview questions one by one, or paste multiple below.</p>
+              <div class="ir-questions-list" id="questionsList" role="list">
+                <div class="ir-question-row" role="listitem" data-question-index="0">
+                  <input
+                    type="text"
+                    class="ir-question-input"
+                    placeholder="e.g. Tell me about your journey so far"
+                    aria-label="Question 1"
+                  />
+                  <button type="button" class="ir-question-remove" aria-label="Remove question" title="Remove question" style="display: none;">×</button>
+                </div>
               </div>
+              <button type="button" class="ir-btn ir-btn-ghost ir-btn-sm ir-add-question-btn" id="addQuestionBtn">
+                + Add another question
+              </button>
+              <details class="ir-paste-multiple">
+                <summary>Or paste multiple questions (one per line)</summary>
+                <textarea
+                  id="questionsPaste"
+                  class="ir-config-textarea ir-paste-textarea"
+                  rows="4"
+                  placeholder="Paste several questions here, one per line"
+                ></textarea>
+                <button type="button" class="ir-btn ir-btn-ghost ir-btn-sm ir-paste-add-btn" id="addPastedQuestionsBtn">Add these questions</button>
+              </details>
             </div>
 
             <div class="ir-config-timing">
@@ -270,12 +280,16 @@
       <p>During each answer, your webcam records locally and speech-to-text generates a live transcript. After the session, the review screen shows your recording, a cleaned-up transcript, and the Haas recommendations for that exact question so you can compare what you said with what the school emphasizes.</p>
     </div>
     <div class="ir-guide-section">
-      <h3>What we are adding next</h3>
-      <p>We are working on short, on-device summaries for individual answers and full sessions that highlight patterns in how you tell your story.</p>
-      <p>Over time, we will layer in a small set of targeted prompts&mdash;for example, to tighten a specific answer or connect it more clearly to Haas&mdash;while keeping all processing on your device.</p>
+      <h3>What's new</h3>
+      <p><strong>Custom practice:</strong> Add your own questions and set prep/answer times. Same recording and transcription as Haas.</p>
+      <p><strong>AI feedback (optional):</strong> Per-answer and full-session summaries via OpenAI. Only transcript text is sent when you opt in.</p>
+    </div>
+    <div class="ir-guide-section">
+      <h3>What we're building next</h3>
+      <p>More targeted prompts (e.g. tighten an answer, connect to school fit) and refinements based on your feedback.</p>
     </div>
     <div class="ir-guide-section"><h3>Privacy</h3><p>All processing happens in your browser. Video, audio, and transcripts never leave your device. Closing the tab clears all data unless you download or copy it.</p></div>
-    <div class="ir-guide-section"><h3>Interview format</h3><p>6 questions from one of seven sets (Haas Question Bank). For each: 45 seconds prep, up to 3 minutes to answer. You can submit early. In review, each answer shows your notes and Haas recommendations with official sources.</p></div>
+    <div class="ir-guide-section"><h3>Interview format</h3><p><strong>Haas:</strong> 6 questions from one of seven sets. 45s prep, up to 3 min per answer. <strong>Custom:</strong> Your own questions and timing. In review you see recordings, transcripts, and optional AI feedback.</p></div>
     <div class="ir-guide-section"><h3>Keyboard shortcuts</h3><p><span class="ir-kbd">Space</span> — Skip current phase</p><p><span class="ir-kbd">Esc</span> — End session and go to review</p></div>
     <div class="ir-guide-section"><h3>Troubleshooting</h3><p><strong>Camera not detected:</strong> Ensure no other app is using it. Try a different device from the dropdown.</p><p><strong>Microphone not working:</strong> Check browser permissions. The level bar should move when you speak.</p><p><strong>Transcription not appearing:</strong> Live transcription requires Chrome or Edge. On phones, offline transcription may be slower; for the full experience use a desktop browser.</p><p><strong>Transcription failed for an answer:</strong> Your recording was still saved — use "Download recording" to keep it. For best results use Chrome or Edge on a desktop and ensure the page has finished loading the transcription model before you start.</p>
 <p><strong>Review screen — when does it say "Skipped" or "Skipped (no valid reviews)"?</strong></p><ul style="margin:0.5em 0 0 1.2em;padding:0">
