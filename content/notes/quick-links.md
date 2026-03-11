@@ -1,5 +1,3 @@
-## quick links
-
 selected work and references that are a good starting point if you're trying to understand what i’ve been building and thinking about lately.
 
 - **Avail – $27M seed (Founders Fund)** · [Reuters](https://www.reuters.com/technology/peter-thiels-founders-fund-backs-27-mln-funding-avail-2024-02-26/)

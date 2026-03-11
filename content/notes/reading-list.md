@@ -1,5 +1,3 @@
-# reading list
-
 a running log of books that change how i think about building, leadership, and systems.
 
 ## currently reading

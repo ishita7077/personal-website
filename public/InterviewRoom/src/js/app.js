@@ -38,8 +38,11 @@
     transcriptEnhanced: {},
     transcriptionStatus: [],
     sessionId: null,
-    aiReviews: [],
-    sessionSummary: null
+  aiReviews: [],
+  sessionSummary: null,
+  customQuestions: null,
+  customPrepTime: null,
+  customAnswerTime: null
   };
 
   IR.handleResourcesClick = function () {
@@ -120,6 +123,19 @@
     }
     document.getElementById('schoolCardHaas').addEventListener('click', () => IR.selectSchool('haas-mba'));
     document.getElementById('schoolCardHaas').addEventListener('keydown', e => { if (e.key === 'Enter') IR.selectSchool('haas-mba'); });
+    const customCard = document.getElementById('schoolCardCustom');
+    if (customCard) {
+      customCard.addEventListener('click', () => {
+        IR.navigateTo('custom');
+        IR.updateConfigFromDom();
+      });
+      customCard.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          IR.navigateTo('custom');
+          IR.updateConfigFromDom();
+        }
+      });
+    }
     document.getElementById('guideBtn').addEventListener('click', () => IR.toggleGuide());
     document.getElementById('guideBackdrop').addEventListener('click', () => IR.toggleGuide());
     document.getElementById('guideCloseBtn').addEventListener('click', () => IR.toggleGuide());
@@ -133,6 +149,25 @@
     document.getElementById('exportTranscriptsBtn').addEventListener('click', () => IR.exportTranscripts());
     document.getElementById('downloadAllVideosBtn').addEventListener('click', () => IR.downloadAllVideos());
     document.getElementById('newSessionBtn').addEventListener('click', () => IR.promptNewSession());
+
+    const qInput = document.getElementById('questionsInput');
+    if (qInput) {
+      qInput.addEventListener('input', () => IR.updateConfigFromDom());
+    }
+    const prepInput = document.getElementById('prepTimeInput');
+    if (prepInput) {
+      prepInput.addEventListener('input', () => IR.updateConfigFromDom());
+    }
+    const answerInput = document.getElementById('answerTimeInput');
+    if (answerInput) {
+      answerInput.addEventListener('input', () => IR.updateConfigFromDom());
+    }
+    const startPracticeBtn = document.getElementById('startPracticeBtn');
+    if (startPracticeBtn) {
+      startPracticeBtn.addEventListener('click', () => IR.startConfiguredFlow());
+    }
+
+    IR.updateConfigFromDom();
 
     window.addEventListener('beforeunload', e => {
       if (!IR.sessionHasData()) return;
@@ -175,6 +210,13 @@
   };
 
   IR.buildSessionQuestions = function (id) {
+    if (IR.state.customQuestions && IR.state.customQuestions.length) {
+      return IR.state.customQuestions.map((text, idx) => ({
+        id: 'custom-' + (idx + 1),
+        text,
+        slot: null
+      }));
+    }
     if (id === 'haas-mba' && IR.haasQuestionSets && IR.haasQuestionSets.length > 0) {
       const sets = IR.haasQuestionSets;
       const setIndex = Math.floor(Math.random() * sets.length);
@@ -234,14 +276,15 @@
   };
 
   IR.startPrep = function () {
-    const c = IR.config[IR.state.selectedSchool];
+    const base = IR.config[IR.state.selectedSchool];
+    const prepTime = IR.state.customPrepTime || (base && base.prepTime) || 0;
     IR.state.phase = 'prep';
     // reset live transcript view for new question
     IR.speech.finalTranscript = '';
     IR.speech.interimTranscript = '';
     IR.ui.updateLiveTranscript();
     IR.ui.updateSessionUI();
-    IR.timer.start(c.prepTime, t => IR.ui.updateTimerDisplay(t), () => IR.startAnswer());
+    IR.timer.start(prepTime, t => IR.ui.updateTimerDisplay(t), () => IR.startAnswer());
   };
 
   IR.startAnswer = function () {
@@ -253,8 +296,103 @@
     IR.ui.updateSessionUI();
     IR.media.startRecording();
     IR.speech.start();
-    const c = IR.config[IR.state.selectedSchool];
-    IR.timer.start(c.answerTime, t => IR.ui.updateTimerDisplay(t), () => IR.finishAnswer());
+    const base = IR.config[IR.state.selectedSchool];
+    const answerTime = IR.state.customAnswerTime || (base && base.answerTime) || 0;
+    IR.timer.start(answerTime, t => IR.ui.updateTimerDisplay(t), () => IR.finishAnswer());
+  };
+
+  IR.updateConfigFromDom = function () {
+    const ta = document.getElementById('questionsInput');
+    const prepInput = document.getElementById('prepTimeInput');
+    const answerInput = document.getElementById('answerTimeInput');
+    const countLabel = document.getElementById('questionCountLabel');
+    const estLabel = document.getElementById('estimatedDurationLabel');
+    const prevQs = document.getElementById('previewQuestions');
+    const prevPrep = document.getElementById('previewPrep');
+    const prevAnswer = document.getElementById('previewAnswer');
+    const prevTotal = document.getElementById('previewTotal');
+    const footer = document.getElementById('configFooter');
+    const startNudge = document.getElementById('startNudge');
+
+    const rawLines = ta ? ta.value.split(/\r?\n/) : [];
+    const questions = rawLines.map(s => s.trim()).filter(Boolean);
+    const qCount = questions.length;
+
+    const prepRaw = prepInput && prepInput.value.trim() !== '' ? Number(prepInput.value) : NaN;
+    const answerRaw = answerInput && answerInput.value.trim() !== '' ? Number(answerInput.value) : NaN;
+    const timersValid = prepRaw >= 5 && answerRaw >= 1;
+    const prepSeconds = Number.isFinite(prepRaw) ? Math.max(prepRaw, 0) : 0;
+    const answerMinutes = Number.isFinite(answerRaw) ? Math.max(answerRaw, 0) : 0;
+    const answerSeconds = answerMinutes * 60;
+
+    if (countLabel) {
+      const n = qCount;
+      countLabel.textContent = (n === 1 ? '1 question added' : `${n} questions added`);
+    }
+
+    const baseConf = IR.config && IR.config['haas-mba'] ? IR.config['haas-mba'] : null;
+    const effectiveQuestions = qCount;
+    const effPrep = prepSeconds || 0;
+    const effAnswer = answerSeconds || 0;
+    const totalSeconds = effectiveQuestions * (effPrep + effAnswer);
+    const totalMinutes = totalSeconds ? Math.ceil(totalSeconds / 60) : 0;
+
+    if (estLabel) {
+      estLabel.textContent = totalMinutes ? `~${totalMinutes} minutes` : '~0 minutes';
+    }
+    if (prevQs) prevQs.textContent = String(effectiveQuestions || 0);
+    if (prevPrep) prevPrep.textContent = `${effPrep || 0} sec`;
+    if (prevAnswer) prevAnswer.textContent = `${Math.round((effAnswer || 0) / 60) || 0} min`;
+    if (prevTotal) prevTotal.textContent = totalMinutes ? `~${totalMinutes} minutes` : '~0 minutes';
+
+    const hasQuestions = qCount > 0;
+    const ready = hasQuestions && timersValid;
+    if (footer) {
+      footer.classList.toggle('ir-config-footer-ready', ready);
+    }
+    if (startNudge) {
+      startNudge.textContent = ready ? 'You are ready — start your practice interview.' : '';
+    }
+  };
+
+  IR.startConfiguredFlow = async function () {
+    const ta = document.getElementById('questionsInput');
+    const prepInput = document.getElementById('prepTimeInput');
+    const answerInput = document.getElementById('answerTimeInput');
+    const rawLines = ta ? ta.value.split(/\r?\n/) : [];
+    const questions = rawLines.map(s => s.trim()).filter(Boolean);
+
+    IR.state.customQuestions = questions.length ? questions : null;
+
+    let prepSeconds = prepInput ? Number(prepInput.value) || 0 : 0;
+    let answerMinutes = answerInput ? Number(answerInput.value) || 0 : 0;
+    if (prepSeconds >= 5) {
+      IR.state.customPrepTime = prepSeconds;
+    } else {
+      IR.state.customPrepTime = null;
+    }
+    if (answerMinutes >= 1) {
+      IR.state.customAnswerTime = answerMinutes * 60;
+    } else {
+      IR.state.customAnswerTime = null;
+    }
+
+    IR.state.selectedSchool = 'haas-mba';
+    IR.state.permState = 'idle';
+    IR.navigateTo('techcheck');
+    if (IR.ui && IR.ui.renderFormatInfo) {
+      IR.ui.renderFormatInfo('haas-mba');
+    }
+    if (IR.ui && IR.ui.renderAlerts) {
+      IR.ui.renderAlerts();
+    }
+    const pt = document.getElementById('placeholderText');
+    const pb = document.getElementById('permBlock');
+    if (pt) pt.style.display = '';
+    if (pb) pb.classList.remove('active');
+    if (IR.media && IR.media.requestAccess) {
+      await IR.media.requestAccess();
+    }
   };
 
   IR.finishAnswer = async function () {

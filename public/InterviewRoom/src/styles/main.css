@@ -103,7 +103,7 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
 @keyframes ir-blink{50%{opacity:0.4}}
 
 /* Home */
-.ir-home{align-items:center;justify-content:center;text-align:center}
+.ir-home{align-items:center;justify-content:flex-start;text-align:center}
 .ir-home-hero{max-width:560px;margin:0 auto}
 .ir-home-tagline{font-size:15px;color:var(--ir-text-muted);margin-top:12px;margin-bottom:48px;line-height:1.7}
 .ir-school-card{background:var(--ir-bg-card);border:1px solid var(--ir-border);border-radius:var(--ir-radius-lg);padding:22px 26px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all var(--ir-transition);box-shadow:var(--ir-shadow-sm);max-width:480px;margin:0 auto 40px}
@@ -122,6 +122,50 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
 .ir-btn-help{padding:8px 12px}
 .ir-perm-icon{display:none}
 .ir-perm-block.active .ir-perm-icon{display:flex}
+
+/* Config */
+.ir-config{margin-top:40px;width:100%;text-align:left}
+.ir-config-grid{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(260px,1fr);gap:28px;align-items:flex-start;margin-top:10px}
+.ir-config-main{display:flex;flex-direction:column;gap:18px}
+.ir-config-questions{background:var(--ir-bg-card);border-radius:var(--ir-radius-lg);border:1px solid var(--ir-border);padding:18px 18px 16px;box-shadow:var(--ir-shadow-sm)}
+.ir-config-header-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.ir-config-step-num{margin-right:6px;color:var(--ir-accent)}
+.ir-config-count{font-size:12px;color:var(--ir-text-dim);font-family:var(--ir-mono)}
+.ir-config-note{font-size:12px;color:var(--ir-text-dim);margin-bottom:6px}
+.ir-config-textarea{width:100%;min-height:180px;resize:vertical;border-radius:var(--ir-radius);border:1px solid var(--ir-border);padding:10px 12px;font-family:var(--ir-sans);font-size:14px;line-height:1.5;color:var(--ir-text);background:var(--ir-bg-elevated);outline:none;transition:border-color var(--ir-transition),box-shadow var(--ir-transition),background var(--ir-transition)}
+.ir-config-textarea:focus{border-color:var(--ir-accent);box-shadow:0 0 0 1px rgba(201,96,10,0.15);background:#fff}
+.ir-config-examples{margin-top:10px;padding-top:10px;border-top:1px dashed var(--ir-border)}
+.ir-config-examples-label{font-size:12px;color:var(--ir-text-dim);margin-bottom:4px}
+.ir-config-examples-list{margin:0;padding-left:18px;font-size:13px;color:var(--ir-text-muted);line-height:1.6}
+.ir-config-examples-list li{margin-bottom:2px}
+
+.ir-config-timing{background:var(--ir-bg-card);border-radius:var(--ir-radius-lg);border:1px solid var(--ir-border);padding:16px 18px;box-shadow:var(--ir-shadow-sm);display:flex;flex-direction:column;gap:6px}
+.ir-config-timing-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ir-config-timing-label{font-size:13px;font-weight:500;color:var(--ir-text)}
+.ir-config-timing-input{display:flex;align-items:center;gap:6px}
+.ir-config-timing-input input{width:80px;padding:8px 10px;border-radius:var(--ir-radius);border:1px solid var(--ir-border);font-family:var(--ir-mono);font-size:13px;color:var(--ir-text);background:var(--ir-bg-elevated);outline:none;text-align:right;-moz-appearance:textfield}
+.ir-config-timing-input input::-webkit-outer-spin-button,
+.ir-config-timing-input input::-webkit-inner-spin-button{margin:0;-webkit-appearance:none}
+.ir-config-timing-input input:focus{border-color:var(--ir-accent);box-shadow:0 0 0 1px rgba(201,96,10,0.15);background:#fff}
+.ir-config-unit{font-size:12px;color:var(--ir-text-dim)}
+.ir-config-help{font-size:12px;color:var(--ir-text-muted);margin-top:4px}
+.ir-config-summary{margin-top:8px;padding-top:8px;border-top:1px dashed var(--ir-border);display:flex;align-items:center;justify-content:space-between;font-size:13px}
+.ir-config-summary-label{color:var(--ir-text-muted)}
+
+.ir-config-preview{background:var(--ir-bg-card);border-radius:var(--ir-radius-lg);border:1px solid var(--ir-border);padding:16px 18px;box-shadow:var(--ir-shadow-sm);display:flex;flex-direction:column;gap:10px}
+.ir-preview-card{}
+.ir-preview-title{font-size:14px;font-weight:600;margin-bottom:8px}
+.ir-preview-stats{margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.ir-preview-row{display:flex;align-items:center;justify-content:space-between}
+.ir-preview-row-total{margin-top:4px;padding-top:6px;border-top:1px dashed var(--ir-border);font-weight:600}
+.ir-preview-row dt{color:var(--ir-text-muted)}
+.ir-preview-row dd{margin:0;font-family:var(--ir-mono);color:var(--ir-text)}
+.ir-preview-help{font-size:12px;color:var(--ir-text-dim);margin:4px 0 0}
+.ir-config-footer{margin-top:16px;display:flex;justify-content:flex-end;align-items:center;gap:12px}
+.ir-config-footer-note{font-size:12px;color:var(--ir-text-dim)}
+.ir-config-footer-ready .ir-btn-primary{box-shadow:0 0 0 1px rgba(201,96,10,0.35),0 10px 24px rgba(201,96,10,0.35);transform:translateY(-1px)}
+.ir-config-footer-ready .ir-btn-primary:hover{transform:translateY(-1px)}
+
 
 /* Tech check */
 .ir-techcheck{max-width:960px;margin:0 auto;width:100%}
@@ -356,6 +400,13 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
   .ir-school-detail{font-size:12px}
   .ir-home-features{gap:16px;flex-wrap:wrap;justify-content:center}
   .ir-feature{font-size:12px}
+  .ir-config{margin-top:28px}
+  .ir-config-steps{justify-content:flex-start;gap:6px}
+  .ir-config-grid{grid-template-columns:1fr;gap:16px}
+  .ir-config-footer{justify-content:stretch}
+  .ir-config-footer .ir-btn{width:100%;min-height:48px}
+  .ir-config-timing-row{align-items:flex-start;flex-direction:column}
+  .ir-config-timing-input input{width:100px}
   .ir-device-select{flex-direction:column}
   .ir-device-select select{min-height:44px}
   .ir-tc-actions{flex-direction:column;margin-top:12px}

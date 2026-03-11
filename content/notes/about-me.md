@@ -1,7 +1,5 @@
 for long-form writing, see [The Numismatica](https://ishita7077.substack.com/).
 
-# about me
-
 my name is ishita.
 
 i build at the intersection of crypto infrastructure and AI-native workflows.

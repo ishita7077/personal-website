@@ -39,12 +39,125 @@
           </div>
           <div class="ir-school-arrow">→</div>
         </div>
+        <div class="ir-school-card" id="schoolCardCustom" role="button" tabindex="0" title="Create a custom practice interview">
+          <div class="ir-school-info">
+            <div class="ir-school-name">Custom practice</div>
+            <div class="ir-school-detail">Your own questions · flexible timing</div>
+          </div>
+          <div class="ir-school-arrow">→</div>
+        </div>
         <div class="ir-home-features">
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Video recording</div>
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>Live transcription</div>
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>100% on-device</div>
         </div>
       </div>
+    </section>
+
+    <section class="ir-screen ir-config-screen" id="screen-custom">
+      <section class="ir-config" id="configPanel" aria-label="Configure custom practice interview">
+        <div class="ir-config-grid">
+          <div class="ir-config-main">
+            <div class="ir-config-questions">
+              <div class="ir-config-header-row">
+                <span class="ir-label"><span class="ir-config-step-num">1.</span> Questions</span>
+                <span class="ir-config-count" id="questionCountLabel">0 questions added</span>
+              </div>
+              <p class="ir-config-note">Questions are counted by line break — add one question per line.</p>
+              <textarea
+                id="questionsInput"
+                class="ir-config-textarea"
+                rows="9"
+                placeholder="Paste interview questions (one per line)"
+              ></textarea>
+              <div class="ir-config-examples">
+                <div class="ir-config-examples-label">Example:</div>
+                <ul class="ir-config-examples-list">
+                  <li>Tell me about your journey so far</li>
+                  <li>Why this school?</li>
+                  <li>Describe a leadership moment that defines you</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="ir-config-timing">
+              <div class="ir-config-timing-row">
+                <label class="ir-config-timing-label" for="prepTimeInput">Prep Time</label>
+                <div class="ir-config-timing-input">
+                  <input
+                    id="prepTimeInput"
+                    type="number"
+                    min="5"
+                    step="5"
+                    inputmode="numeric"
+                  />
+                  <span class="ir-config-unit">seconds</span>
+                </div>
+              </div>
+              <p class="ir-config-help">Time to think before recording starts</p>
+
+              <div class="ir-config-timing-row">
+                <label class="ir-config-timing-label" for="answerTimeInput">Answer Time</label>
+                <div class="ir-config-timing-input">
+                  <input
+                    id="answerTimeInput"
+                    type="number"
+                    min="1"
+                    max="10"
+                    step="1"
+                    inputmode="numeric"
+                  />
+                  <span class="ir-config-unit">minutes</span>
+                </div>
+              </div>
+              <p class="ir-config-help">Maximum time allowed for your answer</p>
+
+              <div class="ir-config-summary">
+                <span class="ir-config-summary-label">Estimated interview duration:</span>
+                <span id="estimatedDurationLabel">~0 minutes</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="ir-config-preview" aria-label="Interview preview">
+            <div class="ir-preview-card">
+              <div class="ir-preview-title">Interview Preview</div>
+              <dl class="ir-preview-stats">
+                <div class="ir-preview-row">
+                  <dt>Questions</dt>
+                  <dd id="previewQuestions">0</dd>
+                </div>
+                <div class="ir-preview-row">
+                  <dt>Prep Time</dt>
+                  <dd id="previewPrep">45 sec</dd>
+                </div>
+                <div class="ir-preview-row">
+                  <dt>Answer Time</dt>
+                  <dd id="previewAnswer">3 min</dd>
+                </div>
+                <div class="ir-preview-row ir-preview-row-total">
+                  <dt>Estimated total time</dt>
+                  <dd id="previewTotal">~0 minutes</dd>
+                </div>
+              </dl>
+            </div>
+            <p class="ir-preview-help">
+              Each question will appear with a prep timer followed by recording.
+            </p>
+          </aside>
+        </div>
+
+        <div class="ir-config-footer" id="configFooter">
+          <button
+            type="button"
+            class="ir-btn ir-btn-primary ir-btn-lg"
+            id="startPracticeBtn"
+          >
+            Start Practice Interview →
+          </button>
+          <span class="ir-config-footer-note" id="startNudge" aria-live="polite"></span>
+        </div>
+      </section>
     </section>
 
     <section class="ir-screen ir-resources" id="screen-resources">
