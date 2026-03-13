@@ -127,6 +127,12 @@
     if (resourcesBtn) {
       resourcesBtn.addEventListener('click', (e) => { e.preventDefault(); IR.handleResourcesClick(); });
     }
+    const aiStoriesNavBtn = document.getElementById('aiStoriesNavBtn');
+    if (aiStoriesNavBtn) {
+      aiStoriesNavBtn.addEventListener('click', () => {
+        IR.navigateTo('ai-stories');
+      });
+    }
     const resourcesBackBtn = document.getElementById('resourcesBackBtn');
     if (resourcesBackBtn) {
       resourcesBackBtn.addEventListener('click', () => {

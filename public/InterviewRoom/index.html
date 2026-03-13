@@ -15,11 +15,14 @@
   <div class="ir-app" id="app">
     <nav class="ir-nav">
       <a class="ir-logo" id="navLogo" role="button" tabindex="0" aria-label="Interview Room home">
-        <svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="8" stroke="#c9600a" stroke-width="2"/><path d="M12 10v12l10-6-10-6z" fill="#c9600a"/><path d="M26 8a18 18 0 0 1-20 18" stroke="#c9600a" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.4"/></svg>
+        <svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="8" stroke="#2563eb" stroke-width="2"/><path d="M12 10v12l10-6-10-6z" fill="#2563eb"/><path d="M26 8a18 18 0 0 1-20 18" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.4"/></svg>
         <span class="ir-logo-text">Interview <span>Room</span></span>
       </a>
       <div class="ir-nav-right">
         <a href="#" class="ir-btn ir-btn-ghost ir-btn-sm" id="resourcesBtn" title="Haas resources">Resources</a>
+        <button class="ir-btn ir-btn-ghost ir-btn-sm" id="aiStoriesNavBtn" type="button" title="Building Human Stories with AI">
+          Building Human Stories with AI
+        </button>
         <button class="ir-btn ir-btn-ghost ir-btn-sm ir-btn-help" id="guideBtn" aria-label="Help" title="View guide and shortcuts">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 115.12 2.13c-.57.52-1.12 1.1-1.12 1.87v.5"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
         </button>
@@ -57,6 +60,86 @@
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>100% on-device</div>
         </div>
       </div>
+
+    </section>
+
+    <section class="ir-screen ir-ai-stories-screen" id="screen-ai-stories">
+      <section class="ir-ai-stories" id="aiStories">
+        <header class="ir-ai-stories-header">
+          <h2 class="ir-h2">Building Human Stories with AI</h2>
+          <p class="ir-ai-stories-intro">
+            While prepping for my Berkeley Haas MBA interview, I was stuck. Generic advice (STAR method videos, random mock questions) wasn't enough. I needed help crafting strong, authentic stories and tight answers-not just timed practice. Paying $300–500/hr for a coach? No thanks.
+          </p>
+          <p class="ir-ai-stories-intro">
+            Then I found this Claude-based interview coach from Lenny’s Newsletter (I’ve followed the pod/newsletter for years). Noam Segal researched 30+ tech professionals, extracted what actually works, and encoded it into a plug-and-play Claude Code project.
+          </p>
+          <p class="ir-ai-stories-intro">
+            Solid evidence base + professional coaching techniques baked in. I set it up-and it was game-changing. I used it to build, refine, and polish every single one of my behavioral stories and answers before I ever hit record on a mock or the real interview.
+          </p>
+          <p class="ir-ai-stories-intro">
+            Here's how it works:
+          </p>
+        </header>
+
+        <div class="ir-ai-stories-steps">
+          <article class="ir-ai-step-card">
+            <div class="ir-ai-step-label">Step 1</div>
+            <h3 class="ir-ai-step-title">Download the Claude interview coach</h3>
+            <p class="ir-ai-step-body">
+              Grab the Claude Code skill from GitHub. It acts like a structured interview answer coach.
+            </p>
+            <a
+              href="https://github.com/noamseg/interview-coach-skill"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ir-btn ir-btn-primary ir-btn-sm ir-ai-step-cta"
+            >
+              Get the Interview Coach
+            </a>
+          </article>
+
+          <article class="ir-ai-step-card">
+            <div class="ir-ai-step-label">Step 2</div>
+            <h3 class="ir-ai-step-title">Set up Claude Code</h3>
+            <p class="ir-ai-step-body">
+              Open Claude → <span class="ir-mono">Code</span> tab → load the project folder → run <code>kickoff</code>.
+            </p>
+          </article>
+
+          <article class="ir-ai-step-card">
+            <div class="ir-ai-step-label">Step 3</div>
+            <h3 class="ir-ai-step-title">Build and refine your stories</h3>
+            <p class="ir-ai-step-body">
+              Use <code>stories</code> to craft answers and <code>analyze</code> to tighten clarity, structure, and impact.
+            </p>
+          </article>
+        </div>
+
+        <aside class="ir-ai-stories-reference">
+          <p class="ir-ai-ref-text">
+            Want the full guide? This skill was created by Noam Segal for Lenny's Newsletter based on research with 30+ tech professionals.
+            It includes mock interviews, answer scoring, company-specific prep, and post-interview analysis.
+          </p>
+          <div class="ir-ai-ref-links">
+            <a
+              href="https://www.lennysnewsletter.com/p/how-to-use-ai-in-your-next-job-interview"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ir-ai-ref-link"
+            >
+              Read the full article
+            </a>
+            <a
+              href="https://github.com/noamseg/interview-coach-skill"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ir-ai-ref-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </aside>
+      </section>
     </section>
 
     <section class="ir-screen ir-config-screen" id="screen-custom">
