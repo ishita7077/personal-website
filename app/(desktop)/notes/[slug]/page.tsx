@@ -17,6 +17,7 @@ const getNote = cache(async (slug: string) => {
   if (!supabase) {
     logger.warn("notes/[slug]/getNote", "No Supabase client; using fallback note", { slug });
     const fallback = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === slug);
+    if (fallback) logger.info("notes/[slug]/getNote", "Returning fallback note", { slug, source: "fallback" });
     return fallback || null;
   }
   try {
@@ -25,12 +26,16 @@ const getNote = cache(async (slug: string) => {
       .single()) as { data: NoteType | null; error: unknown };
     if (error) {
       logger.error("notes/[slug]/getNote", "select_note RPC failed", { slug, error });
-      return null;
+      const fallback = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === slug);
+      if (fallback) logger.info("notes/[slug]/getNote", "Using fallback after RPC error", { slug });
+      return fallback || null;
     }
+    if (note) logger.info("notes/[slug]/getNote", "Returning note from Supabase", { slug, source: "supabase" });
     return note;
   } catch (e) {
     logger.error("notes/[slug]/getNote", "getNote threw", { slug, error: e });
-    return null;
+    const fallback = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === slug);
+    return fallback || null;
   }
 });
 
@@ -103,6 +108,7 @@ export default async function NotePage({ params }: PageProps) {
       return redirect("/notes/error");
     }
 
+    logger.info("notes/[slug]/page", "Rendering note page", { cleanSlug, noteId: note.id });
     return <NotesDesktopPage slug={cleanSlug} />;
   } catch (e) {
     logger.error("notes/[slug]/page", "NotePage threw", { cleanSlug, error: e });

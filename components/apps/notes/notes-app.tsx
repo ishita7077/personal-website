@@ -5,6 +5,8 @@ import { createClient } from "@/utils/supabase/client";
 import { Note as NoteType } from "@/lib/notes/types";
 import { FALLBACK_PUBLIC_NOTES } from "@/lib/notes/fallback-public-notes";
 import { logger } from "@/lib/logger";
+
+const ABOUT_ME_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "about-me") ?? null;
 import { SessionNotesProvider } from "@/app/(desktop)/notes/session-notes";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useWindowFocus } from "@/lib/window-focus-context";
@@ -73,30 +75,39 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
         const defaultNote = data.find((n: NoteType) => n.slug === targetSlug);
 
         if (defaultNote && !selectedNote) {
-          // Note found in public notes - fetch full data
-          const { data: fullNote } = await supabase
-            .rpc("select_note", { note_slug_arg: defaultNote.slug })
-            .single();
-          if (fullNote) {
-            setSelectedNote(fullNote as NoteType);
+          // about-me: always use fallback so content/notes/about-me.md is source of truth
+          if (defaultNote.slug === "about-me" && ABOUT_ME_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for about-me (source of truth)");
+            setSelectedNote(ABOUT_ME_FALLBACK);
+          } else {
+            const { data: fullNote } = await supabase
+              .rpc("select_note", { note_slug_arg: defaultNote.slug })
+              .single();
+            if (fullNote) {
+              setSelectedNote(fullNote as NoteType);
+            }
           }
         } else if (!defaultNote && initialSlug && !selectedNote) {
-          // Note not in public notes - try to fetch directly (may be a private/session note)
-          const { data: fullNote } = await supabase
-            .rpc("select_note", { note_slug_arg: initialSlug })
-            .single();
-          if (fullNote) {
-            setSelectedNote(fullNote as NoteType);
+          if (initialSlug === "about-me" && ABOUT_ME_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for about-me (direct slug)");
+            setSelectedNote(ABOUT_ME_FALLBACK);
           } else {
-            // Note doesn't exist - fall back to first public note and update URL
-            const fallbackNote = data[0];
-            if (fallbackNote) {
-              const { data: fallbackFullNote } = await supabase
-                .rpc("select_note", { note_slug_arg: fallbackNote.slug })
-                .single();
-              if (fallbackFullNote) {
-                setSelectedNote(fallbackFullNote as NoteType);
-                window.history.replaceState(null, "", `/notes/${fallbackNote.slug}`);
+            const { data: fullNote } = await supabase
+              .rpc("select_note", { note_slug_arg: initialSlug })
+              .single();
+            if (fullNote) {
+              setSelectedNote(fullNote as NoteType);
+            } else {
+              // Note doesn't exist - fall back to first public note and update URL
+              const fallbackNote = data[0];
+              if (fallbackNote) {
+                const { data: fallbackFullNote } = await supabase
+                  .rpc("select_note", { note_slug_arg: fallbackNote.slug })
+                  .single();
+                if (fallbackFullNote) {
+                  setSelectedNote(fallbackFullNote as NoteType);
+                  window.history.replaceState(null, "", `/notes/${fallbackNote.slug}`);
+                }
               }
             }
           }
@@ -127,7 +138,13 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
         if (isMobile) setShowSidebar(false);
         return;
       }
-      // Fetch full note data using RPC
+      if (note.slug === "about-me" && ABOUT_ME_FALLBACK) {
+        logger.info("notes-app/handleNoteSelect", "Using fallback for about-me");
+        setSelectedNote(ABOUT_ME_FALLBACK);
+        window.history.replaceState(null, "", `/notes/${note.slug}`);
+        if (isMobile) setShowSidebar(false);
+        return;
+      }
       const { data: fullNote } = await supabase
         .rpc("select_note", { note_slug_arg: note.slug })
         .single();
