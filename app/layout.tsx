@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
@@ -69,6 +70,7 @@ export default function RootLayout({
             {children}
           </SystemSettingsProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
