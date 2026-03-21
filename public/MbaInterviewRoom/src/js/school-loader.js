@@ -24,17 +24,6 @@
     insead: "#0072a8",
   };
 
-  /** Listing copy for the Berkeley Haas card (not included in `/api/mba-interview-room/schools`). */
-  const HAAS_LINK_LISTING = {
-    interview_style_summary:
-      "Invitation-only; prerecorded video and/or live remote options.",
-    unique_hook:
-      "Defining Leadership Principles as cultural lens; dynamic interview options per official interview page (step4).",
-    interviewer_profile: "Student or alum for live remote",
-    practice_mechanics:
-      "Up to 6 prompts · 45s prep / 3 min answer · 7 rotating six-question sets",
-  };
-
   function apiOrigin() {
     if (typeof window === "undefined" || !window.location) return "";
     return window.location.origin;
@@ -48,29 +37,30 @@
     if (official.length) {
       sections.push({
         id: "official",
-        title: "School-affiliated links",
+        title: "Official & programme pages",
         blurb:
-          "From the handoff secondary-sources pack (official and school-affiliated URLs).",
+          "Straight from the school’s own sites—admissions, interviews, culture, and events. Best source of truth for format and expectations.",
         items: official.map(function (url) {
-          return {
-            name: url.replace(/^https?:\/\//, "").split("/")[0] || "Link",
-            topic: url,
-            url: url,
-          };
+          const inf =
+            IR.inferResourceLinkPresentation && IR.inferResourceLinkPresentation(url);
+          const title = (inf && inf.title) || "Resource";
+          const desc = (inf && inf.description) || "";
+          return { name: title, topic: desc, url: url };
         }),
       });
     }
     if (community.length) {
       sections.push({
         id: "community",
-        title: "Community & applicant texture",
-        blurb: "From the handoff community pack — patterns and timing, not guarantees.",
+        title: "Applicant reports & forums",
+        blurb:
+          "Third-party write-ups and discussions. Great for real-world colour—never a substitute for the official pages above.",
         items: community.map(function (url) {
-          return {
-            name: url.replace(/^https?:\/\//, "").split("/")[0] || "Link",
-            topic: url,
-            url: url,
-          };
+          const inf =
+            IR.inferResourceLinkPresentation && IR.inferResourceLinkPresentation(url);
+          const title = (inf && inf.title) || "Resource";
+          const desc = (inf && inf.description) || "";
+          return { name: title, topic: desc, url: url };
         }),
       });
     }
@@ -85,29 +75,14 @@
 
   function listingCardBody(name, listing) {
     const L = listing || {};
-    const style = L.interview_style_summary;
-    const hook = L.unique_hook;
-    const mech = L.practice_mechanics;
-    const who = L.interviewer_profile;
+    const tagline = (L.interview_style_summary || L.unique_hook || "").trim();
     let html =
       '<div class="ir-school-info">' +
       '<div class="ir-school-name">' +
       escapeHtml(name) +
       "</div>";
-    if (style) {
-      html += '<p class="ir-school-style">' + escapeHtml(style) + "</p>";
-    }
-    if (hook) {
-      html += '<p class="ir-school-hook">' + escapeHtml(hook) + "</p>";
-    }
-    if (mech) {
-      html += '<p class="ir-school-practice">' + escapeHtml(mech) + "</p>";
-    }
-    if (who) {
-      html +=
-        '<p class="ir-school-who">' +
-        escapeHtml("Likely interviewer: " + who) +
-        "</p>";
+    if (tagline) {
+      html += '<p class="ir-school-tagline">' + escapeHtml(tagline) + "</p>";
     }
     html += "</div>" + '<div class="ir-school-arrow" aria-hidden="true">→</div>';
     return html;
@@ -167,28 +142,25 @@
 
   IR.fetchSchoolsRegistry = async function () {
     if (IR.SCHOOLS_LIST) return IR.SCHOOLS_LIST;
-    const res = await fetch(apiOrigin() + API_SCHOOLS);
-    if (!res.ok) throw new Error("Could not load schools list");
-    const data = await res.json();
-    IR.SCHOOLS_LIST = (data.schools || []).slice();
-    return IR.SCHOOLS_LIST;
+    if (IR._schoolsRegistryInflight) return IR._schoolsRegistryInflight;
+    IR._schoolsRegistryInflight = (async function () {
+      try {
+        const res = await fetch(apiOrigin() + API_SCHOOLS);
+        if (!res.ok) throw new Error("Could not load schools list");
+        const data = await res.json();
+        IR.SCHOOLS_LIST = (data.schools || []).slice();
+        return IR.SCHOOLS_LIST;
+      } finally {
+        IR._schoolsRegistryInflight = null;
+      }
+    })();
+    return IR._schoolsRegistryInflight;
   };
 
   IR.renderSchoolCards = function () {
     const mount = document.getElementById("schoolCardsMount");
     if (!mount) return;
     mount.innerHTML = "";
-
-    const haas = document.createElement("a");
-    haas.className = "ir-school-card ir-school-card-link";
-    haas.href = "/InterviewRoom";
-    haas.target = "_top";
-    haas.rel = "noopener noreferrer";
-    haas.title = "UC Berkeley Haas — practice at /InterviewRoom";
-    haas.innerHTML = listingCardBody("UC Berkeley Haas", HAAS_LINK_LISTING);
-    haas.classList.add("ir-school-card-haas");
-    applyCardAccent(haas, "berkeley_haas");
-    mount.appendChild(haas);
 
     const list = IR.SCHOOLS_LIST || [];
     list.forEach(function (s) {
@@ -199,10 +171,8 @@
       card.dataset.schoolId = s.id;
       const L = s.listing || {};
       card.title =
-        "Start " +
-        s.display_name +
-        " practice — " +
-        (L.interview_style_summary || "").slice(0, 120);
+        "Start " + s.display_name + " practice" +
+        (L.interview_style_summary ? ". " + L.interview_style_summary.slice(0, 140) : "");
       card.innerHTML = listingCardBody(s.display_name, L);
       applyCardAccent(card, s.id);
       function go() {

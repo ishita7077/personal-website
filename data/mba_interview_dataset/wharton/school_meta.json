@@ -1,8 +1,8 @@
 {
   "school_id": "wharton",
   "display_name": "The Wharton School",
-  "validated_interview_format": "Team Based Discussion ~35 minutes + ~10 minute 1:1 reflection.",
-  "unique_elements": "Group exercise evaluating collaboration, communication, leadership in a team setting.",
+  "validated_interview_format": "Team Based Discussion (~35 minutes) plus a short one-on-one with admissions.",
+  "unique_elements": "This tool cannot host a live group TBD; sessions still mirror phase order—TBD debrief, one-to-one, then behavioural prompts—via solo video answers.",
   "interviewer_type": "Admissions team member for 1:1 segment",
   "community_texture": "Community threads emphasize collaborative behavior over winning your own idea (handoff CSV).",
   "handoff_paths": {

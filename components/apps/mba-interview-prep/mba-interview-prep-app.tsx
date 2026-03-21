@@ -208,7 +208,7 @@ export function MbaInterviewPrepApp() {
           School-specific structure from the handoff packs in{" "}
           <code className="text-xs bg-muted px-1 py-0.5 rounded">mba_final_handoff_static/</code>.
           For timed video practice, use the{" "}
-          <Link href="/mba-interview-room" className="text-[#c9600a] hover:underline">
+          <Link href="/mba-interview-room" className="text-blue-600 hover:underline">
             MBA Interview Room
           </Link>
           .

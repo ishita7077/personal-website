@@ -190,11 +190,11 @@
           ds.classList.remove('ir-visible');
           this._setPermIcon('denied');
           document.getElementById('permTitle').textContent = 'Camera and microphone access was denied';
-          document.getElementById('permDesc').textContent = 'Interview Room needs access to record your practice session. All recordings stay on your device.';
+          document.getElementById('permDesc').textContent = 'MBA Interview Room needs access to record your practice session. All recordings stay on your device.';
           const stepsEl = document.getElementById('permSteps');
           if (stepsEl) {
             stepsEl.innerHTML = IR.isMobile && IR.isMobile()
-              ? '<strong>To allow access:</strong><br>Open your browser or device Settings, find this site (or Camera/Microphone permissions), and turn on Camera and Microphone for Interview Room.'
+              ? '<strong>To allow access:</strong><br>Open your browser or device Settings, find this site (or Camera/Microphone permissions), and turn on Camera and Microphone for this site.'
               : 'To allow access: click the lock or camera icon in your browser\'s address bar, then set Camera and Microphone to "Allow".';
           }
           document.getElementById('retryPermBtn').textContent = 'Retry camera & microphone';
@@ -293,22 +293,66 @@
       const brief = document.getElementById('programmeBrief');
       const lead = document.getElementById('programmeBriefLead');
       const body = document.getElementById('programmeBriefBody');
+      const mech = document.getElementById('programmeBriefMechanics');
       const foot = document.getElementById('programmeBriefFoot');
       if (brief && lead && body && foot) {
         if (isCustom) {
           brief.classList.add('ir-hidden');
+          if (mech) {
+            mech.textContent = '';
+            mech.classList.add('ir-hidden');
+          }
         } else {
           const meta = IR.state && IR.state.schoolMeta;
           const sid = IR.state && IR.state.selectedSchool;
-          if (meta && sid === id && meta.validated_interview_format) {
-            lead.textContent = meta.validated_interview_format;
-            body.textContent = meta.unique_elements || '';
-            foot.textContent = meta.interviewer_type
-              ? `Who you might see: ${meta.interviewer_type}`
-              : '';
-            brief.classList.remove('ir-hidden');
+          const regSchool = (IR.SCHOOLS_LIST || []).find((s) => s.id === id);
+          const listing = regSchool && regSchool.listing;
+          if (meta && sid === id) {
+            const leadText = (meta.validated_interview_format || (listing && listing.interview_style_summary) || '').trim();
+            const bodyText = (meta.unique_elements || (listing && listing.unique_hook) || '').trim();
+            if (leadText) {
+              lead.textContent = leadText;
+              lead.classList.remove('ir-hidden');
+            } else {
+              lead.textContent = '';
+              lead.classList.add('ir-hidden');
+            }
+            if (bodyText) {
+              body.textContent = bodyText;
+              body.classList.remove('ir-hidden');
+            } else {
+              body.textContent = '';
+              body.classList.add('ir-hidden');
+            }
+            const who =
+              meta.interviewer_type ||
+              (listing && listing.interviewer_profile ? listing.interviewer_profile : '');
+            if (who) {
+              foot.textContent = 'Who you might see: ' + who;
+              foot.classList.remove('ir-hidden');
+            } else {
+              foot.textContent = '';
+              foot.classList.add('ir-hidden');
+            }
+            if (mech && listing && listing.practice_mechanics) {
+              mech.textContent = listing.practice_mechanics;
+              mech.classList.remove('ir-hidden');
+            } else if (mech) {
+              mech.textContent = '';
+              mech.classList.add('ir-hidden');
+            }
+            const showBrief =
+              !lead.classList.contains('ir-hidden') ||
+              !body.classList.contains('ir-hidden') ||
+              (mech && !mech.classList.contains('ir-hidden')) ||
+              !foot.classList.contains('ir-hidden');
+            brief.classList.toggle('ir-hidden', !showBrief);
           } else {
             brief.classList.add('ir-hidden');
+            if (mech) {
+              mech.textContent = '';
+              mech.classList.add('ir-hidden');
+            }
           }
         }
       }
@@ -352,20 +396,50 @@
       });
     },
 
+    humanizePromptKind(q) {
+      if (!q || (IR.state && IR.state.customMode)) return '';
+      const ph = String(q.interview_phase || '');
+      const qt = String(q.question_type || '');
+      const byPhase = {
+        live_behavioral: 'Behavioural',
+        video: 'Short video',
+        kira_video: 'Timed video',
+        kira_written: 'Written',
+        alumni_live: 'Live interview',
+        live_or_video: 'Prompt',
+        post_interview_reflection: 'Written reflection',
+        pre_interview_written: 'Written exercise',
+        live_file_aware: 'Application-aware interview',
+        tbd_debrief: 'Team discussion debrief',
+        one_on_one: 'One-to-one'
+      };
+      const byType = {
+        behavioral: 'Behavioural',
+        timed_video: 'Timed video',
+        written_timed: 'Written',
+        written_reflection: 'Written',
+        data_task: 'Written',
+        team_exercise: 'Team-style',
+        reflection: 'Reflection',
+        goals: 'Goals'
+      };
+      const a = byPhase[ph] || (ph ? ph.replace(/_/g, ' ') : '');
+      const b = byType[qt] || (qt ? qt.replace(/_/g, ' ') : '');
+      if (a && b && a.toLowerCase() !== b.toLowerCase()) return `${a} · ${b}`;
+      return a || b || '';
+    },
+
     updateSessionUI() {
       const q = IR.state.sessionQuestions[IR.state.currentQuestion];
       const t = IR.state.sessionQuestions.length;
+      const written = q && q.responseMode === 'written';
       document.getElementById('sessionQLabel').textContent = `Q${IR.state.currentQuestion + 1} / ${t}`;
       document.getElementById('questionText').textContent = q ? q.text : '';
       const phaseEl = document.getElementById('questionPhase');
       if (phaseEl) {
-        if (q && (q.interview_phase || q.question_type) && !(IR.state && IR.state.customMode)) {
-          const parts = [];
-          if (q.interview_phase) parts.push(String(q.interview_phase).replace(/_/g, ' '));
-          if (q.question_type) parts.push(String(q.question_type).replace(/_/g, ' '));
-          phaseEl.textContent = parts
-            .map((s) => s.replace(/\b\w/g, (c) => c.toUpperCase()))
-            .join(' · ');
+        const line = this.humanizePromptKind(q);
+        if (line) {
+          phaseEl.textContent = line;
           phaseEl.hidden = false;
         } else {
           phaseEl.textContent = '';
@@ -373,20 +447,32 @@
         }
       }
       document.getElementById('questionCard').dataset.phase = IR.state.phase;
+      document.getElementById('questionCard').dataset.response = written ? 'written' : 'video';
       const pl = document.getElementById('phaseLabel');
       const sessionMedia = document.getElementById('sessionMedia');
       const liveTranscript = document.getElementById('liveTranscript');
       const recIndicator = document.getElementById('recIndicator');
       const camPreview = document.getElementById('camPreviewSmall');
       const skipBtn = document.getElementById('skipBtn');
+      const writtenWrap = document.getElementById('sessionWrittenWrap');
       if (IR.state.phase === 'prep') {
-        pl.textContent = 'PREPARATION';
+        pl.textContent = written ? 'GET READY' : 'PREPARATION';
         pl.className = 'ir-phase-label prep';
         sessionMedia.classList.remove('ir-visible');
         liveTranscript.classList.remove('ir-visible');
         recIndicator.classList.remove('ir-visible');
         camPreview.classList.remove('recording');
-        skipBtn.textContent = 'Skip to answer →';
+        if (writtenWrap) writtenWrap.classList.add('ir-hidden');
+        skipBtn.textContent = written ? 'Start writing →' : 'Skip to answer →';
+      } else if (written) {
+        pl.textContent = 'WRITE YOUR ANSWER';
+        pl.className = 'ir-phase-label answer ir-phase-written';
+        sessionMedia.classList.remove('ir-visible');
+        liveTranscript.classList.remove('ir-visible');
+        recIndicator.classList.remove('ir-visible');
+        camPreview.classList.remove('recording');
+        if (writtenWrap) writtenWrap.classList.remove('ir-hidden');
+        skipBtn.textContent = 'Submit →';
       } else {
         pl.textContent = 'ANSWER — SPEAK NOW';
         pl.className = 'ir-phase-label answer';
@@ -394,6 +480,7 @@
         liveTranscript.classList.add('ir-visible');
         recIndicator.classList.add('ir-visible');
         camPreview.classList.add('recording');
+        if (writtenWrap) writtenWrap.classList.add('ir-hidden');
         skipBtn.textContent = 'Submit answer →';
       }
       this.updateProgress();
@@ -442,8 +529,7 @@
           wrap.className = 'ir-waiting-programme-inner';
           const lab = document.createElement('span');
           lab.className = 'ir-label';
-          lab.textContent =
-            `${IR.state.schoolDisplayName.toUpperCase()} — REAL FORMAT (HANDOFF)`;
+          lab.textContent = IR.state.schoolDisplayName.toUpperCase();
           const p = document.createElement('p');
           p.className = 'ir-waiting-programme-text';
           p.textContent = m.validated_interview_format || '';
@@ -496,7 +582,7 @@
         if (!anyDone) {
           btn.title = 'Complete at least one question first';
         } else if (!allReady) {
-          btn.title = 'Preparing final transcripts. This will open once notes are ready.';
+          btn.title = 'Finishing text from your recordings. Review opens when it’s ready.';
         } else {
           btn.title = 'View all your responses';
         }
@@ -506,7 +592,7 @@
         if (!anyDone) {
           nudge.textContent = 'Click a question to begin';
         } else if (!allReady) {
-          nudge.textContent = 'Preparing final transcripts locally…';
+          nudge.textContent = 'Finishing text from your recordings…';
         } else {
           nudge.textContent = doneCount === qs.length
             ? 'All done — you can finish and review.'
@@ -517,6 +603,8 @@
 
     buildTranscriptViews(text, index) {
       const status = (IR.state.transcriptionStatus || [])[index];
+      const sq = IR.state.sessionQuestions && IR.state.sessionQuestions[index];
+      const isWritten = sq && sq.responseMode === 'written';
       const isFailed = status === (IR.TRANSCRIPTION_STATUS && IR.TRANSCRIPTION_STATUS.FAILED);
       const isPending = status === (IR.TRANSCRIPTION_STATUS && IR.TRANSCRIPTION_STATUS.PENDING) ||
         status === (IR.TRANSCRIPTION_STATUS && IR.TRANSCRIPTION_STATUS.TRANSCRIBING);
@@ -524,8 +612,10 @@
         ? ((IR.state.transcriptionError && IR.state.transcriptionError[index]) ||
           'Transcription could not be generated. Your recording was saved — you can download it. For best results use Chrome or Edge on a desktop.')
         : isPending
-          ? 'Preparing transcript…'
-          : 'No transcript available.';
+          ? 'Preparing text…'
+          : isWritten
+            ? 'No text submitted.'
+            : 'No text yet.';
       const enhanced = IR.state.transcriptEnhanced && IR.state.transcriptEnhanced[index];
 
       const container = document.createElement('div');
@@ -581,20 +671,20 @@
         const qualityStr = typeof tq.quality === 'string' ? tq.quality : String(tq.quality);
         const tqLine = document.createElement('p');
         tqLine.className = 'ir-ai-review-meta';
-        tqLine.textContent = 'Transcript quality: ' + qualityStr;
+        tqLine.textContent = 'Answer text quality: ' + qualityStr;
         aiSection.appendChild(tqLine);
       }
 
       const note = document.createElement('p');
       note.className = 'ir-ai-review-meta';
-      note.textContent = 'AI feedback is generated with OpenAI using only your transcript (no video or audio).';
+      note.textContent = 'Optional suggestions use only your written answer text—not video or audio.';
       aiSection.appendChild(note);
 
       // If we have no transcript, just explain why there is no AI feedback.
       if (typeof transcript !== 'string' || !transcript.trim()) {
         const p = document.createElement('p');
         p.className = 'ir-ai-review-status';
-        p.textContent = 'No transcript available for this answer, so AI feedback is not available.';
+        p.textContent = 'There’s no text for this answer yet, so suggestions aren’t available.';
         aiSection.appendChild(p);
         return aiSection;
       }
@@ -605,12 +695,12 @@
       if (enhStatus === 'loading') {
         const p = document.createElement('p');
         p.className = 'ir-ai-review-status';
-        p.textContent = 'Generating AI feedback…';
+        p.textContent = 'Generating suggestions…';
         enhWrap.appendChild(p);
       } else if (enhStatus === 'failed') {
         const p = document.createElement('p');
         p.className = 'ir-ai-review-status';
-        p.textContent = 'AI feedback failed. You can try again.';
+        p.textContent = 'Suggestions couldn’t be generated. You can try again.';
         enhWrap.appendChild(p);
         const retryBtn = document.createElement('button');
         retryBtn.type = 'button';
@@ -686,15 +776,15 @@
       } else {
         const p = document.createElement('p');
         p.className = 'ir-ai-review-status';
-        p.textContent = 'No AI feedback generated yet for this answer.';
+        p.textContent = 'No suggestions yet for this answer.';
         enhWrap.appendChild(p);
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'ir-btn ir-btn-ghost ir-btn-sm';
         btn.dataset.action = 'enhanced-feedback';
         btn.dataset.index = String(i);
-        btn.textContent = 'Generate AI feedback';
-        btn.title = 'Send this answer\'s transcript to OpenAI for summary and suggestions (optional)';
+        btn.textContent = 'Get suggestions';
+        btn.title = 'Send this answer’s text for optional strengths and improvements';
         enhWrap.appendChild(btn);
       }
 
@@ -904,10 +994,15 @@
             video.playsInline = true;
             video.src = url;
             body.appendChild(video);
+          } else if (q && q.responseMode === 'written') {
+            /* Answer text lives under NOTES only — avoids duplicate empty states */
           } else {
+            const pend = (IR.state.transcriptionStatus || [])[i];
+            const pending =
+              pend === IR.TRANSCRIPTION_STATUS.PENDING || pend === IR.TRANSCRIPTION_STATUS.TRANSCRIBING;
             const p = document.createElement('p');
             p.className = 'ir-review-skipped-msg';
-            p.textContent = 'No recording.';
+            p.textContent = pending ? 'Preparing text from recording…' : 'No recording.';
             body.appendChild(p);
           }
         }
@@ -974,8 +1069,8 @@
         btnC.className = 'ir-btn ir-btn-ghost ir-btn-sm ir-btn-icon';
         btnC.dataset.action = 'copy-transcript';
         btnC.dataset.index = String(i);
-        btnC.title = 'Copy this transcript';
-        btnC.innerHTML = '<span class="ir-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span> Copy transcript';
+        btnC.title = 'Copy this answer as text';
+        btnC.innerHTML = '<span class="ir-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span> Copy text';
         actions.appendChild(btnC);
         body.appendChild(actions);
         card.appendChild(body);
@@ -1001,7 +1096,7 @@
         let statusText = '';
         if (summaryStatus === 'running') statusText = 'Generating locally…';
         else if (summaryStatus === 'ready') statusText = 'Ready';
-        else if (summaryStatus === 'unavailable') statusText = 'Local AI unavailable — transcripts only';
+        else if (summaryStatus === 'unavailable') statusText = 'On-device summary off — text notes only';
         else if (summaryStatus === 'failed') statusText = 'Summary failed — see per-answer reviews';
         else if (summaryStatus === 'skipped') statusText = 'Skipped (no valid reviews)';
         status.textContent = statusText;
@@ -1123,7 +1218,7 @@
       this.updateSessionSummaryCard();
     },
 
-    /** Session summary card — OpenAI-only (no local model). */
+    /** Session summary card — optional cloud summary when enabled. */
     updateSessionSummaryCard() {
       if (IR.state.screen !== 'review') return;
       const c = document.getElementById('reviewCards');
@@ -1163,7 +1258,7 @@
         if (enhStatus === 'loading') {
           const p = document.createElement('p');
           p.className = 'ir-ai-review-status';
-          p.textContent = 'Sending transcripts to OpenAI for a deeper summary…';
+          p.textContent = 'Building a full-session summary from your answers…';
           wrap.appendChild(p);
         } else if (enhStatus === 'failed') {
           const p = document.createElement('p');
@@ -1269,7 +1364,7 @@
           btn.className = 'ir-btn ir-btn-ghost ir-btn-sm';
           btn.dataset.action = 'enhanced-session-summary';
           btn.textContent = 'Generate summary';
-          btn.title = 'Send your transcripts to OpenAI for a deeper session summary (optional)';
+          btn.title = 'Send your answer text for an optional full-session summary';
           wrap.appendChild(btn);
         }
       } else {
@@ -1277,33 +1372,154 @@
       }
     },
 
-    renderResources() {
+    async renderResources() {
       const list = document.getElementById('resourcesList');
       if (!list) return;
+      try {
+        if (IR.fetchSchoolsRegistry) await IR.fetchSchoolsRegistry();
+      } catch (e) {
+        /* picker may stay empty */
+      }
+
       const titleEl = document.getElementById('resourcesTitle');
       const subEl = document.getElementById('resourcesSub');
-      const sid = IR.state && IR.state.selectedSchool;
       const dname = (IR.state && IR.state.schoolDisplayName) || '';
-      if (titleEl) {
-        titleEl.textContent = dname ? dname + ' resources' : 'School resources';
-      }
-      if (subEl) {
-        if (dname) {
-          subEl.textContent =
-            'Handoff-sourced materials for ' +
-            dname +
-            ': answer framework (markdown), official/community URLs from step4/step5 packs, and question-level guidance in review.';
-        } else {
-          subEl.textContent =
-            'Select a programme on the home screen to load its answer framework and link lists from the dataset.';
-        }
-      }
+      const meta = IR.state && IR.state.schoolMeta;
       const fwMd = IR.state && IR.state.answerFrameworkMd;
       let sections = [];
       if (IR.state && IR.state.schoolResourceSections && IR.state.schoolResourceSections.length) {
         sections = IR.state.schoolResourceSections;
       }
+
+      function resourceDomain(url) {
+        try {
+          return new URL(url).hostname.replace(/^www\./i, '');
+        } catch (e) {
+          return '';
+        }
+      }
+
+      if (titleEl) {
+        titleEl.textContent = dname ? `${dname} — prep resources` : 'Interview prep resources';
+      }
+      if (subEl) {
+        if (dname) {
+          subEl.textContent =
+            'Official pages, trusted third-party notes, and a short planning guide for this programme. After you practice, use Review to see school-specific guidance for each question.';
+        } else {
+          subEl.textContent =
+            'Pick an MBA programme below to load its links and planning guide. You can open this page anytime from the top bar—no need to start a recording first.';
+        }
+      }
+
       list.innerHTML = '';
+
+      const schools = IR.SCHOOLS_LIST || [];
+      if (schools.length) {
+        const toolbar = document.createElement('div');
+        toolbar.className = 'ir-resources-toolbar';
+        const lab = document.createElement('span');
+        lab.className = 'ir-label';
+        lab.textContent = 'Programme';
+        toolbar.appendChild(lab);
+        const wrapSel = document.createElement('div');
+        wrapSel.className = 'ir-resources-select-wrap';
+        const sel = document.createElement('select');
+        sel.className = 'ir-resources-program-select';
+        sel.setAttribute('aria-label', 'Choose MBA programme for resources');
+        const opt0 = document.createElement('option');
+        opt0.value = '';
+        opt0.textContent = dname ? 'Switch to another programme…' : 'Choose a programme…';
+        sel.appendChild(opt0);
+        let picked = false;
+        const curId = IR.state && IR.state.selectedSchool;
+        schools.forEach((s) => {
+          const o = document.createElement('option');
+          o.value = s.id;
+          o.textContent = s.display_name;
+          if (curId && curId === s.id) {
+            o.selected = true;
+            picked = true;
+          }
+          sel.appendChild(o);
+        });
+        if (!picked) {
+          opt0.selected = true;
+        }
+        sel.addEventListener('change', () => {
+          const v = sel.value;
+          if (!v || !IR.loadResourcesProgram) return;
+          IR.loadResourcesProgram(v);
+        });
+        wrapSel.appendChild(sel);
+        toolbar.appendChild(wrapSel);
+        list.appendChild(toolbar);
+      }
+
+      if (!dname && schools.length) {
+        const pickIntro = document.createElement('p');
+        pickIntro.className = 'ir-resources-picker-intro ir-body';
+        pickIntro.textContent =
+          'Or jump straight in—tap a school to load its resource pack:';
+        list.appendChild(pickIntro);
+        const picker = document.createElement('div');
+        picker.className = 'ir-resources-picker-grid';
+        schools.forEach((s) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'ir-resources-picker-btn';
+          btn.textContent = s.display_name;
+          btn.addEventListener('click', () => {
+            if (IR.loadResourcesProgram) IR.loadResourcesProgram(s.id);
+          });
+          picker.appendChild(btn);
+        });
+        list.appendChild(picker);
+      }
+
+      if (dname && meta) {
+        const snap = document.createElement('section');
+        snap.className = 'ir-resources-snapshot';
+        const snapTitle = document.createElement('h2');
+        snapTitle.className = 'ir-h3';
+        snapTitle.textContent = 'Interview format snapshot';
+        snap.appendChild(snapTitle);
+        if (meta.validated_interview_format) {
+          const p = document.createElement('p');
+          p.className = 'ir-resources-snapshot-lead';
+          p.textContent = meta.validated_interview_format;
+          snap.appendChild(p);
+        }
+        if (meta.unique_elements) {
+          const sub = document.createElement('p');
+          sub.className = 'ir-resources-snapshot-sub';
+          const strong = document.createElement('strong');
+          strong.textContent = 'What makes it distinctive: ';
+          sub.appendChild(strong);
+          sub.appendChild(document.createTextNode(meta.unique_elements));
+          snap.appendChild(sub);
+        }
+        const curId = IR.state && IR.state.selectedSchool;
+        const reg = schools.find((s) => s.id === curId);
+        const whoLine =
+          meta.interviewer_type ||
+          (reg && reg.listing && reg.listing.interviewer_profile) ||
+          '';
+        if (whoLine) {
+          const who = document.createElement('p');
+          who.className = 'ir-resources-snapshot-who';
+          who.textContent = 'Who you might meet: ' + whoLine;
+          snap.appendChild(who);
+        }
+        if (reg && reg.listing && reg.listing.practice_mechanics) {
+          const pm = document.createElement('p');
+          pm.className = 'ir-resources-snapshot-mechanics';
+          pm.textContent = reg.listing.practice_mechanics;
+          snap.appendChild(pm);
+        }
+        list.appendChild(snap);
+      }
+
       sections.forEach((section) => {
         const sec = document.createElement('section');
         sec.className = 'ir-resource-section';
@@ -1323,52 +1539,78 @@
         const grid = document.createElement('div');
         grid.className = 'ir-resource-grid';
         (section.items || []).forEach((r) => {
-          const item = document.createElement('article');
-          item.className = 'ir-resource-item';
-          const name = document.createElement('div');
-          name.className = 'ir-resource-name';
-          const link = document.createElement('a');
-          link.href = r.url;
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
-          link.textContent = r.name;
-          name.appendChild(link);
-          const topic = document.createElement('p');
-          topic.className = 'ir-resource-topic';
-          topic.textContent = r.topic;
-          item.appendChild(name);
-          item.appendChild(topic);
+          const item = document.createElement('a');
+          item.className = 'ir-resource-item ir-resource-item-card';
+          item.href = r.url;
+          item.target = '_blank';
+          item.rel = 'noopener noreferrer';
+          const row = document.createElement('div');
+          row.className = 'ir-resource-item-top';
+          const linkTitle = document.createElement('span');
+          linkTitle.className = 'ir-resource-link-title';
+          linkTitle.textContent = r.name;
+          row.appendChild(linkTitle);
+          const chev = document.createElement('span');
+          chev.className = 'ir-resource-link-chev';
+          chev.setAttribute('aria-hidden', 'true');
+          chev.textContent = '↗';
+          row.appendChild(chev);
+          item.appendChild(row);
+          if (r.topic) {
+            const desc = document.createElement('p');
+            desc.className = 'ir-resource-item-desc';
+            desc.textContent = r.topic;
+            item.appendChild(desc);
+          }
+          const a11y = document.createElement('span');
+          a11y.className = 'sr-only';
+          a11y.textContent = ' Opens in a new tab.';
+          item.appendChild(a11y);
+          const foot = document.createElement('div');
+          foot.className = 'ir-resource-item-foot';
+          const dom = document.createElement('span');
+          dom.className = 'ir-resource-domain';
+          dom.textContent = resourceDomain(r.url);
+          foot.appendChild(dom);
+          item.appendChild(foot);
           grid.appendChild(item);
         });
         sec.appendChild(grid);
         list.appendChild(sec);
       });
-      if (fwMd) {
-        const fwSec = document.createElement('section');
-        fwSec.className = 'ir-resource-section';
-        const fwHead = document.createElement('div');
-        fwHead.className = 'ir-resource-section-header';
-        const fwTitle = document.createElement('h2');
-        fwTitle.className = 'ir-h3';
-        fwTitle.textContent = 'Answer framework (dataset)';
-        fwHead.appendChild(fwTitle);
-        const fwBlurb = document.createElement('p');
-        fwBlurb.className = 'ir-resource-blurb';
-        fwBlurb.textContent =
-          'Generated from `answer_framework.md` for this programme (structure, evidence taxonomy, handoff URLs).';
-        fwHead.appendChild(fwBlurb);
-        fwSec.appendChild(fwHead);
-        const pre = document.createElement('pre');
-        pre.className = 'ir-resource-framework-md';
-        pre.textContent = fwMd;
-        fwSec.appendChild(pre);
-        list.appendChild(fwSec);
+
+      if (fwMd && IR.frameworkMdToHtml) {
+        const html = IR.frameworkMdToHtml(fwMd);
+        if (html) {
+          const fwSec = document.createElement('section');
+          fwSec.className = 'ir-resource-section ir-resource-framework-section';
+          const fwHead = document.createElement('div');
+          fwHead.className = 'ir-resource-section-header';
+          const fwTitle = document.createElement('h2');
+          fwTitle.className = 'ir-h3';
+          fwTitle.textContent = 'Planning your answers';
+          fwHead.appendChild(fwTitle);
+          const fwBlurb = document.createElement('p');
+          fwBlurb.className = 'ir-resource-blurb';
+          fwBlurb.textContent =
+            'Which kinds of examples to have ready, plus simple habits that work in any interview. For your prep—not wording to repeat verbatim.';
+          fwHead.appendChild(fwBlurb);
+          fwSec.appendChild(fwHead);
+          const article = document.createElement('div');
+          article.className = 'ir-framework-article';
+          article.innerHTML = html;
+          fwSec.appendChild(article);
+          list.appendChild(fwSec);
+        }
       }
-      if (!sections.length && !fwMd) {
+
+      if (!dname && !sections.length && !fwMd) {
         const empty = document.createElement('p');
-        empty.className = 'ir-body';
+        empty.className = 'ir-body ir-resources-empty';
         empty.textContent =
-          'Choose a programme from the home screen first so resources and the framework can load from the server.';
+          schools.length === 0
+            ? 'Programme list could not be loaded. Refresh the page or open this app from /mba-interview-room on the live site.'
+            : 'Select a programme above to load links and the planning guide.';
         list.appendChild(empty);
       }
     }

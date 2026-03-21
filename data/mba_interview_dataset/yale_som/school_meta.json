@@ -1,8 +1,8 @@
 {
   "school_id": "yale_som",
   "display_name": "Yale School of Management",
-  "validated_interview_format": "Blind ~30 minute interview + separate video questions (two; ~60 seconds each in handoff).",
-  "unique_elements": "Video assesses communication; live interview resume-only.",
+  "validated_interview_format": "Short video prompts plus a longer blind-style interview.",
+  "unique_elements": "Video for communication; live interview is resume-only.",
   "interviewer_type": "Second-year student, recent alum, or admissions committee member",
   "community_texture": "Separate components for video vs blind live (handoff).",
   "handoff_paths": {

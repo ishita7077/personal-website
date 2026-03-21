@@ -9,7 +9,8 @@
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "typecheck": "next typegen && tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build",
+    "check": "npm run lint && npm run typecheck && npm run validate:mba-room && npm run build",
+    "validate:mba-room": "node scripts/validate-mba-interview-room.mjs",
     "build:mba-dataset": "node scripts/build-mba-dataset.mjs"
   },
   "dependencies": {

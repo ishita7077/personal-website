@@ -2064,7 +2064,7 @@
     {
       "id": "haas-video-S1-Q2",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] Why do you want an MBA at this point in your career?",
+      "text": "Why do you want an MBA at this point in your career?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2113,7 +2113,7 @@
     {
       "id": "haas-video-S2-Q2",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] Why Berkeley Haas specifically?",
+      "text": "Why Berkeley Haas specifically?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2162,7 +2162,7 @@
     {
       "id": "haas-video-S3-Q5",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] What clubs, initiatives, or activities would you engage with at Haas?",
+      "text": "What clubs, initiatives, or activities would you engage with at Haas?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2211,7 +2211,7 @@
     {
       "id": "haas-video-S4-Q1",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] Why do you believe now is the right time for you to pursue an MBA?",
+      "text": "Why do you believe now is the right time for you to pursue an MBA?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2260,7 +2260,7 @@
     {
       "id": "haas-video-S5-Q5",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] What do you want out of your MBA experience personally and professionally?",
+      "text": "What do you want out of your MBA experience personally and professionally?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2309,7 +2309,7 @@
     {
       "id": "haas-video-S6-Q4",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] What is one weakness you are actively working to improve?",
+      "text": "What is one weakness you are actively working to improve?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2358,7 +2358,7 @@
     {
       "id": "haas-video-S7-Q1",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] How did you decide on your current career path?",
+      "text": "How did you decide on your current career path?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [
@@ -2407,7 +2407,7 @@
     {
       "id": "haas-video-S7-Q5",
       "interview_phase": "prerecorded_video_simulation",
-      "text": "[Prerecorded video simulation — same practice content as live] What will you bring to your MBA classmates that they may not already have?",
+      "text": "What will you bring to your MBA classmates that they may not already have?",
       "question_type": "behavioral_or_school_fit",
       "high_probability": false,
       "evidence_types": [

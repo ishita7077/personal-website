@@ -24,7 +24,7 @@
       if (this.whisper.lastFailAt && now - this.whisper.lastFailAt < 5 * 60 * 1000) {
         return;
       }
-      IR.ui.setAiOverlay({ label: 'Loading transcription model…', progress: 0 });
+      IR.ui.setAiOverlay({ label: 'Preparing speech-to-text…', progress: 0 });
       this.whisper.initPromise = (async () => {
         try {
           const mod = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/transformers.min.js');
@@ -32,10 +32,10 @@
             progress_callback: ev => {
               if (ev.status === 'progress' && ev.loaded != null && ev.total != null && ev.total > 0) {
                 const pct = Math.round((ev.loaded / ev.total) * 100);
-                IR.ui.setAiOverlay({ label: 'Loading transcription model…', progress: pct });
+                IR.ui.setAiOverlay({ label: 'Preparing speech-to-text…', progress: pct });
               }
               if (ev.status === 'ready') {
-                IR.ui.setAiOverlay({ label: 'Transcription model ready', progress: 100 });
+                IR.ui.setAiOverlay({ label: 'Speech-to-text ready', progress: 100 });
                 setTimeout(() => IR.ui.setAiOverlay({ visible: false }), 1000);
               }
             }
@@ -48,7 +48,7 @@
           this.whisper.error = e;
           this.whisper.lastFailAt = Date.now();
           IR.ui.setAiOverlay({ visible: false });
-          IR.ui.toast('Could not load the transcription model. Notes will not be available for this session.', 'warning');
+          IR.ui.toast('Could not prepare speech-to-text. Your recordings still work; you can add notes manually.', 'warning');
         } finally {
           this.whisper.initPromise = null;
         }
@@ -65,7 +65,7 @@
       try {
         const wavBlob = await IR.convert.webmToWav(blob);
         wavUrl = URL.createObjectURL(wavBlob);
-        IR.ui.setAiOverlay({ label: 'Transcribing answer locally…', indeterminate: true, longRunning: true });
+        IR.ui.setAiOverlay({ label: 'Turning your answer into text…', indeterminate: true, longRunning: true });
         const out = await this.whisper.pipeline(wavUrl, {
           chunk_length_s: 30,
           return_timestamps: false
@@ -95,7 +95,7 @@
       if (this.review.lastFailAt && now - this.review.lastFailAt < 5 * 60 * 1000) {
         return;
       }
-      IR.ui.setAiOverlay({ label: 'Loading review model…', indeterminate: true });
+      IR.ui.setAiOverlay({ label: 'Loading review tools…', indeterminate: true });
       this.review.initPromise = (async () => {
         try {
           const mod = await import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/transformers.min.js');
@@ -114,7 +114,7 @@
           this.review.lastFailAt = Date.now();
           IR.ui.setAiOverlay({ visible: false });
           const msg = (e && e.message) ? e.message : String(e);
-          IR.ui.toast('Could not load the review model. ' + (msg.length > 50 ? msg.slice(0, 50) + '…' : msg), 'warning');
+          IR.ui.toast('Could not load on-device review tools. ' + (msg.length > 50 ? msg.slice(0, 50) + '…' : msg), 'warning');
         } finally {
           this.review.initPromise = null;
           IR.ui.setAiOverlay({ visible: false });

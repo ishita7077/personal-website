@@ -1,33 +1,28 @@
-# Repo audit — MBA interview surfaces
+# Repo map — MBA interview surfaces
 
 ## `/InterviewRoom`
 
-| Area | Location |
-|------|----------|
-| Route | `app/InterviewRoom/route.ts` → `public/InterviewRoom/` |
-| Content | `haas-data.js`, `config-haas.js`, Haas resources |
-| AI | `POST /api/interview-room/enhanced-feedback` |
+| Item | Location |
+|------|-----------|
+| Route | `app/InterviewRoom/[[...path]]/route.ts` → `public/InterviewRoom/index.html` |
+| Assets | `public/InterviewRoom/` (`<base href="/InterviewRoom/">`) |
+| AI (optional) | `POST /api/interview-room/enhanced-feedback` |
 
 ## `/mba-interview-room`
 
-| Area | Location |
-|------|----------|
-| Route | `app/mba-interview-room/route.ts` → `public/MbaInterviewRoom/` |
+| Item | Location |
+|------|-----------|
+| Route | `app/mba-interview-room/[[...path]]/route.ts` → `public/MbaInterviewRoom/index.html` |
 | Data | `data/mba_interview_dataset/{school_id}/` via `GET /api/mba-interview-room/school/[id]` |
-| Registry API | `GET /api/mba-interview-room/schools` (excludes `berkeley_haas`) |
-| AI | `POST /api/mba-interview/enhanced-feedback` |
+| Registry | `GET /api/mba-interview-room/schools` |
+| AI (optional) | `POST /api/mba-interview/enhanced-feedback` |
 
-## Shared tooling
+## Shared
 
-| Area | Location |
-|------|----------|
+| Item | Location |
+|------|-----------|
 | Loaders / types | `lib/mba-interview/*` |
 | Dataset build | `npm run build:mba-dataset` → `scripts/build-mba-dataset.mjs` |
-| Typed React flow (legacy) | `app/api/mba-interview/*`, `components/apps/mba-interview-prep/*` |
+| Dataset checks | `npm run validate:mba-room` → `scripts/validate-mba-interview-room.mjs` |
 
-## Handoff inputs
-
-- Structure and timing: `mba_final_handoff_static/deep-research-report (2).md`
-- URLs: step4 secondary and step5 community CSVs per school
-
-See **`docs/MBA_INTERVIEW_ARCHITECTURE.md`** for runbooks and subdomain notes.
+See **`docs/MBA_INTERVIEW_ARCHITECTURE.md`** for deployment and local testing.

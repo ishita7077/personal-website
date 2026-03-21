@@ -27,7 +27,7 @@ export default function InterviewCoachPage() {
               href={REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-medium text-[#c9600a] hover:underline shrink-0"
+              className="text-xs font-medium text-blue-600 hover:underline shrink-0"
             >
               Open repo →
             </a>
@@ -47,11 +47,11 @@ export default function InterviewCoachPage() {
         </div>
 
         <p className="text-xs text-muted-foreground">
-          For timed video practice with Haas-style questions and recording, use{" "}
-          <Link href="/InterviewRoom" className="text-[#c9600a] hover:underline">
-            Interview Room
-          </Link>{" "}
-          on this site.
+          For timed video practice with school-specific questions and recording (including Berkeley Haas), use{" "}
+          <Link href="/mba-interview-room" className="text-blue-600 hover:underline">
+            MBA Interview Room
+          </Link>
+          .
         </p>
       </div>
     </main>

@@ -1,8 +1,8 @@
 {
   "school_id": "insead",
   "display_name": "INSEAD",
-  "validated_interview_format": "Mandatory Kira video assessment + if pre-selected, two alumni interviews.",
-  "unique_elements": "Handoff cites Kira pattern: four video questions (45s prep / 60s response) + one written (5 minutes) within 48 hours of deadline; dual alumni reports.",
+  "validated_interview_format": "Kira-style assessment (video + written) plus alumni interviews for some candidates.",
+  "unique_elements": "Practice here samples video, typed, and alumni-style prompts—not the full timed Kira window.",
   "interviewer_type": "Two alumni interviewers submitting reports",
   "community_texture": "Applicant-cycle timing texture (Clear Admit in handoff CSV).",
   "handoff_paths": {

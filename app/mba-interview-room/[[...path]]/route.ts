@@ -2,12 +2,15 @@ import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
 
+type RouteParams = { params: Promise<{ path?: string[] }> };
+
 /**
- * Serves the multi-school MBA Interview Room static app (`public/MbaInterviewRoom/`).
- *
- * Optional: map a subdomain to this path via your host’s rewrite rules.
+ * Serves the MBA Interview Room SPA for `/mba-interview-room` and nested paths
+ * (e.g. `/mba-interview-room/stanford_gsb`, `/mba-interview-room/stanford_gsb/resources`).
+ * Assets resolve via `<base href="/MbaInterviewRoom/">`.
  */
-export async function GET() {
+export async function GET(_req: Request, { params }: RouteParams) {
+  await params;
   try {
     const filePath = path.join(process.cwd(), "public", "MbaInterviewRoom", "index.html");
     const html = await readFile(filePath, "utf-8");

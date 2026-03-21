@@ -91,30 +91,43 @@
     const inSession = isSessionScreen || isReviewScreen;
     const isRecording = isSessionScreen && IR.state.phase === 'answer';
     const openInNewTab = () => {
-      const base = window.location.origin + window.location.pathname;
-      window.open(base + '#resources', '_blank');
+      const origin = window.location.origin;
+      const sid = IR.state && IR.state.selectedSchool;
+      const p = IR.MBA_IR_PREFIX || '/mba-interview-room';
+      const url =
+        sid && !IR.state.customMode
+          ? origin + p + '/' + encodeURIComponent(sid) + '/resources'
+          : origin + p + '/resources';
+      window.open(url, '_blank', 'noopener,noreferrer');
     };
     if (!inSession) {
-      IR.navigateTo('resources');
+      const sid = IR.state.selectedSchool;
+      if (sid && !IR.state.customMode) {
+        const p = IR.openResourcesWithPath && IR.openResourcesWithPath(sid, 'push');
+        if (p && typeof p.catch === 'function') p.catch(function () {});
+      } else {
+        if (IR.pushMbaIrPath) IR.pushMbaIrPath('resources', 'push');
+        IR.navigateTo('resources');
+      }
       return;
     }
     if (isRecording) {
       IR.ui.showModal(
         'Open resources?',
-        'You are in the middle of a recorded answer. Finish or end this answer before leaving. If needed, you can open school resources in a new tab.',
+        'You are in the middle of a recorded answer. Finish or end this answer before leaving. You can open prep links in another window.',
         [
           { label: 'Stay here', class: 'ir-btn-ghost' },
-          { label: 'Open in new tab', class: 'ir-btn-primary', action: openInNewTab }
+          { label: 'Open prep links', class: 'ir-btn-primary', action: openInNewTab }
         ]
       );
       return;
     }
     IR.ui.showModal(
       'Open resources?',
-      'This session lives only in this tab. Before you close it or start a new session, download your recordings or transcripts. You can open school resources in a separate tab so this page stays as-is.',
+      'This session stays in this tab. Save anything you need before you leave. Open prep links in another window to keep this session as-is.',
       [
         { label: 'Cancel', class: 'ir-btn-ghost' },
-        { label: 'Open in new tab', class: 'ir-btn-primary', action: openInNewTab }
+        { label: 'Open prep links', class: 'ir-btn-primary', action: openInNewTab }
       ]
     );
   };
@@ -127,6 +140,14 @@
     document.addEventListener('keydown', e => {
       if (IR.state.screen !== 'session' || !IR.state.sessionActive) return;
       if (IR.state.finalizingAnswer) return;
+      const tag = (e.target && e.target.tagName) || '';
+      if (tag === 'TEXTAREA' || (tag === 'INPUT' && e.target.type !== 'button' && e.target.type !== 'submit')) {
+        if (e.code === 'Escape') {
+          e.preventDefault();
+          IR.confirmEndSession();
+        }
+        return;
+      }
       if (e.code === 'Space' && (e.target === document.body || e.target.closest('.ir-session'))) {
         e.preventDefault();
         IR.skipPhase();
@@ -139,8 +160,16 @@
       if (e.target === e.currentTarget) IR.ui.hideModal();
     });
 
-    document.getElementById('navLogo').addEventListener('click', () => IR.navigateTo('home'));
-    document.getElementById('navLogo').addEventListener('keydown', e => { if (e.key === 'Enter') IR.navigateTo('home'); });
+    document.getElementById('navLogo').addEventListener('click', () => {
+      if (IR.pushMbaIrPath) IR.pushMbaIrPath('', 'replace');
+      IR.navigateTo('home');
+    });
+    document.getElementById('navLogo').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        if (IR.pushMbaIrPath) IR.pushMbaIrPath('', 'replace');
+        IR.navigateTo('home');
+      }
+    });
     const resourcesBtn = document.getElementById('resourcesBtn');
     if (resourcesBtn) {
       resourcesBtn.addEventListener('click', (e) => { e.preventDefault(); IR.handleResourcesClick(); });
@@ -150,12 +179,12 @@
       resourcesBackBtn.addEventListener('click', () => {
         if (window.opener && !window.opener.closed) {
           window.close();
-          try {
-            window.location.hash = '';
-          } catch (e) {
-            // ignore
-          }
+          return;
+        }
+        if (window.history.length > 1) {
+          window.history.back();
         } else {
+          if (IR.pushMbaIrPath) IR.pushMbaIrPath('', 'replace');
           IR.navigateTo('home');
         }
       });
@@ -163,11 +192,13 @@
     const customCard = document.getElementById('schoolCardCustom');
     if (customCard) {
       customCard.addEventListener('click', () => {
+        if (IR.pushMbaIrPath) IR.pushMbaIrPath('custom', 'push');
         IR.navigateTo('custom');
         IR.updateConfigFromDom();
       });
       customCard.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
+          if (IR.pushMbaIrPath) IR.pushMbaIrPath('custom', 'push');
           IR.navigateTo('custom');
           IR.updateConfigFromDom();
         }
@@ -177,7 +208,10 @@
     document.getElementById('guideBackdrop').addEventListener('click', () => IR.toggleGuide());
     document.getElementById('guideCloseBtn').addEventListener('click', () => IR.toggleGuide());
     document.getElementById('retryPermBtn').addEventListener('click', () => IR.retryPermissions());
-    document.getElementById('techcheckBackBtn').addEventListener('click', () => IR.navigateTo('home'));
+    document.getElementById('techcheckBackBtn').addEventListener('click', () => {
+      if (IR.pushMbaIrPath) IR.pushMbaIrPath('', 'replace');
+      IR.navigateTo('home');
+    });
     document.getElementById('beginBtn').addEventListener('click', () => IR.startSession());
     document.getElementById('waitingExitBtn').addEventListener('click', () => IR.leaveWaitingRoom());
     document.getElementById('waitingReviewBtn').addEventListener('click', () => IR.requestReview());
@@ -243,6 +277,43 @@
       e.preventDefault();
       e.returnValue = '';
     });
+
+    window.addEventListener('popstate', function () {
+      if (IR.syncRouteFromLocation) {
+        IR.syncRouteFromLocation().catch(function () {});
+      }
+    });
+  };
+
+  IR.openResourcesWithPath = function (id, mode) {
+    if (!id || !IR.pushMbaIrPath || !IR.loadResourcesProgram) return Promise.resolve();
+    IR.pushMbaIrPath(encodeURIComponent(id) + '/resources', mode === 'replace' ? 'replace' : 'push');
+    return IR.loadResourcesProgram(id, { skipPathUpdate: true });
+  };
+
+  IR.loadResourcesProgram = async function (id, opts) {
+    opts = opts || {};
+    if (!id || !IR.fetchSchoolBundle) return;
+    try {
+      await IR.fetchSchoolBundle(id);
+      IR.state.selectedSchool = id;
+      IR.state.customMode = false;
+      IR.navigateTo('resources');
+      if (!opts.skipPathUpdate && IR.pushMbaIrPath) {
+        let needPush = true;
+        if (IR.parseMbaIrPath) {
+          const cur = IR.parseMbaIrPath();
+          if (cur.view === 'resources' && cur.schoolId === id) needPush = false;
+        }
+        if (needPush) {
+          IR.pushMbaIrPath(encodeURIComponent(id) + '/resources', 'push');
+        }
+      }
+    } catch (e) {
+      if (IR.ui && IR.ui.toast) {
+        IR.ui.toast('Could not load resources for this programme.', 'error');
+      }
+    }
   };
 
   IR.navigateTo = function (screen) {
@@ -254,7 +325,10 @@
       IR.media.stopAll();
       IR.ui.setStatus('idle', 'READY');
     }
-    if (screen === 'resources' && IR.ui.renderResources) IR.ui.renderResources();
+    if (screen === 'resources' && IR.ui.renderResources) {
+      const pr = IR.ui.renderResources();
+      if (pr && typeof pr.then === 'function') pr.catch(function () {});
+    }
     if (screen !== 'review') {
       IR.revokeReviewBlobUrls();
     }
@@ -262,7 +336,7 @@
   };
 
   IR.selectSchool = async function (id) {
-    if (id !== 'haas-mba' && IR.fetchSchoolBundle) {
+    if (IR.fetchSchoolBundle) {
       try {
         await IR.fetchSchoolBundle(id);
       } catch (e) {
@@ -275,6 +349,7 @@
     IR.state.selectedSchool = id;
     IR.state.customMode = false;
     IR.state.permState = 'idle';
+    if (IR.pushMbaIrPath) IR.pushMbaIrPath(encodeURIComponent(id), 'push');
     IR.navigateTo('techcheck');
     IR.ui.renderFormatInfo(id);
     IR.ui.renderAlerts();
@@ -291,11 +366,149 @@
     await IR.media.requestAccess();
   };
 
+  IR.isWrittenResponseQuestion = function (q) {
+    if (!q) return false;
+    const qt = String(q.question_type || '');
+    const ph = String(q.interview_phase || '');
+    if (qt === 'written_reflection' || qt === 'written_timed') return true;
+    if (qt === 'data_task') return true;
+    if (ph === 'kira_written' || ph === 'post_interview_reflection' || ph === 'pre_interview_written') return true;
+    return false;
+  };
+
+  IR.mapPoolQuestionToSession = function (q) {
+    const o = {
+      id: q.id,
+      text: q.text,
+      expected_answer_map: q.expected_answer_map,
+      question_type: q.question_type,
+      interview_phase: q.interview_phase,
+      tags: q.tags || IR.inferTagsFromQuestionType(q.question_type),
+      prep_time_seconds: q.prep_time_seconds,
+      answer_time_seconds: q.answer_time_seconds,
+      responseMode: IR.isWrittenResponseQuestion(q) ? 'written' : 'video',
+      slot: null
+    };
+    return o;
+  };
+
+  IR.pickOrderedQuestionPool = function (schoolId, ir, pool) {
+    const n = Math.min(ir.totalQuestions || 6, pool.length);
+    if (schoolId === 'yale_som') {
+      const videos = IR.shuffleArray(pool.filter((q) => q.interview_phase === 'video'));
+      const lives = IR.shuffleArray(pool.filter((q) => q.interview_phase === 'live_behavioral'));
+      const wantV = Math.min(2, videos.length);
+      const picked = videos.slice(0, wantV);
+      const used = new Set(picked.map((p) => p.id));
+      const need = n - picked.length;
+      const livePick = lives.filter((q) => !used.has(q.id)).slice(0, Math.min(need, lives.length));
+      picked.push(...livePick);
+      if (picked.length < n) {
+        const rest = IR.shuffleArray(pool.filter((q) => !picked.some((p) => p.id === q.id)));
+        picked.push(...rest.slice(0, n - picked.length));
+      }
+      return picked.slice(0, n);
+    }
+    if (schoolId === 'insead') {
+      const picked = [];
+      const used = new Set();
+      const take = (pred) => {
+        const arr = IR.shuffleArray(pool.filter((q) => pred(q) && !used.has(q.id)));
+        const q = arr[0];
+        if (q) {
+          used.add(q.id);
+          picked.push(q);
+        }
+      };
+      take((q) => q.interview_phase === 'kira_video');
+      take((q) => q.interview_phase === 'kira_written');
+      take((q) => q.interview_phase === 'alumni_live');
+      const rest = IR.shuffleArray(pool.filter((q) => !used.has(q.id)));
+      while (picked.length < n && rest.length) {
+        picked.push(rest.shift());
+      }
+      return picked.slice(0, n);
+    }
+    if (schoolId === 'london_business_school') {
+      const picked = [];
+      const used = new Set();
+      const kiraFirst = IR.shuffleArray(pool.filter((q) => q.interview_phase === 'kira_video')).slice(0, 1);
+      kiraFirst.forEach((q) => {
+        used.add(q.id);
+        picked.push(q);
+      });
+      const rest = IR.shuffleArray(pool.filter((q) => !used.has(q.id)));
+      while (picked.length < n && rest.length) {
+        picked.push(rest.shift());
+      }
+      return picked.slice(0, n);
+    }
+    if (schoolId === 'wharton') {
+      const picked = [];
+      const used = new Set();
+      const tbd = IR.shuffleArray(pool.filter((q) => q.interview_phase === 'tbd_debrief'));
+      const oneOnOne = IR.shuffleArray(pool.filter((q) => q.interview_phase === 'one_on_one'));
+      tbd.slice(0, 1).forEach((q) => {
+        used.add(q.id);
+        picked.push(q);
+      });
+      oneOnOne.slice(0, 1).forEach((q) => {
+        if (!used.has(q.id)) {
+          used.add(q.id);
+          picked.push(q);
+        }
+      });
+      const rest = pool.filter((q) => !used.has(q.id));
+      const high = IR.shuffleArray(rest.filter((q) => q.high_probability));
+      const low = IR.shuffleArray(rest.filter((q) => !q.high_probability));
+      for (const q of high.concat(low)) {
+        if (picked.length >= n) break;
+        picked.push(q);
+      }
+      return picked.slice(0, n);
+    }
+    if (schoolId === 'mit_sloan') {
+      const picked = [];
+      const used = new Set();
+      const pre = IR.shuffleArray(pool.filter((q) => q.interview_phase === 'pre_interview_written'));
+      pre.slice(0, 1).forEach((q) => {
+        used.add(q.id);
+        picked.push(q);
+      });
+      const rest = pool.filter((q) => !used.has(q.id));
+      const high = IR.shuffleArray(rest.filter((q) => q.high_probability));
+      const low = IR.shuffleArray(rest.filter((q) => !q.high_probability));
+      for (const q of high.concat(low)) {
+        if (picked.length >= n) break;
+        picked.push(q);
+      }
+      return picked.slice(0, n);
+    }
+    if (schoolId === 'hbs') {
+      const reflections = pool.filter(
+        (q) => q.interview_phase === 'post_interview_reflection' || q.question_type === 'written_reflection'
+      );
+      const ref = IR.shuffleArray(reflections)[0];
+      const restPool = pool.filter((q) => !reflections.some((r) => r.id === q.id));
+      const high = IR.shuffleArray(restPool.filter((q) => q.high_probability));
+      const low = IR.shuffleArray(restPool.filter((q) => !q.high_probability));
+      const orderedRest = high.concat(low);
+      const maxMain = ref ? Math.max(0, n - 1) : n;
+      const main = orderedRest.slice(0, Math.min(orderedRest.length, maxMain));
+      if (ref && main.length < n) return main.concat([ref]).slice(0, n);
+      return main.slice(0, n);
+    }
+    const high = IR.shuffleArray(pool.filter((q) => q.high_probability));
+    const low = IR.shuffleArray(pool.filter((q) => !q.high_probability));
+    return high.concat(low).slice(0, n);
+  };
+
   IR.buildSessionQuestions = function (id) {
     if (IR.state.customQuestions && IR.state.customQuestions.length) {
       return IR.state.customQuestions.map((text, idx) => ({
         id: 'custom-' + (idx + 1),
         text,
+        responseMode: 'video',
         slot: null
       }));
     }
@@ -304,54 +517,13 @@
       const ir = bundle.interviewRoom;
       if (ir.pickMode === 'random_set' && ir.sets && ir.sets.length) {
         const set = ir.sets[Math.floor(Math.random() * ir.sets.length)];
-        return set.map(q => ({
-          id: q.id,
-          text: q.text,
-          expected_answer_map: q.expected_answer_map,
-          question_type: q.question_type,
-          interview_phase: q.interview_phase,
-          tags: q.tags || IR.inferTagsFromQuestionType(q.question_type),
-          prep_time_seconds: q.prep_time_seconds,
-          answer_time_seconds: q.answer_time_seconds,
-          slot: null
-        }));
+        return set.map((q) => IR.mapPoolQuestionToSession(q));
       }
       const pool = bundle.questionPool || [];
-      const high = IR.shuffleArray(pool.filter(q => q.high_probability));
-      const rest = IR.shuffleArray(pool.filter(q => !q.high_probability));
-      const ordered = high.concat(rest);
-      const n = Math.min(ir.totalQuestions || 6, ordered.length);
-      return ordered.slice(0, n).map(q => ({
-        id: q.id,
-        text: q.text,
-        expected_answer_map: q.expected_answer_map,
-        question_type: q.question_type,
-        interview_phase: q.interview_phase,
-        tags: q.tags || IR.inferTagsFromQuestionType(q.question_type),
-        prep_time_seconds: q.prep_time_seconds,
-        answer_time_seconds: q.answer_time_seconds,
-        slot: null
-      }));
+      const ordered = IR.pickOrderedQuestionPool(id, ir, pool);
+      return ordered.map((q) => IR.mapPoolQuestionToSession(q));
     }
-    if (id === 'haas-mba' && IR.haasQuestionSets && IR.haasQuestionSets.length > 0) {
-      const sets = IR.haasQuestionSets;
-      const setIndex = Math.floor(Math.random() * sets.length);
-      return sets[setIndex].map(q => ({ id: q.id, text: q.text, slot: null }));
-    }
-    const conf = IR.config[id];
-    const bank = IR.questions[id];
-    const qs = new Array(conf.totalQuestions).fill(null);
-    bank.fixed.forEach(f => { qs[f.slot] = f; });
-    const pool = [...bank.pool];
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
-    }
-    let pi = 0;
-    for (let i = 0; i < qs.length; i++) {
-      if (!qs[i] && pi < pool.length) qs[i] = pool[pi++];
-    }
-    return qs;
+    return [];
   };
 
   IR.startSession = function () {
@@ -415,15 +587,23 @@
             ? q.prep_time_seconds
             : (base && base.prepTime) || 0);
     IR.state.phase = 'prep';
-    // reset live transcript view for new question
     IR.speech.finalTranscript = '';
     IR.speech.interimTranscript = '';
     IR.ui.updateLiveTranscript();
     IR.ui.updateSessionUI();
+    if (prepTime <= 0) {
+      IR.startAnswer();
+      return;
+    }
     IR.timer.start(prepTime, t => IR.ui.updateTimerDisplay(t), () => IR.startAnswer());
   };
 
   IR.startAnswer = function () {
+    const q = IR.state.sessionQuestions && IR.state.sessionQuestions[IR.state.currentQuestion];
+    if (q && q.responseMode === 'written') {
+      IR.startWrittenAnswerPhase();
+      return;
+    }
     IR.state.phase = 'answer';
     IR.state._as = Date.now();
     IR.speech.finalTranscript = '';
@@ -433,7 +613,6 @@
     IR.media.startRecording();
     IR.speech.start();
     const base = IR.config[IR.state.selectedSchool];
-    const q = IR.state.sessionQuestions && IR.state.sessionQuestions[IR.state.currentQuestion];
     const answerTime =
       IR.state.customAnswerTime != null
         ? IR.state.customAnswerTime
@@ -443,7 +622,68 @@
     IR.timer.start(answerTime, t => IR.ui.updateTimerDisplay(t), () => IR.finishAnswer());
   };
 
+  IR.startWrittenAnswerPhase = function () {
+    IR.state.phase = 'answer';
+    IR.state._as = Date.now();
+    const ta = document.getElementById('sessionWrittenInput');
+    if (ta) ta.value = '';
+    IR.ui.updateSessionUI();
+    const base = IR.config[IR.state.selectedSchool];
+    const q = IR.state.sessionQuestions && IR.state.sessionQuestions[IR.state.currentQuestion];
+    const answerTime =
+      IR.state.customAnswerTime != null
+        ? IR.state.customAnswerTime
+        : (q && q.answer_time_seconds != null
+            ? q.answer_time_seconds
+            : (base && base.answerTime) || 0);
+    IR.timer.start(answerTime, t => IR.ui.updateTimerDisplay(t), () => IR.finishWrittenAnswer(null));
+  };
+
+  IR.finishWrittenAnswer = function (opt) {
+    if (IR.state.finalizingAnswer) return;
+    IR.state.finalizingAnswer = true;
+    IR.ui.setSessionControlsEnabled(false);
+    IR.timer.clear();
+    const idx = IR.state.currentQuestion;
+    const ta = document.getElementById('sessionWrittenInput');
+    const text = ((ta && ta.value) || '').trim();
+    IR.state.recordings[idx] = null;
+    IR.state.transcripts[idx] = text;
+    if (IR.state.transcriptionStatus && IR.state.transcriptionStatus[idx] !== undefined) {
+      IR.state.transcriptionStatus[idx] = IR.TRANSCRIPTION_STATUS.READY;
+    }
+    if (IR.state.transcriptionError && IR.state.transcriptionError[idx] !== undefined) {
+      IR.state.transcriptionError[idx] = null;
+    }
+    IR.state.answerDurations[idx] = Math.round((Date.now() - (IR.state._as || Date.now())) / 1000);
+    IR.state.finalizingAnswer = false;
+    IR.ui.setSessionControlsEnabled(true);
+    if (IR.state.questionStatuses && IR.state.questionStatuses.length) {
+      IR.state.questionStatuses[idx] = 'done';
+    }
+    if (opt && opt.endSession) {
+      IR.requestReview();
+      return;
+    }
+    const allDone = (IR.state.questionStatuses || []).length &&
+      IR.state.questionStatuses.every(s => s === 'done');
+    if (allDone) {
+      IR.ui.toast('All questions complete.', 'success');
+      IR.requestReview();
+      return;
+    }
+    IR.state.sessionActive = false;
+    IR.state.phase = null;
+    IR.ui.toast('Answer saved. Pick another question or finish.', 'success');
+    IR.showWaitingRoom();
+  };
+
   IR.finishAnswer = async function () {
+    const q = IR.state.sessionQuestions && IR.state.sessionQuestions[IR.state.currentQuestion];
+    if (q && q.responseMode === 'written') {
+      IR.finishWrittenAnswer(null);
+      return;
+    }
     if (IR.state.finalizingAnswer) return;
     IR.state.finalizingAnswer = true;
     IR.ui.setSessionControlsEnabled(false);
@@ -708,13 +948,13 @@
       IR.state.customAnswerTime = null;
     }
 
-    IR.state.selectedSchool = 'haas-mba';
+    IR.state.selectedSchool = 'custom-practice';
     IR.state.customMode = true;
     IR.state.permState = 'idle';
     IR.navigateTo('techcheck');
     IR.updateTopNav();
     if (IR.ui && IR.ui.renderFormatInfo) {
-      IR.ui.renderFormatInfo('haas-mba');
+      IR.ui.renderFormatInfo('custom-practice');
     }
     if (IR.ui && IR.ui.renderAlerts) {
       IR.ui.renderAlerts();
@@ -734,7 +974,12 @@
       IR.timer.clear();
       IR.startAnswer();
     } else if (IR.state.phase === 'answer') {
-      IR.finishAnswer();
+      const q = IR.state.sessionQuestions && IR.state.sessionQuestions[IR.state.currentQuestion];
+      if (q && q.responseMode === 'written') {
+        IR.finishWrittenAnswer(null);
+      } else {
+        IR.finishAnswer();
+      }
     }
   };
 
@@ -781,6 +1026,11 @@
         class: 'ir-btn-danger',
         action: async () => {
           if (IR.state.phase === 'answer') {
+            const q = IR.state.sessionQuestions && IR.state.sessionQuestions[IR.state.currentQuestion];
+            if (q && q.responseMode === 'written') {
+              IR.finishWrittenAnswer({ endSession: true });
+              return;
+            }
             IR.state.finalizingAnswer = true;
             IR.ui.setSessionControlsEnabled(false);
             IR.speech.stop();
@@ -834,6 +1084,9 @@
     IR.state.customPrepTime = null;
     IR.state.customAnswerTime = null;
     IR.state.customMode = false;
+    const w = document.getElementById('sessionWrittenInput');
+    if (w) w.value = '';
+    if (IR.pushMbaIrPath) IR.pushMbaIrPath('', 'replace');
     IR.navigateTo('home');
     IR.media.stopAll();
   };
@@ -890,7 +1143,7 @@
 
   IR.requestReview = function () {
     if (IR.transcription && IR.transcription.hasPendingJobs && IR.transcription.hasPendingJobs()) {
-      IR.ui.setAiOverlay({ label: 'Preparing final transcripts…', indeterminate: true, longRunning: true });
+      IR.ui.setAiOverlay({ label: 'Finishing text from your recordings…', indeterminate: true, longRunning: true });
       const check = () => {
         if (!IR.transcription.hasPendingJobs()) {
           IR.ui.setAiOverlay({ visible: false });
@@ -937,11 +1190,15 @@
   };
 
   IR.copyTranscript = function (i) {
-    IR.ui.copyToClipboard(IR.state.transcripts[i] || '', () => IR.ui.toast('Transcript copied', 'success'), () => IR.ui.toast('Copy failed. Try selecting and copying manually.', 'error'));
+    IR.ui.copyToClipboard(IR.state.transcripts[i] || '', () => IR.ui.toast('Text copied', 'success'), () => IR.ui.toast('Copy failed. Try selecting and copying manually.', 'error'));
   };
 
   IR.exportTranscripts = function () {
-    let o = `INTERVIEW ROOM — SESSION TRANSCRIPT\nSchool: ${IR.config[IR.state.selectedSchool]?.school || ''}\nDate: ${new Date().toLocaleDateString()}\n${'='.repeat(50)}\n\n`;
+    const schoolLine =
+      (IR.state.schoolDisplayName && !IR.state.customMode
+        ? IR.state.schoolDisplayName
+        : IR.config[IR.state.selectedSchool]?.school) || '';
+    let o = `MBA INTERVIEW ROOM — SESSION TRANSCRIPT\nSchool: ${schoolLine}\nDate: ${new Date().toLocaleDateString()}\n${'='.repeat(50)}\n\n`;
     IR.state.sessionQuestions.forEach((q, i) => {
       const status = IR.state.questionStatuses?.[i] || 'pending';
       const skipped = status !== 'done' && !IR.state.recordings[i];
@@ -955,7 +1212,7 @@
           `Answer: ${IR.state.transcripts[i] || '(No transcript)'}\n\n`;
       }
     });
-    IR.ui.copyToClipboard(o, () => IR.ui.toast('All transcripts copied', 'success'), () => IR.ui.toast('Copy failed. Try selecting and copying manually.', 'error'));
+    IR.ui.copyToClipboard(o, () => IR.ui.toast('All answer text copied', 'success'), () => IR.ui.toast('Copy failed. Try selecting and copying manually.', 'error'));
   };
 
   IR.setTranscriptTab = function () { /* Single transcript view; no tabs */ };
@@ -967,9 +1224,16 @@
   };
 
   document.addEventListener('DOMContentLoaded', () => {
+    if (IR.legacyHashRedirect) IR.legacyHashRedirect();
     IR.init();
-    if (window.location.hash === '#resources') {
-      IR.navigateTo('resources');
-    }
+    Promise.resolve()
+      .then(function () {
+        return IR.fetchSchoolsRegistry ? IR.fetchSchoolsRegistry() : null;
+      })
+      .catch(function () {})
+      .then(function () {
+        if (IR.syncRouteFromLocation) return IR.syncRouteFromLocation();
+      })
+      .catch(function () {});
   });
 })(typeof window !== 'undefined' ? window : this);

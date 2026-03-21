@@ -9,8 +9,8 @@
         "interview_style_summary": "1:1 structured behavioural interview focused on past actions; trained alumni or admissions; ~45–60 minutes; deep probing.",
         "unique_hook": "All admits interview; emphasis on recent meaningful professional/community experiences; depth over breadth (per handoff report).",
         "interviewer_profile": "Alumni subset or MBA Admissions team",
-        "practice_mechanics": "Up to 6 prompts · default 90s prep / 8 min answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 timed video prompts · default 90s prep / 8 min answer · drawn from programme question bank",
+        "question_bank_count": 29,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -22,8 +22,8 @@
         "interview_style_summary": "1:1 application-based interview tailored to your file; ~30 minutes.",
         "unique_hook": "Post-Interview Reflection due within 24 hours (guidance often cited as ~300–450 words).",
         "interviewer_profile": "MBA Admissions Board member who reviewed your application",
-        "practice_mechanics": "Up to 5 prompts · default 45s prep / 5 min answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 5 prompts · file-aware and behavioural video answers first, then post-interview written reflection last · default 45s prep / 5 min answer unless a prompt sets its own timers",
+        "question_bank_count": 31,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -32,11 +32,11 @@
       "display_name": "The Wharton School",
       "data_dir": "data/mba_interview_dataset/wharton",
       "listing": {
-        "interview_style_summary": "Team Based Discussion ~35 minutes + ~10 minute 1:1 reflection.",
-        "unique_hook": "Group exercise evaluating collaboration, communication, leadership in a team setting.",
+        "interview_style_summary": "Team-based discussion plus a short one-to-one with admissions; real TBD is in a group room.",
+        "unique_hook": "Practice follows the real sequence in spirit: team-discussion debrief prompts, then one-to-one style questions, then more behavioural practice—all solo on camera.",
         "interviewer_profile": "Admissions team member for 1:1 segment",
-        "practice_mechanics": "Up to 6 prompts · default 45s prep / 5 min answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 timed video prompts · order: TBD debrief → one-to-one → behavioural pool · no live group room",
+        "question_bank_count": 31,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -46,10 +46,10 @@
       "data_dir": "data/mba_interview_dataset/mit_sloan",
       "listing": {
         "interview_style_summary": "1:1 behavioural interview; virtual per official guidance in handoff.",
-        "unique_hook": "Pre-interview short-answer + PDF (data visualisation or data-driven decision slide) due shortly before interview.",
+        "unique_hook": "Often a short pre-interview written/slide task—practised here as a timed written outline, not file upload.",
         "interviewer_profile": "Commonly admissions staff (handoff + community notes)",
-        "practice_mechanics": "Up to 6 prompts · default 45s prep / 4m15s answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 prompts · pre-interview written exercise first when included, then weighted behavioural video prompts · default 45s prep / ~4m15s answer unless overridden",
+        "question_bank_count": 30,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -61,8 +61,8 @@
         "interview_style_summary": "1:1 conversational interview; time for your questions.",
         "unique_hook": "Single required interview; student, alum, or staff weighted equally in evaluation.",
         "interviewer_profile": "Student, alum, or admissions staff",
-        "practice_mechanics": "Up to 6 prompts · default 60s prep / 9 min answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 timed video prompts · default 60s prep / 9 min answer · drawn from programme bank",
+        "question_bank_count": 29,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -74,8 +74,8 @@
         "interview_style_summary": "1:1 behavioural interview; resume-only (blind) by design.",
         "unique_hook": "Interviewer has not read full application; restate goals and motivations clearly.",
         "interviewer_profile": "Often alumni depending on cycle",
-        "practice_mechanics": "Up to 6 prompts · default 45s prep / 5m15s answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 timed video prompts · default 45s prep / ~5m15s answer · drawn from programme bank",
+        "question_bank_count": 29,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -87,7 +87,7 @@
         "interview_style_summary": "Invitation-only; prerecorded video and/or live remote options.",
         "unique_hook": "Defining Leadership Principles as cultural lens; dynamic interview options per official interview page (step4).",
         "interviewer_profile": "Student or alum for live remote",
-        "practice_mechanics": "Up to 6 prompts · default 45s prep / 3 min answer · 7 rotating six-question sets",
+        "practice_mechanics": "Six questions per session · one of seven rotating sets · default 45s prep / 3 min answer",
         "question_bank_count": 50,
         "pick_mode": "random_set"
       }
@@ -97,11 +97,11 @@
       "display_name": "Yale School of Management",
       "data_dir": "data/mba_interview_dataset/yale_som",
       "listing": {
-        "interview_style_summary": "Blind ~30 minute interview + separate video questions (two; ~60 seconds each in handoff).",
-        "unique_hook": "Video assesses communication; live interview resume-only.",
+        "interview_style_summary": "Short video prompts plus a longer blind-style interview in reality.",
+        "unique_hook": "This session starts with two short video-style prompts when possible, then live-style behavioural prompts.",
         "interviewer_profile": "Second-year student, recent alum, or admissions committee member",
-        "practice_mechanics": "Up to 6 prompts · default 45s prep / 4m15s answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 prompts · two timed video-style first, then blind-style video answers · per-prompt timers when set",
+        "question_bank_count": 31,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -111,10 +111,10 @@
       "data_dir": "data/mba_interview_dataset/london_business_school",
       "listing": {
         "interview_style_summary": "Interview with alumni or senior admissions staff; regional; in-person or online.",
-        "unique_hook": "Admissions video via Kira Talent; interviewer may have read full application.",
+        "unique_hook": "Opens with the short Kira-style video prompt when present; then weighted behavioural practice.",
         "interviewer_profile": "Alumni or senior admissions staff",
-        "practice_mechanics": "Up to 6 prompts · default 60s prep / 7m30s answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 timed video prompts · Kira-style items use shorter timers when defined on the prompt",
+        "question_bank_count": 31,
         "pick_mode": "shuffle_weighted"
       }
     },
@@ -123,11 +123,11 @@
       "display_name": "INSEAD",
       "data_dir": "data/mba_interview_dataset/insead",
       "listing": {
-        "interview_style_summary": "Mandatory Kira video assessment + if pre-selected, two alumni interviews.",
-        "unique_hook": "Handoff cites Kira pattern: four video questions (45s prep / 60s response) + one written (5 minutes) within 48 hours of deadline; d…",
+        "interview_style_summary": "Kira-style components plus alumni interviews in the real process.",
+        "unique_hook": "Structured opening: Kira-style timed video, typed written, and alumni-style prompts when present in the bank, then behavioural practice.",
         "interviewer_profile": "Two alumni interviewers submitting reports",
-        "practice_mechanics": "Up to 6 prompts · default 45s prep / 5m30s answer · weighted picks from 50-prompt programme bank · video/Kira/written-style prompts use shorter timers in-session",
-        "question_bank_count": 50,
+        "practice_mechanics": "Up to 6 prompts · fixed order for Kira video → written → alumni when those types exist, then shuffled behavioural · multi-day Kira window not simulated",
+        "question_bank_count": 32,
         "pick_mode": "shuffle_weighted"
       }
     }

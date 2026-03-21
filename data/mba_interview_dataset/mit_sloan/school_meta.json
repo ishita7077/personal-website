@@ -2,7 +2,7 @@
   "school_id": "mit_sloan",
   "display_name": "MIT Sloan",
   "validated_interview_format": "1:1 behavioural interview; virtual per official guidance in handoff.",
-  "unique_elements": "Pre-interview short-answer + PDF (data visualisation or data-driven decision slide) due shortly before interview.",
+  "unique_elements": "Pre-interview data task in reality; this app uses a timed typed outline only (no file upload).",
   "interviewer_type": "Commonly admissions staff (handoff + community notes)",
   "community_texture": "Structured, execution-focused prep flow (step4 secondary notes).",
   "handoff_paths": {

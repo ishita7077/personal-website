@@ -32,7 +32,7 @@
       const msg = (e.message || String(e)).toLowerCase();
       if (msg.includes('unavailable') || msg.includes('transcription')) return 'Transcription is not available on this device. Your recording was saved — you can download it.';
       if (msg.includes('decode') || msg.includes('audio')) return 'Could not process the recording. Try Chrome or Edge on a desktop for best support.';
-      if (msg.includes('load') || msg.includes('model')) return 'Transcription model could not be loaded. Your recording was saved.';
+      if (msg.includes('load') || msg.includes('model')) return 'Speech-to-text could not start. Your recording was saved.';
       return 'Transcription could not be generated. Your recording was saved — you can download it. For best results use Chrome or Edge on a desktop.';
     },
 

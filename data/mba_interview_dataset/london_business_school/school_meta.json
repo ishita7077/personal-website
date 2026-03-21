@@ -2,7 +2,7 @@
   "school_id": "london_business_school",
   "display_name": "London Business School",
   "validated_interview_format": "Interview with alumni or senior admissions staff; regional; in-person or online.",
-  "unique_elements": "Admissions video via Kira Talent; interviewer may have read full application.",
+  "unique_elements": "Kira Talent video in the real process; practice opens with that short video-style prompt when available.",
   "interviewer_type": "Alumni or senior admissions staff",
   "community_texture": "Alumni/admissions mix and geography (handoff).",
   "handoff_paths": {

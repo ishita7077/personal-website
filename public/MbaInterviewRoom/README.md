@@ -1,7 +1,10 @@
 # MBA Interview Room (static bundle)
 
-Served at **`/mba-interview-room`** with `<base href="/MbaInterviewRoom/">`.
+- **URL:** `/mba-interview-room` (and nested paths for programme, resources, custom mode)
+- **Base:** `<base href="/MbaInterviewRoom/">`
+- **Data:** `GET /api/mba-interview-room/schools`, `GET /api/mba-interview-room/school/[id]`
+- **Optional feedback:** `POST /api/mba-interview/enhanced-feedback`
 
-Loads programme data from **`/api/mba-interview-room/schools`** and **`/api/mba-interview-room/school/[id]`**. Optional AI feedback: **`/api/mba-interview/enhanced-feedback`**.
+The Haas-only **Interview Room** at `/InterviewRoom` is a separate app under `public/InterviewRoom/`.
 
-Architecture and local testing: **`docs/MBA_INTERVIEW_ARCHITECTURE.md`**.
+Docs: `docs/MBA_INTERVIEW_ARCHITECTURE.md`. Dataset validation: `npm run validate:mba-room`.

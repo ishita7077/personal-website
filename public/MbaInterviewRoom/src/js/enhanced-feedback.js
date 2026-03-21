@@ -66,22 +66,22 @@
 
     const p1 = document.createElement('p');
     p1.textContent =
-      'AI feedback for Interview Room is powered by OpenAI. It analyzes what you said to give structured feedback on each answer and your overall session.';
+      'Optional written feedback reads what you said and suggests improvements. You only need to confirm this once in this browser.';
     body.appendChild(p1);
 
     const p2 = document.createElement('p');
     p2.textContent =
-      'Only the text of your transcripts is sent to OpenAI — video and audio stay on your device. Transcripts are used only to generate feedback and are not stored by Interview Room.';
+      'Only the text of your answers is sent over the network to produce suggestions. Video and audio stay on your device. Nothing is saved in this app after the response returns.';
     body.appendChild(p2);
     const a = document.createElement('a');
     a.href = link;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    a.textContent = 'OpenAI data usage and privacy';
+    a.textContent = 'Provider data policy (OpenAI)';
     body.appendChild(a);
     const p3 = document.createElement('p');
     p3.style.marginTop = '1em';
-    p3.textContent = 'By continuing, you agree to send your transcript text to OpenAI under their API data usage policies.';
+    p3.textContent = 'By continuing, you agree to send your answer text under that policy.';
     body.appendChild(p3);
 
     const checkboxWrap = document.createElement('label');
@@ -94,7 +94,7 @@
     checkbox.type = 'checkbox';
     checkbox.id = 'ir-enhanced-consent-check';
     const span = document.createElement('span');
-    span.textContent = 'I understand and agree to send my transcript text to OpenAI to receive AI feedback.';
+    span.textContent = 'I understand and want to use optional written feedback.';
     checkboxWrap.appendChild(checkbox);
     checkboxWrap.appendChild(span);
     body.appendChild(checkboxWrap);
@@ -107,7 +107,7 @@
       return;
     }
 
-    modalTitle.textContent = 'AI feedback (OpenAI)';
+    modalTitle.textContent = 'Optional written feedback';
     modalBody.innerHTML = '';
     modalBody.appendChild(body);
 
@@ -239,7 +239,7 @@
           if (IR.ui && IR.ui.updateReviewCardAI) IR.ui.updateReviewCardAI(index);
           if (IR.ui && IR.ui.updateEnhancedBlock) IR.ui.updateEnhancedBlock(index);
           if (IR.ui && IR.ui.toast) {
-            IR.ui.toast((err && err.message) || 'AI feedback failed', 'error');
+            IR.ui.toast((err && err.message) || 'Could not generate suggestions', 'error');
           }
           if (callback) callback(err);
         });
@@ -281,7 +281,7 @@
     }
     if (answers.length === 0) {
       if (callback) callback(new Error('No transcripts to summarize'));
-      if (IR.ui && IR.ui.toast) IR.ui.toast('No transcripts available for enhanced summary', 'warning');
+      if (IR.ui && IR.ui.toast) IR.ui.toast('Add text for at least one answer to run a full-session summary.', 'warning');
       return;
     }
 

@@ -161,16 +161,16 @@ upload photos directly from your iphone using the share sheet:
 
 when you share a photo, the shortcut uploads it to supabase storage and ai automatically categorizes it into collections (flowers, food, friends).
 
-## Interview Room
+## interview practice (mba)
 
-Practice MBA admissions interviews (Haas format) with video recording and live transcription. Runs entirely in your browser — no data is uploaded.
+Two surfaces: a **Haas-focused** Interview Room and a **multi-programme** MBA Interview Room. Recording and transcription stay in the browser unless you opt into optional API-based text feedback (separate endpoints per app).
 
-| | Link |
-|---|-----|
-| **Live** | [ishitasrivastava.xyz/InterviewRoom](https://ishitasrivastava.xyz/InterviewRoom) |
-| **Source** | [github.com/ishita7077/personal-website/tree/main/public/InterviewRoom](https://github.com/ishita7077/personal-website/tree/main/public/InterviewRoom) |
+| App | Path | Bundle |
+|-----|------|--------|
+| Interview Room (Haas) | [`/InterviewRoom`](https://ishitasrivastava.xyz/InterviewRoom) | `public/InterviewRoom/` |
+| MBA Interview Room (10 programmes + custom) | `/mba-interview-room` | `public/MbaInterviewRoom/` |
 
-The app lives in `public/InterviewRoom/`. Fork or copy that folder to use it standalone.
+Developer notes: [`docs/MBA_INTERVIEW_ARCHITECTURE.md`](docs/MBA_INTERVIEW_ARCHITECTURE.md), dataset layout in [`data/mba_interview_dataset/README.md`](data/mba_interview_dataset/README.md).
 
 ## clone the repo
 

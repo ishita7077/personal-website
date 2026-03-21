@@ -2,7 +2,7 @@
   "school_id": "hbs",
   "display_name": "Harvard Business School",
   "validated_interview_format": "1:1 application-based interview tailored to your file; ~30 minutes.",
-  "unique_elements": "Post-Interview Reflection due within 24 hours (guidance often cited as ~300–450 words).",
+  "unique_elements": "Post-interview reflection (often ~300–450 words, ~24h); in practice sessions the typed reflection is the final prompt after file-aware and behavioural video questions.",
   "interviewer_type": "MBA Admissions Board member who reviewed your application",
   "community_texture": "Reports emphasize file-aware, detail-probing questions (Clear Admit pattern in handoff CSV).",
   "handoff_paths": {

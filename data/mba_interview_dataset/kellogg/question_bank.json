@@ -1,12 +1,12 @@
 {
   "version": 1,
   "school_id": "kellogg",
-  "question_count": 50,
+  "question_count": 29,
   "questions": [
     {
       "id": "kellogg-bhv-1",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you influenced an outcome when you did not have formal authority.",
+      "text": "Tell me about a time you influenced an outcome when you did not have formal authority.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -53,7 +53,7 @@
     {
       "id": "kellogg-bhv-2",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a professional setback or failure. What happened and what did you change afterward?",
+      "text": "Describe a professional setback or failure. What happened and what did you change afterward?",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -101,7 +101,7 @@
     {
       "id": "kellogg-bhv-3",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you resolved a conflict between two stakeholders.",
+      "text": "Tell me about a time you resolved a conflict between two stakeholders.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -148,7 +148,7 @@
     {
       "id": "kellogg-bhv-4",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Give an example of using data or analysis to drive a decision.",
+      "text": "Give an example of using data or analysis to drive a decision.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -195,7 +195,7 @@
     {
       "id": "kellogg-bhv-5",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you had to deliver results with incomplete information.",
+      "text": "Tell me about a time you had to deliver results with incomplete information.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -242,7 +242,7 @@
     {
       "id": "kellogg-bhv-6",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a time you changed your mind after receiving new information.",
+      "text": "Describe a time you changed your mind after receiving new information.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -289,7 +289,7 @@
     {
       "id": "kellogg-bhv-7",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you mentored or developed someone.",
+      "text": "Tell me about a time you mentored or developed someone.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -336,7 +336,7 @@
     {
       "id": "kellogg-bhv-8",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a high-stakes presentation or executive conversation you led.",
+      "text": "Describe a high-stakes presentation or executive conversation you led.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -383,7 +383,7 @@
     {
       "id": "kellogg-bhv-9",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you improved a process or way of working.",
+      "text": "Tell me about a time you improved a process or way of working.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -430,7 +430,7 @@
     {
       "id": "kellogg-bhv-10",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe working across cultures, time zones, or language barriers.",
+      "text": "Describe working across cultures, time zones, or language barriers.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -477,7 +477,7 @@
     {
       "id": "kellogg-bhv-11",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about an ethical grey area you navigated.",
+      "text": "Tell me about an ethical grey area you navigated.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -524,7 +524,7 @@
     {
       "id": "kellogg-bhv-12",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a time you said no to a senior leader or client.",
+      "text": "Describe a time you said no to a senior leader or client.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -571,7 +571,7 @@
     {
       "id": "kellogg-bhv-13",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you had to fire someone or end a collaboration.",
+      "text": "Tell me about a time you had to fire someone or end a collaboration.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -618,7 +618,7 @@
     {
       "id": "kellogg-bhv-14",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a time you volunteered for an ambiguous project and made it succeed.",
+      "text": "Describe a time you volunteered for an ambiguous project and made it succeed.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -665,7 +665,7 @@
     {
       "id": "kellogg-bhv-15",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is the hardest feedback you have received, and how did you respond?",
+      "text": "What is the hardest feedback you have received, and how did you respond?",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -712,7 +712,7 @@
     {
       "id": "kellogg-bhv-16",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you balanced short-term pressure with long-term quality.",
+      "text": "Tell me about a time you balanced short-term pressure with long-term quality.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -759,7 +759,7 @@
     {
       "id": "kellogg-bhv-17",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a time you built trust in a low-trust environment.",
+      "text": "Describe a time you built trust in a low-trust environment.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -806,7 +806,7 @@
     {
       "id": "kellogg-bhv-18",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a product, service, or initiative you launched.",
+      "text": "Tell me about a product, service, or initiative you launched.",
       "question_type": "behavioral",
       "high_probability": true,
       "evidence_types": [
@@ -853,7 +853,7 @@
     {
       "id": "kellogg-bhv-19",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a time you disagreed with your team’s consensus.",
+      "text": "Describe a time you disagreed with your team’s consensus.",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -900,7 +900,7 @@
     {
       "id": "kellogg-bhv-20",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Why MBA, and why now?",
+      "text": "Why MBA, and why now?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -947,7 +947,7 @@
     {
       "id": "kellogg-bhv-21",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What are your short-term and long-term career goals?",
+      "text": "What are your short-term and long-term career goals?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -993,7 +993,7 @@
     {
       "id": "kellogg-bhv-22",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What kind of leader do you aspire to be in ten years?",
+      "text": "What kind of leader do you aspire to be in ten years?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1039,7 +1039,7 @@
     {
       "id": "kellogg-bhv-23",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What industries or functions are you exploring post-MBA?",
+      "text": "What industries or functions are you exploring post-MBA?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1085,7 +1085,7 @@
     {
       "id": "kellogg-bhv-24",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. How would classmates describe you in one sentence?",
+      "text": "How would classmates describe you in one sentence?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1131,7 +1131,7 @@
     {
       "id": "kellogg-bhv-25",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a misconception people might have about you?",
+      "text": "What is a misconception people might have about you?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1177,7 +1177,7 @@
     {
       "id": "kellogg-bhv-26",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Tell me about a time you had to prioritize among three urgent demands.",
+      "text": "Tell me about a time you had to prioritize among three urgent demands.",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1224,7 +1224,7 @@
     {
       "id": "kellogg-bhv-27",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. Describe a time you recovered a failing project.",
+      "text": "Describe a time you recovered a failing project.",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1271,7 +1271,7 @@
     {
       "id": "kellogg-bhv-28",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What would you ask the admissions committee if roles were reversed?",
+      "text": "What would you ask the admissions committee if roles were reversed?",
       "question_type": "behavioral",
       "high_probability": false,
       "evidence_types": [
@@ -1317,1015 +1317,7 @@
     {
       "id": "kellogg-extra-29",
       "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-30",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-31",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-32",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-33",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-34",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-35",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-36",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-37",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-38",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-39",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-40",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-41",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-42",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-43",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-44",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-45",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-46",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-47",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-48",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-49",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
-      "question_type": "goals",
-      "high_probability": false,
-      "evidence_types": [
-        "goals_clarity",
-        "impact_metric"
-      ],
-      "evaluation_dimensions": [
-        "school_fit",
-        "judgement"
-      ],
-      "handoff_basis": {
-        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
-        "step4_urls_sample": [
-          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
-          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
-          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
-        ],
-        "step5_urls_sample": [
-          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
-        ],
-        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
-      },
-      "expected_answer_map": {
-        "questionGoal": "Name a credible problem, why it matters, and a concrete first step.",
-        "corePoints": [
-          "Answer the question directly in the first 1–2 sentences.",
-          "Include a concrete situation or example with your role and actions.",
-          "Close with outcome, learning, or how it shapes your MBA goals."
-        ],
-        "niceToHave": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ],
-        "redFlags": [
-          "Vague generalities with no example.",
-          "Contradicting your stated goals.",
-          "Negative framing about teammates without accountability."
-        ],
-        "examplesOfGoodDirection": [
-          "Tie to skills you want from the MBA without overstating certainty."
-        ]
-      },
-      "prep_time_seconds": 45,
-      "answer_time_seconds": 315
-    },
-    {
-      "id": "kellogg-extra-50",
-      "interview_phase": "live_behavioral",
-      "text": "[Resume-only simulation] The interviewer has only your resume. What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
+      "text": "What is a problem in your industry you would like to help solve post-MBA, and what is your first step?",
       "question_type": "goals",
       "high_probability": false,
       "evidence_types": [

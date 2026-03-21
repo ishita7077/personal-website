@@ -40,7 +40,7 @@
         quality: QUALITY.LOW,
         isUsableForReview: false,
         reason: 'empty',
-        message: 'Transcript is empty.',
+        message: 'No text captured for this answer.',
         stats: { wordCount: 0 }
       };
     }
@@ -60,7 +60,7 @@
         quality: QUALITY.LOW,
         isUsableForReview: false,
         reason: 'too_short',
-        message: 'Transcript is too short for reliable AI feedback.',
+        message: 'Answer text is too short for reliable suggestions.',
         stats: { wordCount, uniqueRatio, fillerRatio, ellipsisCount, repeatedChunks }
       };
     }
@@ -70,7 +70,7 @@
         quality: QUALITY.LOW,
         isUsableForReview: false,
         reason: 'repeated_garbage',
-        message: 'Transcript appears corrupted or highly repetitive.',
+        message: 'This text looks incomplete or highly repetitive.',
         stats: { wordCount, uniqueRatio, fillerRatio, ellipsisCount, repeatedChunks }
       };
     }
@@ -101,7 +101,7 @@
       isUsableForReview,
       reason: reasons[0] || null,
       message: !isUsableForReview
-        ? 'Transcript quality too low for reliable AI feedback.'
+        ? 'Text quality is too low for reliable suggestions.'
         : null,
       stats: {
         wordCount,

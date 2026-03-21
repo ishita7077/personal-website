@@ -1,6 +1,6 @@
 # MBA interview dataset (developers)
 
-Generated files for **`/mba-interview-room`** (`public/MbaInterviewRoom/`). Berkeley Haas live practice is served from **`/InterviewRoom`** and does not read this tree at runtime (a `berkeley_haas/` folder still exists for registry parity and builds).
+Generated files for **`/mba-interview-room`** (`public/MbaInterviewRoom/`). All ten programmes, including **Berkeley Haas**, load their bundles from this tree at runtime via `GET /api/mba-interview-room/school/[id]`. The standalone **`/InterviewRoom`** app is a separate Haas-only surface that uses its own `haas-data.js` copy.
 
 ## Layout
 

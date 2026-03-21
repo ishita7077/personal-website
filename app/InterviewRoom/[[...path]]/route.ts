@@ -2,23 +2,21 @@ import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
 
+type RouteParams = { params: Promise<{ path?: string[] }> };
+
 /**
- * Serves the Interview Room static HTML.
- * Assets (CSS, JS) are served from public/InterviewRoom/ at /InterviewRoom/*.
- * We inject <base href="/InterviewRoom/"> so relative paths resolve correctly.
+ * Standalone **Interview Room** (Haas-focused) — independent from MBA Interview Room.
+ * Serves `public/InterviewRoom/index.html` for `/InterviewRoom` and any nested path so
+ * shared links keep working. Assets resolve via `<base href="/InterviewRoom/">`.
  */
-export async function GET() {
+export async function GET(_req: Request, { params }: RouteParams) {
+  await params;
   try {
     const filePath = path.join(process.cwd(), "public", "InterviewRoom", "index.html");
     const html = await readFile(filePath, "utf-8");
-
-    // Inject base tag so src/styles/main.css → /InterviewRoom/src/styles/main.css
     const baseTag = '<base href="/InterviewRoom/">';
     const withBase =
-      html.indexOf("<head>") !== -1
-        ? html.replace("<head>", `<head>${baseTag}`)
-        : html;
-
+      html.indexOf("<head>") !== -1 ? html.replace("<head>", `<head>${baseTag}`) : html;
     return new NextResponse(withBase, {
       headers: {
         "Content-Type": "text/html; charset=utf-8",

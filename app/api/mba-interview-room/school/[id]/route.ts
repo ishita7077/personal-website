@@ -8,15 +8,6 @@ type RouteParams = { params: Promise<{ id: string }> };
  */
 export async function GET(_req: Request, { params }: RouteParams) {
   const { id } = await params;
-  if (id === "berkeley_haas") {
-    return NextResponse.json(
-      {
-        error: "Berkeley Haas practice is served from /InterviewRoom.",
-        usePath: "/InterviewRoom",
-      },
-      { status: 404 }
-    );
-  }
   const bundle = loadInterviewRoomBundle(id);
   if (!bundle) {
     return NextResponse.json({ error: "Unknown school or missing dataset." }, { status: 404 });

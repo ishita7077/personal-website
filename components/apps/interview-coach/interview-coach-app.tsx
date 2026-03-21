@@ -51,7 +51,7 @@ export function InterviewCoachApp({ inShell = false }: InterviewCoachAppProps) {
                 href={REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium text-[#c9600a] hover:underline shrink-0"
+                className="text-xs font-medium text-blue-600 hover:underline shrink-0"
               >
                 Open repo →
               </a>
@@ -64,23 +64,14 @@ export function InterviewCoachApp({ inShell = false }: InterviewCoachAppProps) {
           </div>
 
           <p className="text-xs text-muted-foreground">
-            For timed video practice with on-device recording, see{" "}
+            For timed video practice with on-device recording (ten MBA programmes, including Haas), open{" "}
             <a
               href="/mba-interview-room"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#c9600a] hover:underline"
+              className="text-blue-600 hover:underline"
             >
               MBA Interview Room
-            </a>{" "}
-            or{" "}
-            <a
-              href="/InterviewRoom"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#c9600a] hover:underline"
-            >
-              Interview Room
             </a>
             .
           </p>
