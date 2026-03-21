@@ -3,6 +3,7 @@
  * Practice: /mba-interview-room/{schoolId}
  * Resources: /mba-interview-room/{schoolId}/resources
  * Custom: /mba-interview-room/custom
+ * AI stories: /mba-interview-room/ai-stories
  *
  * (The separate Haas **Interview Room** lives at `/InterviewRoom` — different app in public/InterviewRoom.)
  */
@@ -34,6 +35,9 @@
     if (parts[0] === "custom") {
       return { view: "custom", schoolId: null };
     }
+    if (parts[0] === "ai-stories") {
+      return { view: "ai-stories", schoolId: null };
+    }
     if (parts.length === 1 && parts[0] === "resources") {
       return { view: "resources-root", schoolId: null };
     }
@@ -57,7 +61,7 @@
   };
 
   IR.isKnownSchoolId = function (id) {
-    if (!id || id === "custom") return false;
+    if (!id || id === "custom" || id === "ai-stories") return false;
     const list = IR.SCHOOLS_LIST;
     if (list && list.length) {
       return list.some(function (s) {
@@ -104,6 +108,11 @@
     if (parsed.view === "custom") {
       IR.navigateTo("custom");
       if (IR.updateConfigFromDom) IR.updateConfigFromDom();
+      return;
+    }
+    if (parsed.view === "ai-stories") {
+      IR.navigateTo("ai-stories");
+      IR.updateTopNav();
       return;
     }
     if (parsed.view === "resources-root") {

@@ -501,6 +501,24 @@ a.ir-resource-item-card:hover .ir-resource-link-title{color:var(--ir-accent-hove
 .ir-resource-name a:hover{text-decoration:underline}
 .ir-resource-topic{font-size:13px;color:var(--ir-text-muted);line-height:1.6;margin:0}
 
+/* Building Human Stories with AI (same content as standalone Interview Room) */
+.ir-ai-stories{max-width:920px;margin:40px auto 0;padding:24px 20px 22px;border-radius:var(--ir-radius-lg);background:var(--ir-bg-card);border:1px solid var(--ir-border);box-shadow:var(--ir-shadow-sm);text-align:left}
+.ir-ai-stories-header{margin-bottom:18px}
+.ir-ai-stories-header .ir-h2{margin-bottom:8px}
+.ir-ai-stories-intro{font-size:13px;line-height:1.8;color:var(--ir-text-muted);margin:0 0 8px}
+.ir-ai-stories-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:10px 0 16px}
+.ir-ai-step-card{background:var(--ir-bg-elevated);border-radius:var(--ir-radius);border:1px solid var(--ir-border);padding:14px 14px 12px;box-shadow:var(--ir-shadow-sm);display:flex;flex-direction:column;gap:6px}
+.ir-ai-step-label{font-family:var(--ir-mono);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ir-accent)}
+.ir-ai-step-title{font-size:14px;font-weight:600;margin:0}
+.ir-ai-step-body{font-size:12px;line-height:1.7;color:var(--ir-text-muted);margin:0}
+.ir-ai-step-body code{font-family:var(--ir-mono);font-size:12px;background:var(--ir-bg-inset);padding:1px 4px;border-radius:4px}
+.ir-ai-step-cta{margin-top:6px;align-self:flex-start}
+.ir-ai-stories-reference{margin-top:6px;padding:10px 12px;border-radius:var(--ir-radius);background:var(--ir-bg-inset);border:1px dashed var(--ir-border)}
+.ir-ai-ref-text{font-size:13px;line-height:1.7;color:var(--ir-text-muted);margin:0 0 6px}
+.ir-ai-ref-links{display:flex;flex-wrap:wrap;gap:10px}
+.ir-ai-ref-link{font-size:13px;color:var(--ir-accent);text-decoration:none}
+.ir-ai-ref-link:hover{text-decoration:underline}
+
 .ir-footer{max-width:920px;margin:32px auto 20px;padding:12px 20px max(24px,env(safe-area-inset-bottom));font-size:12px;color:var(--ir-text-dim);text-align:center;border-top:1px solid var(--ir-border)}
 .ir-footer a{color:var(--ir-accent);text-decoration:none}
 .ir-footer a:hover{text-decoration:underline}
@@ -528,6 +546,8 @@ a.ir-resource-item-card:hover .ir-resource-link-title{color:var(--ir-accent-hove
   .ir-announcement{margin-left:max(-16px,calc(-1 * env(safe-area-inset-left,0px)));margin-right:max(-16px,calc(-1 * env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
   .ir-home-features{gap:16px;flex-wrap:wrap;justify-content:center}
   .ir-feature{font-size:12px}
+  .ir-ai-stories{margin-top:28px;padding:18px 14px}
+  .ir-ai-stories-steps{grid-template-columns:1fr;gap:12px}
   .ir-device-select{flex-direction:column}
   .ir-device-select select{min-height:44px}
   .ir-tc-actions{flex-direction:column;margin-top:12px}

@@ -174,6 +174,14 @@
     if (resourcesBtn) {
       resourcesBtn.addEventListener('click', (e) => { e.preventDefault(); IR.handleResourcesClick(); });
     }
+    const aiStoriesNavBtn = document.getElementById('aiStoriesNavBtn');
+    if (aiStoriesNavBtn) {
+      aiStoriesNavBtn.addEventListener('click', () => {
+        if (IR.pushMbaIrPath) IR.pushMbaIrPath('ai-stories', 'push');
+        IR.navigateTo('ai-stories');
+        IR.updateTopNav();
+      });
+    }
     const resourcesBackBtn = document.getElementById('resourcesBackBtn');
     if (resourcesBackBtn) {
       resourcesBackBtn.addEventListener('click', () => {
