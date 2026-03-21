@@ -5,7 +5,7 @@ Two entry points share the same UX patterns (device check, timers, recording, tr
 | Path | Bundle | Data |
 |------|--------|------|
 | **`/InterviewRoom`** | `public/InterviewRoom/` | Standalone Haas practice (`haas-data.js`, `config-haas.js` in this bundle) |
-| **`/mba-interview-room`** | `public/MbaInterviewRoom/` | Ten programmes (including Haas): `data/mba_interview_dataset/{school}/` via `/api/mba-interview-room/*` |
+| **`/mba-interview-room`** | `public/MbaInterviewRoom/` | Ten programmes (including Haas): `data/mba_interview_dataset/{school}/` via `/api/mba-interview-room/*`. In-app page **Building Human Stories with AI** at `/mba-interview-room/ai-stories` (same copy as `/InterviewRoom`). |
 
 Berkeley Haas in the MBA Interview Room uses the same card → fetch bundle → session flow as every other school. The separate `/InterviewRoom` app remains available for the original single-school Haas experience.
 
