@@ -11,15 +11,6 @@
     return div.innerHTML;
   }
 
-  /** Handoff-aligned copy for device check / waiting room (matches dataset school_meta for Haas). */
-  const HAAS_INTERVIEW_CONTEXT = {
-    validated_interview_format:
-      'Invitation-only; prerecorded video and/or live remote options.',
-    unique_elements:
-      'Defining Leadership Principles as cultural lens; dynamic interview options per official interview page (step4).',
-    interviewer_type: 'Student or alum for live remote',
-  };
-
   IR.ui = {
     toast(msg, type = 'info') {
       const c = document.getElementById('toastContainer');
@@ -298,23 +289,6 @@
         `<div class="ir-format-item"><div class="ir-format-value">${prepTime}s</div><div class="ir-format-label">Prep Time</div></div>` +
         `<div class="ir-format-item"><div class="ir-format-value">${Math.floor(answerTime / 60)}m</div><div class="ir-format-label">Answer Time</div></div>` +
         `<div class="ir-format-item"><div class="ir-format-value">~${totalMin}m</div><div class="ir-format-label">Total Duration</div></div>`;
-
-      const brief = document.getElementById('programmeBrief');
-      const lead = document.getElementById('programmeBriefLead');
-      const body = document.getElementById('programmeBriefBody');
-      const foot = document.getElementById('programmeBriefFoot');
-      if (brief && lead && body && foot) {
-        if (isCustom) {
-          brief.classList.add('ir-hidden');
-        } else if (id === 'haas-mba') {
-          lead.textContent = HAAS_INTERVIEW_CONTEXT.validated_interview_format;
-          body.textContent = HAAS_INTERVIEW_CONTEXT.unique_elements;
-          foot.textContent = `Who you might see: ${HAAS_INTERVIEW_CONTEXT.interviewer_type}`;
-          brief.classList.remove('ir-hidden');
-        } else {
-          brief.classList.add('ir-hidden');
-        }
-      }
     },
 
     renderAlerts() {
@@ -360,21 +334,6 @@
       const t = IR.state.sessionQuestions.length;
       document.getElementById('sessionQLabel').textContent = `Q${IR.state.currentQuestion + 1} / ${t}`;
       document.getElementById('questionText').textContent = q ? q.text : '';
-      const phaseEl = document.getElementById('questionPhase');
-      if (phaseEl) {
-        if (q && (q.interview_phase || q.question_type) && !(IR.state && IR.state.customMode)) {
-          const parts = [];
-          if (q.interview_phase) parts.push(String(q.interview_phase).replace(/_/g, ' '));
-          if (q.question_type) parts.push(String(q.question_type).replace(/_/g, ' '));
-          phaseEl.textContent = parts
-            .map((s) => s.replace(/\b\w/g, (c) => c.toUpperCase()))
-            .join(' · ');
-          phaseEl.hidden = false;
-        } else {
-          phaseEl.textContent = '';
-          phaseEl.hidden = true;
-        }
-      }
       document.getElementById('questionCard').dataset.phase = IR.state.phase;
       const pl = document.getElementById('phaseLabel');
       const sessionMedia = document.getElementById('sessionMedia');
@@ -430,21 +389,6 @@
       const list = document.getElementById('waitingList');
       const btn = document.getElementById('waitingReviewBtn');
       const nudge = document.getElementById('waitingNudge');
-      const progBrief = document.getElementById('waitingProgrammeBrief');
-      if (progBrief) {
-        if (IR.state && !IR.state.customMode && IR.state.selectedSchool === 'haas-mba') {
-          progBrief.classList.remove('ir-hidden');
-          progBrief.innerHTML =
-            '<div class="ir-waiting-programme-inner">' +
-            '<span class="ir-label">UC BERKELEY HAAS — REAL FORMAT (HANDOFF)</span>' +
-            '<p class="ir-waiting-programme-text">' +
-            HAAS_INTERVIEW_CONTEXT.validated_interview_format +
-            '</p></div>';
-        } else {
-          progBrief.classList.add('ir-hidden');
-          progBrief.innerHTML = '';
-        }
-      }
       if (!list) return;
       const qs = IR.state.sessionQuestions || [];
       const statuses = IR.state.questionStatuses || [];

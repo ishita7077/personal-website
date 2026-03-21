@@ -40,15 +40,12 @@
         <h1 class="ir-h1">Practice interviews that feel real</h1>
         <p class="ir-home-tagline">Simulate the Haas MBA interview format with timed questions, video recording, and live transcription. Everything runs on your device — nothing is uploaded.</p>
         <div class="ir-label ir-label-select">SELECT INTERVIEW</div>
-        <div class="ir-school-card ir-school-card-haas" id="schoolCardHaas" role="button" tabindex="0" style="--ir-school-accent:#003262" title="UC Berkeley Haas — 7 rotating question sets · handoff-aligned format notes below when you start">
+        <div class="ir-school-card" id="schoolCardHaas" role="button" tabindex="0" title="Start Haas MBA interview · 6 questions">
           <div class="ir-school-info">
             <div class="ir-school-name">UC Berkeley Haas</div>
-            <p class="ir-school-style">Invitation-only; prerecorded video and/or live remote options.</p>
-            <p class="ir-school-hook">Defining Leadership Principles as cultural lens; dynamic interview options per official interview page.</p>
-            <p class="ir-school-practice">6 prompts · 45s prep · 3 min answer · random 1 of 7 fixed six-question sets</p>
-            <p class="ir-school-who">Likely interviewer: Student or alum for live remote</p>
+            <div class="ir-school-detail">Full-Time MBA · 6 questions · 45s prep · 3 min answer</div>
           </div>
-          <div class="ir-school-arrow" aria-hidden="true">→</div>
+          <div class="ir-school-arrow">→</div>
         </div>
         <div class="ir-school-card" id="schoolCardCustom" role="button" tabindex="0" title="Create a custom practice interview">
           <div class="ir-school-info">
@@ -303,14 +300,7 @@
             <div class="ir-check-row"><div class="ir-check-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/></svg>Mic</div><div class="ir-check-right-inner"><div class="ir-mic-level"><div class="ir-mic-level-fill" id="micLevel"></div></div><span class="ir-check-status" id="checkMic">Checking...</span></div></div>
             <div class="ir-check-row"><div class="ir-check-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Browser</div><span class="ir-check-status" id="checkBrowser">Checking...</span></div>
           </div>
-          <div class="ir-format-info"><div class="ir-label">PRACTICE SIMULATOR (THIS SESSION)</div><div id="formatInfo" class="ir-format-grid"></div></div>
-          <div class="ir-programme-brief ir-hidden" id="programmeBrief" aria-live="polite">
-            <div class="ir-label">HOW BERKELEY HAAS INTERVIEWS</div>
-            <p class="ir-programme-brief-lead" id="programmeBriefLead"></p>
-            <p class="ir-programme-brief-body" id="programmeBriefBody"></p>
-            <p class="ir-programme-brief-foot" id="programmeBriefFoot"></p>
-            <p class="ir-programme-brief-note">The timer above applies to this practice session. Question sets are defined in this app’s data files. Use Resources in the nav for programme links and prep materials.</p>
-          </div>
+          <div class="ir-format-info"><div class="ir-label">INTERVIEW FORMAT</div><div id="formatInfo" class="ir-format-grid"></div></div>
         </div>
       </div>
       <div id="tcAlerts"></div>
@@ -325,7 +315,6 @@
         <h1 class="ir-h1">Waiting room</h1>
         <p class="ir-body">Pick a question to answer. Completed questions are locked — you can't re-record. No timer until you start.</p>
       </div>
-      <div class="ir-waiting-programme ir-hidden" id="waitingProgrammeBrief" aria-live="polite"></div>
       <p class="ir-nudge" id="waitingNudge">Click a question to begin</p>
       <div id="waitingList" class="ir-waiting-list"></div>
       <div class="ir-waiting-footer">
@@ -339,7 +328,7 @@
       <div class="ir-progress" id="sessionProgress"></div>
       <div class="ir-phase-indicator"><div class="ir-phase-label" id="phaseLabel">PREPARATION</div></div>
       <div class="ir-timer" id="sessionTimer">0:45</div>
-      <div class="ir-question-card" id="questionCard" data-phase="prep"><p class="ir-question-phase" id="questionPhase"></p><p class="ir-question-text" id="questionText"></p></div>
+      <div class="ir-question-card" id="questionCard" data-phase="prep"><p class="ir-question-text" id="questionText"></p></div>
       <div class="ir-session-media" id="sessionMedia"><div class="ir-cam-preview-small" id="camPreviewSmall"><video id="sessionCamVideo" autoplay muted playsinline></video></div><div><div class="ir-rec-indicator" id="recIndicator"><div class="ir-rec-dot"></div><span class="ir-rec-text">RECORDING</span></div></div></div>
       <div class="ir-live-transcript" id="liveTranscript"><span class="ir-transcript-placeholder">Your words will appear here as you speak.</span></div>
       <div class="ir-session-controls">

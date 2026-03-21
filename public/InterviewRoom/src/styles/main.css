@@ -111,24 +111,17 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
 .ir-home{align-items:center;justify-content:center;text-align:center}
 .ir-home-hero{max-width:560px;margin:0 auto}
 .ir-home-tagline{font-size:15px;color:var(--ir-text-muted);margin-top:12px;margin-bottom:48px;line-height:1.7}
-.ir-hidden{display:none!important}
-.ir-school-card{background:var(--ir-bg-card);border:1px solid var(--ir-border);border-radius:var(--ir-radius-lg);padding:22px 26px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;cursor:pointer;transition:all var(--ir-transition);box-shadow:var(--ir-shadow-sm);max-width:520px;margin:0 auto 16px}
-.ir-school-card-haas{border-left:4px solid var(--ir-school-accent,#003262)}
+.ir-school-card{background:var(--ir-bg-card);border:1px solid var(--ir-border);border-radius:var(--ir-radius-lg);padding:22px 26px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all var(--ir-transition);box-shadow:var(--ir-shadow-sm);max-width:480px;margin:0 auto 40px}
 .ir-school-card:hover{border-color:var(--ir-accent);box-shadow:var(--ir-shadow)}
-.ir-school-info{text-align:left;flex:1;min-width:0}
+.ir-school-info{text-align:left}
 .ir-school-name{font-size:17px;font-weight:700}
 .ir-school-detail{font-size:13px;color:var(--ir-text-muted);margin-top:3px}
-.ir-school-style{font-size:13px;color:var(--ir-text);margin-top:10px;line-height:1.45;font-weight:500}
-.ir-school-hook{font-size:12px;color:var(--ir-text-muted);margin-top:6px;line-height:1.5}
-.ir-school-practice{font-family:var(--ir-mono);font-size:11px;color:var(--ir-text-dim);margin-top:8px;line-height:1.4;letter-spacing:0.02em}
-.ir-school-who{font-size:11px;color:var(--ir-text-dim);margin-top:6px;font-style:italic;line-height:1.4}
-.ir-school-arrow{color:var(--ir-text-dim);font-size:18px;transition:color var(--ir-transition);flex-shrink:0;align-self:center;margin-top:4px}
+.ir-school-arrow{color:var(--ir-text-dim);font-size:18px;transition:color var(--ir-transition)}
 .ir-school-card:hover .ir-school-arrow{color:var(--ir-accent)}
 .ir-home-features{display:flex;gap:32px;justify-content:center;flex-wrap:wrap}
 .ir-feature{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ir-text-dim)}
 .ir-feature svg{width:16px;height:16px;color:var(--ir-accent)}
 .ir-label-select{margin-bottom:12px}
-#schoolCardCustom{margin-bottom:40px}
 .ir-session-shortcuts{text-align:center;margin-top:6px}
 .ir-shortcuts-text{color:var(--ir-text-dim);font-size:11px}
 .ir-btn-help{padding:8px 12px}
@@ -253,15 +246,6 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
 .ir-format-item{text-align:center}
 .ir-format-value{font-family:var(--ir-mono);font-size:20px;font-weight:600;color:var(--ir-accent)}
 .ir-format-label{font-size:12px;color:var(--ir-text-muted);margin-top:2px}
-.ir-programme-brief{margin-top:18px;padding:16px 18px;border-radius:var(--ir-radius-lg);background:var(--ir-accent-bg);border:1px solid rgba(201,96,10,0.22)}
-.ir-programme-brief .ir-label{margin-bottom:8px}
-.ir-programme-brief-lead{font-size:14px;color:var(--ir-text);line-height:1.55;margin:0 0 10px;font-weight:500}
-.ir-programme-brief-body{font-size:13px;color:var(--ir-text-muted);line-height:1.55;margin:0 0 8px}
-.ir-programme-brief-foot{font-size:12px;color:var(--ir-text-dim);margin:0 0 10px}
-.ir-programme-brief-note{font-size:11px;color:var(--ir-text-dim);margin:0;line-height:1.45}
-.ir-waiting-programme{max-width:520px;margin:0 auto 20px;width:100%}
-.ir-waiting-programme-inner{background:var(--ir-bg-card);border:1px solid var(--ir-border);border-radius:var(--ir-radius);padding:14px 18px;box-shadow:var(--ir-shadow-sm)}
-.ir-waiting-programme-text{font-size:13px;color:var(--ir-text-muted);line-height:1.55;margin:8px 0 0}
 .ir-tc-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:8px}
 
 .ir-alert{display:flex;align-items:flex-start;gap:10px;padding:13px 16px;border-radius:var(--ir-radius);font-size:13px;line-height:1.6;margin-bottom:14px}
@@ -276,8 +260,6 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
 .ir-question-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transition:background 0.3s}
 .ir-question-card[data-phase="prep"]::before{background:var(--ir-yellow)}
 .ir-question-card[data-phase="answer"]::before{background:var(--ir-green)}
-.ir-question-phase{font-family:var(--ir-mono);font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--ir-accent);margin:0 0 10px}
-.ir-question-phase:empty{display:none}
 .ir-question-text{font-size:19px;font-weight:600;line-height:1.55}
 .ir-phase-indicator{text-align:center;margin:8px 0}
 .ir-phase-label{font-family:var(--ir-mono);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
@@ -479,7 +461,6 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
   .ir-school-card{padding:16px 18px;margin-bottom:24px}
   .ir-school-name{font-size:15px}
   .ir-school-detail{font-size:12px}
-  .ir-school-style{font-size:12px}
   .ir-home-features{gap:16px;flex-wrap:wrap;justify-content:center}
   .ir-feature{font-size:12px}
   .ir-ai-stories{margin-top:28px;padding:18px 14px}
