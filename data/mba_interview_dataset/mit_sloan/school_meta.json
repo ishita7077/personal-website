@@ -1,0 +1,20 @@
+{
+  "school_id": "mit_sloan",
+  "display_name": "MIT Sloan",
+  "validated_interview_format": "1:1 behavioural interview; virtual per official guidance in handoff.",
+  "unique_elements": "Pre-interview short-answer + PDF (data visualisation or data-driven decision slide) due shortly before interview.",
+  "interviewer_type": "Commonly admissions staff (handoff + community notes)",
+  "community_texture": "Structured, execution-focused prep flow (step4 secondary notes).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/mit-sloan/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/mit-sloan/"
+  },
+  "secondary_source_urls": [
+    "https://mitsloan.mit.edu/mba/admissions/how-to-apply",
+    "https://mitsloan.mit.edu/mba/admissions"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/interview-reports/"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "school_id": "berkeley_haas",
+  "display_name": "Berkeley Haas",
+  "validated_interview_format": "Invitation-only; prerecorded video and/or live remote options.",
+  "unique_elements": "Defining Leadership Principles as cultural lens; dynamic interview options per official interview page (step4).",
+  "interviewer_type": "Student or alum for live remote",
+  "community_texture": "Same as school-affiliated interview + values pages (step4).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/haas/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/haas/"
+  },
+  "secondary_source_urls": [
+    "https://mba.haas.berkeley.edu/admissions/interview",
+    "https://mba.haas.berkeley.edu/defining-principles",
+    "https://mba.haas.berkeley.edu/admissions"
+  ],
+  "community_source_urls": [
+    "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+  ]
+}

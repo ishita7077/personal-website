@@ -1,0 +1,22 @@
+{
+  "school_id": "yale_som",
+  "display_name": "Yale School of Management",
+  "validated_interview_format": "Blind ~30 minute interview + separate video questions (two; ~60 seconds each in handoff).",
+  "unique_elements": "Video assesses communication; live interview resume-only.",
+  "interviewer_type": "Second-year student, recent alum, or admissions committee member",
+  "community_texture": "Separate components for video vs blind live (handoff).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/yale-som/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/yale-som/"
+  },
+  "secondary_source_urls": [
+    "https://som.yale.edu/programs/mba/admissions/application-information/application-guide",
+    "https://som.yale.edu/programs/mba/admissions/application-information/faq",
+    "https://som.yale.edu/the-som-experience/mission",
+    "https://admissions.som.yale.edu/register/AdmissionsQAMar52026"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/interview-reports/school/yale-som/"
+  ]
+}

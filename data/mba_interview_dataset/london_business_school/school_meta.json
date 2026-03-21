@@ -1,0 +1,23 @@
+{
+  "school_id": "london_business_school",
+  "display_name": "London Business School",
+  "validated_interview_format": "Interview with alumni or senior admissions staff; regional; in-person or online.",
+  "unique_elements": "Admissions video via Kira Talent; interviewer may have read full application.",
+  "interviewer_type": "Alumni or senior admissions staff",
+  "community_texture": "Alumni/admissions mix and geography (handoff).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/london-business-school/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/london-business-school/"
+  },
+  "secondary_source_urls": [
+    "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+    "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+    "https://admissionsblog.london.edu/guiding-decision-mba/",
+    "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+    "https://www.london.edu/masters-degrees/mba/apply"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+  ]
+}

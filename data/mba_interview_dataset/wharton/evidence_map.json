@@ -1,0 +1,1325 @@
+{
+  "version": 1,
+  "questions": {
+    "wharton-str-1": {
+      "evidence_types": [
+        "collaboration_story",
+        "communication"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "empathy",
+        "judgement"
+      ],
+      "interview_phase": "tbd_debrief",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "wharton-str-2": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "clarity"
+      ],
+      "interview_phase": "one_on_one",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "wharton-bhv-1": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-2": {
+      "evidence_types": [
+        "failure_story",
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-3": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-4": {
+      "evidence_types": [
+        "data_story",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-5": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "resilience"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-6": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-7": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-8": {
+      "evidence_types": [
+        "communication_story"
+      ],
+      "evaluation_dimensions": [
+        "clarity",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-9": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-10": {
+      "evidence_types": [
+        "global_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "adaptability"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-11": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-12": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "courage"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-13": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "empathy"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-14": {
+      "evidence_types": [
+        "initiative_story"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "leadership"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-15": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "growth"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-16": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "prioritization"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-17": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "integrity"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-18": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-19": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "courage",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-20": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-21": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-22": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-23": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "exploration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-24": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-25": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-26": {
+      "evidence_types": [
+        "prioritization"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "execution"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-27": {
+      "evidence_types": [
+        "resilience"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-bhv-28": {
+      "evidence_types": [
+        "curiosity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-31": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-32": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-33": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-34": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-35": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-36": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-37": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-38": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-39": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-40": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-41": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-42": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-43": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-44": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-45": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-46": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-47": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-48": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-49": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "wharton-extra-50": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+          "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+          "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+          "https://mba.wharton.upenn.edu/interview-process/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+          "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+          "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+          "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    }
+  },
+  "taxonomy_notes": "Evidence types and dimensions align with dataset design described in deep-research-report (2).md; URLs appear in per-question handoff_basis and school_meta."
+}

@@ -1,0 +1,1223 @@
+{
+  "version": 1,
+  "questions": {
+    "london_business_school-str-1": {
+      "evidence_types": [
+        "school_fit"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "clarity"
+      ],
+      "interview_phase": "kira_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "london_business_school-str-2": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "alumni_live",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "london_business_school-bhv-1": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-2": {
+      "evidence_types": [
+        "failure_story",
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-3": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-4": {
+      "evidence_types": [
+        "data_story",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-5": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "resilience"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-6": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-7": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-8": {
+      "evidence_types": [
+        "communication_story"
+      ],
+      "evaluation_dimensions": [
+        "clarity",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-9": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-10": {
+      "evidence_types": [
+        "global_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "adaptability"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-11": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-12": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "courage"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-13": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "empathy"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-14": {
+      "evidence_types": [
+        "initiative_story"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "leadership"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-15": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "growth"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-16": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "prioritization"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-17": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "integrity"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-18": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-19": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "courage",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-20": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-21": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-22": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-23": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "exploration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-24": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-25": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-26": {
+      "evidence_types": [
+        "prioritization"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "execution"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-27": {
+      "evidence_types": [
+        "resilience"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-bhv-28": {
+      "evidence_types": [
+        "curiosity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-31": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-32": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-33": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-34": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-35": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-36": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-37": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-38": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-39": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-40": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-41": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-42": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-43": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-44": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-45": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-46": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-47": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-48": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-49": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "london_business_school-extra-50": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://admissionsblog.london.edu/get-to-know-the-mba-team/",
+          "https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/",
+          "https://admissionsblog.london.edu/guiding-decision-mba/",
+          "https://admissionsblog.london.edu/meet-the-class-of-mba2027/",
+          "https://www.london.edu/masters-degrees/mba/apply"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/submit-interview-report-receive-a-10-dollar-amazon-gift-card/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    }
+  },
+  "taxonomy_notes": "Evidence types and dimensions align with dataset design described in deep-research-report (2).md; URLs appear in per-question handoff_basis and school_meta."
+}

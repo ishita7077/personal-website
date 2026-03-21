@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "school_id": "london_business_school",
+  "prepTime": 60,
+  "answerTime": 450,
+  "totalQuestions": 6,
+  "timing_basis": "deep-research-report (2).md typical duration + structural components",
+  "pickMode": "shuffle_weighted",
+  "sets": null
+}

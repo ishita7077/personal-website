@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "school_id": "chicago_booth",
+  "prepTime": 60,
+  "answerTime": 540,
+  "totalQuestions": 6,
+  "timing_basis": "deep-research-report (2).md typical duration + structural components",
+  "pickMode": "shuffle_weighted",
+  "sets": null
+}

@@ -1,0 +1,23 @@
+{
+  "school_id": "stanford_gsb",
+  "display_name": "Stanford GSB",
+  "validated_interview_format": "1:1 structured behavioural interview focused on past actions; trained alumni or admissions; ~45–60 minutes; deep probing.",
+  "unique_elements": "All admits interview; emphasis on recent meaningful professional/community experiences; depth over breadth (per handoff report).",
+  "interviewer_type": "Alumni subset or MBA Admissions team",
+  "community_texture": "Community reports emphasize deep follow-ups and substance over polish (step5 community notes).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/stanford-gsb/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/stanford-gsb/"
+  },
+  "secondary_source_urls": [
+    "https://www.gsb.stanford.edu/programs/mba/admission/ambassadors",
+    "https://www.gsb.stanford.edu/events/mba-student-experience-life-gsb",
+    "https://www.gsb.stanford.edu/events/mba-student-experience-life-gsb-0",
+    "https://www.gsb.stanford.edu/programs/mba"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/interview-reports/school/stanford/",
+    "https://www.reddit.com/r/MBA/comments/1k0puwe"
+  ]
+}

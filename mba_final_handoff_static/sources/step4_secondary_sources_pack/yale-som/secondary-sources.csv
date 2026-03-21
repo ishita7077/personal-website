@@ -1,0 +1,5 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+yale-som,school_affiliated,MBA Application Guide,https://som.yale.edu/programs/mba/admissions/application-information/application-guide,"Official guide with video questions, Behavioral Assessment, and blind-interview details.",process_context,high
+yale-som,school_affiliated,MBA Admissions FAQ,https://som.yale.edu/programs/mba/admissions/application-information/faq,Official FAQ confirming interview and Behavioral Assessment realities.,faq,high
+yale-som,school_affiliated,Mission,https://som.yale.edu/the-som-experience/mission,Official mission page grounding Yale SOM in leaders for business and society.,mission_texture,high
+yale-som,school_affiliated,Admissions Q&A,https://admissions.som.yale.edu/register/AdmissionsQAMar52026,Official admissions-event surface showing small interactive sessions hosted by admissions members; useful for school-feel and access pattern.,event,medium

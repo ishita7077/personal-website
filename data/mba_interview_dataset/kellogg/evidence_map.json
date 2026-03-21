@@ -1,0 +1,1123 @@
+{
+  "version": 1,
+  "questions": {
+    "kellogg-bhv-1": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-2": {
+      "evidence_types": [
+        "failure_story",
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-3": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-4": {
+      "evidence_types": [
+        "data_story",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-5": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "resilience"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-6": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-7": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-8": {
+      "evidence_types": [
+        "communication_story"
+      ],
+      "evaluation_dimensions": [
+        "clarity",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-9": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-10": {
+      "evidence_types": [
+        "global_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "adaptability"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-11": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-12": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "courage"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-13": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "empathy"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-14": {
+      "evidence_types": [
+        "initiative_story"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "leadership"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-15": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "growth"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-16": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "prioritization"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-17": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "integrity"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-18": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-19": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "courage",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-20": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-21": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-22": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-23": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "exploration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-24": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-25": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-26": {
+      "evidence_types": [
+        "prioritization"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "execution"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-27": {
+      "evidence_types": [
+        "resilience"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-bhv-28": {
+      "evidence_types": [
+        "curiosity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-29": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-30": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-31": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-32": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-33": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-34": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-35": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-36": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-37": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-38": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-39": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-40": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-41": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-42": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-43": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-44": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-45": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-46": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-47": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-48": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-49": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "kellogg-extra-50": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+          "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+          "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    }
+  },
+  "taxonomy_notes": "Evidence types and dimensions align with dataset design described in deep-research-report (2).md; URLs appear in per-question handoff_basis and school_meta."
+}

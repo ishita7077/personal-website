@@ -1,0 +1,1226 @@
+{
+  "version": 1,
+  "questions": {
+    "insead-str-1": {
+      "evidence_types": [
+        "global_story",
+        "collaboration"
+      ],
+      "evaluation_dimensions": [
+        "adaptability",
+        "international_motivation"
+      ],
+      "interview_phase": "kira_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "insead-str-2": {
+      "evidence_types": [
+        "school_fit",
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "international_motivation"
+      ],
+      "interview_phase": "kira_written",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "insead-str-3": {
+      "evidence_types": [
+        "leadership_story",
+        "global_story"
+      ],
+      "evaluation_dimensions": [
+        "leadership",
+        "consistency"
+      ],
+      "interview_phase": "alumni_live",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "practice_label": "structural_simulation"
+      }
+    },
+    "insead-bhv-1": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-2": {
+      "evidence_types": [
+        "failure_story",
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-3": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-4": {
+      "evidence_types": [
+        "data_story",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-5": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "resilience"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-6": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-7": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-8": {
+      "evidence_types": [
+        "communication_story"
+      ],
+      "evaluation_dimensions": [
+        "clarity",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-9": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-10": {
+      "evidence_types": [
+        "global_story"
+      ],
+      "evaluation_dimensions": [
+        "collaboration",
+        "adaptability"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-11": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-12": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "integrity",
+        "courage"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-13": {
+      "evidence_types": [
+        "leadership_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "empathy"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-14": {
+      "evidence_types": [
+        "initiative_story"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "leadership"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-15": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility",
+        "growth"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-16": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "prioritization"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-17": {
+      "evidence_types": [
+        "collaboration_story"
+      ],
+      "evaluation_dimensions": [
+        "empathy",
+        "integrity"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-18": {
+      "evidence_types": [
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "impact"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-19": {
+      "evidence_types": [
+        "judgement_story"
+      ],
+      "evaluation_dimensions": [
+        "courage",
+        "collaboration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-20": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-21": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-22": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-23": {
+      "evidence_types": [
+        "goals_clarity"
+      ],
+      "evaluation_dimensions": [
+        "exploration"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-24": {
+      "evidence_types": [
+        "values_reflection"
+      ],
+      "evaluation_dimensions": [
+        "self_awareness"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-25": {
+      "evidence_types": [
+        "self_awareness"
+      ],
+      "evaluation_dimensions": [
+        "humility"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-26": {
+      "evidence_types": [
+        "prioritization"
+      ],
+      "evaluation_dimensions": [
+        "judgement",
+        "execution"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-27": {
+      "evidence_types": [
+        "resilience"
+      ],
+      "evaluation_dimensions": [
+        "execution",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-bhv-28": {
+      "evidence_types": [
+        "curiosity"
+      ],
+      "evaluation_dimensions": [
+        "school_fit"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-32": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-33": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-34": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-35": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-36": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-37": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-38": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-39": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-40": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-41": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-42": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-43": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-44": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-45": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-46": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-47": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-48": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-49": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    },
+    "insead-extra-50": {
+      "evidence_types": [
+        "goals_clarity",
+        "impact_metric"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "judgement"
+      ],
+      "interview_phase": "live_behavioral",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+          "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+          "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+          "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+          "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+        ],
+        "step5_urls_sample": [
+          "https://www.clearadmit.com/schools/insead/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions."
+      }
+    }
+  },
+  "taxonomy_notes": "Evidence types and dimensions align with dataset design described in deep-research-report (2).md; URLs appear in per-question handoff_basis and school_meta."
+}

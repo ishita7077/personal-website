@@ -1,0 +1,1206 @@
+{
+  "version": 1,
+  "questions": {
+    "haas-S1-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S1-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S1-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S1-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S1-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S1-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S2-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S2-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S2-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S2-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S2-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S2-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S3-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S3-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S3-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S3-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S3-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S3-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S4-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S4-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S4-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S4-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S4-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S4-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S5-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S5-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S5-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S5-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S5-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S5-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S6-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S6-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S6-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S6-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S6-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S6-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S7-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S7-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S7-Q3": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S7-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S7-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-S7-Q6": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "live_or_video",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S1-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S2-Q2": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S3-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S4-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S5-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S6-Q4": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S7-Q1": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    },
+    "haas-video-S7-Q5": {
+      "evidence_types": [
+        "haas_repo_question_bank"
+      ],
+      "evaluation_dimensions": [
+        "school_fit",
+        "values_alignment",
+        "specificity"
+      ],
+      "interview_phase": "prerecorded_video_simulation",
+      "handoff_basis": {
+        "report_md": "mba_final_handoff_static/deep-research-report (2).md",
+        "step4_urls_sample": [
+          "https://mba.haas.berkeley.edu/admissions/interview",
+          "https://mba.haas.berkeley.edu/defining-principles",
+          "https://mba.haas.berkeley.edu/admissions"
+        ],
+        "step5_urls_sample": [
+          "https://www.reddit.com/r/MBA/comments/1gfiz5g/uc_berkeley_haas_interviews/"
+        ],
+        "practice_archetype_note": "Practice stems implement the interview structure described in the handoff report; they are not claimed to be verbatim past interview questions.",
+        "repo_source": "public/InterviewRoom/src/js/haas-data.js"
+      }
+    }
+  },
+  "taxonomy_notes": "Evidence types and dimensions align with dataset design described in deep-research-report (2).md; URLs appear in per-question handoff_basis and school_meta."
+}

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Interview Room — Practice MBA admissions interviews with video recording and live transcription. Everything runs locally on your device.">
+  <meta name="description" content="MBA Interview Room — timed video practice for top MBA programmes. School-specific question banks, timers, and resources. On-device recording; optional OpenAI transcript feedback.">
   <meta name="theme-color" content="#ffffff">
-  <title>Interview Room — Practice Interviews</title>
+  <title>MBA Interview Room — nine programmes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,15 +14,12 @@
 <body>
   <div class="ir-app" id="app">
     <nav class="ir-nav">
-      <a class="ir-logo" id="navLogo" role="button" tabindex="0" aria-label="Interview Room home">
-        <svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="8" stroke="#2563eb" stroke-width="2"/><path d="M12 10v12l10-6-10-6z" fill="#2563eb"/><path d="M26 8a18 18 0 0 1-20 18" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.4"/></svg>
-        <span class="ir-logo-text">Interview <span>Room</span></span>
+      <a class="ir-logo" id="navLogo" role="button" tabindex="0" aria-label="MBA Interview Room home">
+        <svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="8" stroke="#c9600a" stroke-width="2"/><path d="M12 10v12l10-6-10-6z" fill="#c9600a"/><path d="M26 8a18 18 0 0 1-20 18" stroke="#c9600a" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.4"/></svg>
+        <span class="ir-logo-text">MBA <span>Interview Room</span></span>
       </a>
       <div class="ir-nav-right">
-        <a href="#" class="ir-btn ir-btn-ghost ir-btn-sm" id="resourcesBtn" title="Haas resources">Resources</a>
-        <button class="ir-btn ir-btn-ghost ir-btn-sm" id="aiStoriesNavBtn" type="button" title="Building Human Stories with AI">
-          Building Human Stories with AI
-        </button>
+        <a href="#" class="ir-btn ir-btn-ghost ir-btn-sm" id="resourcesBtn" title="School resources">Resources</a>
         <button class="ir-btn ir-btn-ghost ir-btn-sm ir-btn-help" id="guideBtn" aria-label="Help" title="View guide and shortcuts">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 115.12 2.13c-.57.52-1.12 1.1-1.12 1.87v.5"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
         </button>
@@ -32,24 +29,15 @@
 
     <div class="ir-announcement" id="announcementBar">
       <span class="ir-announcement-label">New</span>
-      <span class="ir-announcement-text">Custom practice with your own questions; AI feedback on answers and session summary (transcripts only, via OpenAI).</span>
+      <span class="ir-announcement-text">Ten programmes including custom practice. Dataset-driven questions, expected-answer maps, frameworks, and official/community links. Optional OpenAI feedback on transcripts.</span>
     </div>
 
     <section class="ir-screen ir-home active" id="screen-home">
       <div class="ir-home-hero">
-        <h1 class="ir-h1">Practice interviews that feel real</h1>
-        <p class="ir-home-tagline">Simulate the Haas MBA interview format with timed questions, video recording, and live transcription. Everything runs on your device — nothing is uploaded.</p>
-        <div class="ir-label ir-label-select">SELECT INTERVIEW</div>
-        <div class="ir-school-card ir-school-card-haas" id="schoolCardHaas" role="button" tabindex="0" style="--ir-school-accent:#003262" title="UC Berkeley Haas — 7 rotating question sets · handoff-aligned format notes below when you start">
-          <div class="ir-school-info">
-            <div class="ir-school-name">UC Berkeley Haas</div>
-            <p class="ir-school-style">Invitation-only; prerecorded video and/or live remote options.</p>
-            <p class="ir-school-hook">Defining Leadership Principles as cultural lens; dynamic interview options per official interview page.</p>
-            <p class="ir-school-practice">6 prompts · 45s prep · 3 min answer · random 1 of 7 fixed six-question sets</p>
-            <p class="ir-school-who">Likely interviewer: Student or alum for live remote</p>
-          </div>
-          <div class="ir-school-arrow" aria-hidden="true">→</div>
-        </div>
+        <h1 class="ir-h1">Multi-school MBA interview practice</h1>
+        <p class="ir-home-tagline">Choose a programme to see <strong>how that school interviews</strong> (research-backed structure from the handoff dataset), then practice with <strong>programme-specific timers</strong>—defaults reflect typical interview length; video, Kira, and written-style prompts use shorter windows where applicable. Recording, transcription, and review run in your browser. <a href="/InterviewRoom" target="_top" class="ir-inline-link">Berkeley Haas</a> is listed first and opens the dedicated Haas experience at <code>/InterviewRoom</code>. Optional AI feedback sends transcript text only when you consent.</p>
+        <div class="ir-label ir-label-select">SELECT PROGRAMME</div>
+        <div id="schoolCardsMount" class="ir-school-cards-mount" aria-live="polite"></div>
         <div class="ir-school-card" id="schoolCardCustom" role="button" tabindex="0" title="Create a custom practice interview">
           <div class="ir-school-info">
             <div class="ir-school-name">Custom practice</div>
@@ -57,92 +45,19 @@
           </div>
           <div class="ir-school-arrow">→</div>
         </div>
+        <a href="/interview-coach" target="_top" rel="noopener noreferrer" class="ir-school-card ir-school-card-link" title="Chat-based interview prep in Claude">
+          <div class="ir-school-info">
+            <div class="ir-school-name">Interview Coach</div>
+            <div class="ir-school-detail">Chat-based prep in Claude · JD analysis, mock Q&A</div>
+          </div>
+          <div class="ir-school-arrow">→</div>
+        </a>
         <div class="ir-home-features">
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Video recording</div>
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>Live transcription</div>
           <div class="ir-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>100% on-device</div>
         </div>
       </div>
-
-    </section>
-
-    <section class="ir-screen ir-ai-stories-screen" id="screen-ai-stories">
-      <section class="ir-ai-stories" id="aiStories">
-        <header class="ir-ai-stories-header">
-          <h2 class="ir-h2">Building Human Stories with AI</h2>
-          <p class="ir-ai-stories-intro">
-            While prepping for my Berkeley Haas MBA interview, I was stuck. Generic advice (STAR method videos, random mock questions) wasn't enough. I needed help crafting strong, authentic stories and tight answers-not just timed practice. Paying $300–500/hr for a coach? No thanks.
-          </p>
-          <p class="ir-ai-stories-intro">
-            Then I found this Claude-based interview coach from Lenny’s Newsletter (I’ve followed the pod/newsletter for years). Noam Segal researched 30+ tech professionals, extracted what actually works, and encoded it into a plug-and-play Claude Code project.
-          </p>
-          <p class="ir-ai-stories-intro">
-            Solid evidence base + professional coaching techniques baked in. I set it up-and it was game-changing. I used it to build, refine, and polish every single one of my behavioral stories and answers before I ever hit record on a mock or the real interview.
-          </p>
-          <p class="ir-ai-stories-intro">
-            Here's how it works:
-          </p>
-        </header>
-
-        <div class="ir-ai-stories-steps">
-          <article class="ir-ai-step-card">
-            <div class="ir-ai-step-label">Step 1</div>
-            <h3 class="ir-ai-step-title">Download the Claude interview coach</h3>
-            <p class="ir-ai-step-body">
-              Grab the Claude Code skill from GitHub. It acts like a structured interview answer coach.
-            </p>
-            <a
-              href="https://github.com/noamseg/interview-coach-skill"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ir-btn ir-btn-primary ir-btn-sm ir-ai-step-cta"
-            >
-              Get the Interview Coach
-            </a>
-          </article>
-
-          <article class="ir-ai-step-card">
-            <div class="ir-ai-step-label">Step 2</div>
-            <h3 class="ir-ai-step-title">Set up Claude Code</h3>
-            <p class="ir-ai-step-body">
-              Open Claude → <span class="ir-mono">Code</span> tab → load the project folder → run <code>kickoff</code>.
-            </p>
-          </article>
-
-          <article class="ir-ai-step-card">
-            <div class="ir-ai-step-label">Step 3</div>
-            <h3 class="ir-ai-step-title">Build and refine your stories</h3>
-            <p class="ir-ai-step-body">
-              Use <code>stories</code> to craft answers and <code>analyze</code> to tighten clarity, structure, and impact.
-            </p>
-          </article>
-        </div>
-
-        <aside class="ir-ai-stories-reference">
-          <p class="ir-ai-ref-text">
-            Want the full guide? This skill was created by Noam Segal for Lenny's Newsletter based on research with 30+ tech professionals.
-            It includes mock interviews, answer scoring, company-specific prep, and post-interview analysis.
-          </p>
-          <div class="ir-ai-ref-links">
-            <a
-              href="https://www.lennysnewsletter.com/p/how-to-use-ai-in-your-next-job-interview"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ir-ai-ref-link"
-            >
-              Read the full article
-            </a>
-            <a
-              href="https://github.com/noamseg/interview-coach-skill"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="ir-ai-ref-link"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </aside>
-      </section>
     </section>
 
     <section class="ir-screen ir-config-screen" id="screen-custom">
@@ -264,8 +179,8 @@
     <section class="ir-screen ir-resources" id="screen-resources">
       <div class="ir-resources-header">
         <div>
-          <h1 class="ir-h1">Haas resources</h1>
-          <p class="ir-body">Use this page as a launchpad when you are researching fit, shaping your story, or double-checking anything you plan to say about Berkeley Haas.</p>
+          <h1 class="ir-h1" id="resourcesTitle">School resources</h1>
+          <p class="ir-body" id="resourcesSub">Use this page as a launchpad when you are researching fit and shaping your story for this programme.</p>
         </div>
         <button class="ir-btn ir-btn-ghost ir-btn-sm" id="resourcesBackBtn" type="button" title="Go back to practice">Back</button>
       </div>
@@ -305,11 +220,11 @@
           </div>
           <div class="ir-format-info"><div class="ir-label">PRACTICE SIMULATOR (THIS SESSION)</div><div id="formatInfo" class="ir-format-grid"></div></div>
           <div class="ir-programme-brief ir-hidden" id="programmeBrief" aria-live="polite">
-            <div class="ir-label">HOW BERKELEY HAAS INTERVIEWS</div>
+            <div class="ir-label">HOW THIS PROGRAMME INTERVIEWS</div>
             <p class="ir-programme-brief-lead" id="programmeBriefLead"></p>
             <p class="ir-programme-brief-body" id="programmeBriefBody"></p>
             <p class="ir-programme-brief-foot" id="programmeBriefFoot"></p>
-            <p class="ir-programme-brief-note">The timer above applies to this practice session. Question sets are defined in this app’s data files. Use Resources in the nav for programme links and prep materials.</p>
+            <p class="ir-programme-brief-note">Session defaults reflect typical interview pacing for this programme; individual prompts may use different prep or answer limits. Full frameworks and links are under Resources.</p>
           </div>
         </div>
       </div>
@@ -369,13 +284,13 @@
     <div class="ir-guide-header"><span class="ir-h3">Guide</span><button class="ir-guide-close" id="guideCloseBtn" aria-label="Close">&times;</button></div>
     <div class="ir-guide-section">
       <h3>How it works</h3>
-      <p>Each Haas practice session runs like the official interview: you complete a short device check, then answer 6 timed questions drawn from one of seven curated Haas question sets.</p>
-      <p>Within a set, the prompts are fixed so you can build real muscle memory, while different sets emphasize different themes such as career story, leadership, and school fit. Every question is mapped to a Haas category and a small set of bullet-point recommendations sourced from official Haas pages.</p>
-      <p>During each answer, your webcam records locally and speech-to-text generates a live transcript. After the session, the review screen shows your recording, a cleaned-up transcript, and the Haas recommendations for that exact question so you can compare what you said with what the school emphasizes.</p>
+      <p>Select a school to load its dataset: device check, waiting room, programme-specific timers, recording, and transcription. Most sessions use up to six prompts; Harvard uses five to approximate a typical file interview length. <strong>Berkeley Haas</strong> opens <code>/InterviewRoom</code> (the same Haas flow as elsewhere on the site).</p>
+      <p>Questions, expected-answer maps, and resources come from the generated dataset (<code>data/mba_interview_dataset/</code>), built from the handoff research report and step4/step5 source packs.</p>
+      <p>After the session, review shows your recording, transcript, school guidance for each prompt, and optional AI feedback on transcripts.</p>
     </div>
     <div class="ir-guide-section">
       <h3>What's new</h3>
-      <p><strong>Custom practice:</strong> Add your own questions and set prep/answer times. Same recording and transcription as Haas.</p>
+      <p><strong>Custom practice:</strong> Add your own questions and set prep/answer times. Same recording and transcription as programme practice.</p>
       <p><strong>AI feedback (optional):</strong> Per-answer and full-session summaries via OpenAI. Only transcript text is sent when you opt in.</p>
     </div>
     <div class="ir-guide-section">
@@ -383,7 +298,7 @@
       <p>More targeted prompts (e.g. tighten an answer, connect to school fit) and refinements based on your feedback.</p>
     </div>
     <div class="ir-guide-section"><h3>Privacy</h3><p>All processing happens in your browser. Video, audio, and transcripts never leave your device. Closing the tab clears all data unless you download or copy it.</p></div>
-    <div class="ir-guide-section"><h3>Interview format</h3><p><strong>Haas:</strong> 6 questions from one of seven sets. 45s prep, up to 3 min per answer. <strong>Custom:</strong> Your own questions and timing. In review you see recordings, transcripts, and optional AI feedback.</p></div>
+      <div class="ir-guide-section"><h3>Interview format</h3><p><strong>Programme practice:</strong> Prep and answer lengths follow each school’s research profile; structural prompts (video, Kira, team debrief, written reflection) may use different limits. <strong>Custom:</strong> Your own questions and timing. Review includes recordings, transcripts, expected-answer guidance, and optional AI feedback.</p></div>
     <div class="ir-guide-section"><h3>Keyboard shortcuts</h3><p><span class="ir-kbd">Space</span> — Skip current phase</p><p><span class="ir-kbd">Esc</span> — End session and go to review</p></div>
     <div class="ir-guide-section">
       <h3>Troubleshooting</h3>
@@ -414,6 +329,7 @@
 
   <script src="src/js/config-haas.js"></script>
   <script src="src/js/haas-data.js"></script>
+  <script src="src/js/school-loader.js"></script>
   <script src="src/js/media.js"></script>
   <script src="src/js/speech.js"></script>
   <script src="src/js/timer.js"></script>

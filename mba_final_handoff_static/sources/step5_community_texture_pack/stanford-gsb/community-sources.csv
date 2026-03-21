@@ -1,0 +1,3 @@
+school_id,source_type,source_title,source_url,claim_or_pattern_supported,category,confidence
+stanford-gsb,community_reported,Clear Admit — Stanford GSB Interview Questions & Reports,https://www.clearadmit.com/interview-reports/school/stanford/,"Recurring pattern reported: deep behavioral TMAT-style questions, extensive follow-ups, low emphasis on generic why-school opener.",question_patterns,high
+stanford-gsb,community_reported,Reddit — Stanford GSB R3,https://www.reddit.com/r/MBA/comments/1k0puwe,"Current-cycle applicant thread useful for timing/invite-rollout texture, not interview content itself.",timing_texture,medium

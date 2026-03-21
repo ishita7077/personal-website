@@ -1,0 +1,4 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+haas,school_affiliated,Interview,https://mba.haas.berkeley.edu/admissions/interview,Official interview page remains the core school-affiliated source for live + prerecorded formats.,process_context,high
+haas,school_affiliated,Defining Leadership Principles,https://mba.haas.berkeley.edu/defining-principles,Official values page remains the strongest school-owned source for interview and answer-map framing.,values,high
+haas,school_affiliated,Admissions overview,https://mba.haas.berkeley.edu/admissions,Official admissions page for related events/resources and holistic evaluation framing.,admissions_overview,medium

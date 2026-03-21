@@ -11,15 +11,6 @@
     return div.innerHTML;
   }
 
-  /** Handoff-aligned copy for device check / waiting room (matches dataset school_meta for Haas). */
-  const HAAS_INTERVIEW_CONTEXT = {
-    validated_interview_format:
-      'Invitation-only; prerecorded video and/or live remote options.',
-    unique_elements:
-      'Defining Leadership Principles as cultural lens; dynamic interview options per official interview page (step4).',
-    interviewer_type: 'Student or alum for live remote',
-  };
-
   IR.ui = {
     toast(msg, type = 'info') {
       const c = document.getElementById('toastContainer');
@@ -306,13 +297,19 @@
       if (brief && lead && body && foot) {
         if (isCustom) {
           brief.classList.add('ir-hidden');
-        } else if (id === 'haas-mba') {
-          lead.textContent = HAAS_INTERVIEW_CONTEXT.validated_interview_format;
-          body.textContent = HAAS_INTERVIEW_CONTEXT.unique_elements;
-          foot.textContent = `Who you might see: ${HAAS_INTERVIEW_CONTEXT.interviewer_type}`;
-          brief.classList.remove('ir-hidden');
         } else {
-          brief.classList.add('ir-hidden');
+          const meta = IR.state && IR.state.schoolMeta;
+          const sid = IR.state && IR.state.selectedSchool;
+          if (meta && sid === id && meta.validated_interview_format) {
+            lead.textContent = meta.validated_interview_format;
+            body.textContent = meta.unique_elements || '';
+            foot.textContent = meta.interviewer_type
+              ? `Who you might see: ${meta.interviewer_type}`
+              : '';
+            brief.classList.remove('ir-hidden');
+          } else {
+            brief.classList.add('ir-hidden');
+          }
         }
       }
     },
@@ -432,14 +429,27 @@
       const nudge = document.getElementById('waitingNudge');
       const progBrief = document.getElementById('waitingProgrammeBrief');
       if (progBrief) {
-        if (IR.state && !IR.state.customMode && IR.state.selectedSchool === 'haas-mba') {
+        if (
+          IR.state &&
+          !IR.state.customMode &&
+          IR.state.schoolMeta &&
+          IR.state.schoolDisplayName
+        ) {
+          const m = IR.state.schoolMeta;
           progBrief.classList.remove('ir-hidden');
-          progBrief.innerHTML =
-            '<div class="ir-waiting-programme-inner">' +
-            '<span class="ir-label">UC BERKELEY HAAS — REAL FORMAT (HANDOFF)</span>' +
-            '<p class="ir-waiting-programme-text">' +
-            HAAS_INTERVIEW_CONTEXT.validated_interview_format +
-            '</p></div>';
+          progBrief.textContent = '';
+          const wrap = document.createElement('div');
+          wrap.className = 'ir-waiting-programme-inner';
+          const lab = document.createElement('span');
+          lab.className = 'ir-label';
+          lab.textContent =
+            `${IR.state.schoolDisplayName.toUpperCase()} — REAL FORMAT (HANDOFF)`;
+          const p = document.createElement('p');
+          p.className = 'ir-waiting-programme-text';
+          p.textContent = m.validated_interview_format || '';
+          wrap.appendChild(lab);
+          wrap.appendChild(p);
+          progBrief.appendChild(wrap);
         } else {
           progBrief.classList.add('ir-hidden');
           progBrief.innerHTML = '';
@@ -649,6 +659,29 @@
           p.textContent = enhReview.coaching.note;
           coach.appendChild(p);
           enhWrap.appendChild(coach);
+        } else if (enhReview.feedback && typeof enhReview.feedback === 'object') {
+          const f = enhReview.feedback;
+          const coach = document.createElement('div');
+          coach.className = 'ir-ai-review-subsection ir-ai-review-coaching';
+          const ct = document.createElement('div');
+          ct.className = 'ir-ai-review-subtitle';
+          ct.textContent = 'Coaching';
+          coach.appendChild(ct);
+          const pairs = [
+            ['Biggest issue', f.biggest_issue],
+            ['Keep', f.what_to_keep],
+            ['Add', f.what_to_add],
+            ['Remove', f.what_to_remove],
+            ['Next attempt', f.next_attempt_advice]
+          ];
+          pairs.forEach(function (pair) {
+            if (!pair[1]) return;
+            const p = document.createElement('p');
+            p.className = 'ir-ai-review-coach-line';
+            p.innerHTML = '<strong>' + pair[0] + ':</strong> ' + pair[1];
+            coach.appendChild(p);
+          });
+          if (coach.childNodes.length > 1) enhWrap.appendChild(coach);
         }
       } else {
         const p = document.createElement('p');
@@ -667,6 +700,56 @@
 
       aiSection.appendChild(enhWrap);
       return aiSection;
+    },
+
+    buildExpectedMapGuidanceView(map) {
+      const wrap = document.createElement('div');
+      wrap.className = 'ir-notes-panel ir-notes-haas';
+      if (!map || !Array.isArray(map.corePoints) || !map.corePoints.length) return wrap;
+      if (map.questionGoal) {
+        const cat = document.createElement('div');
+        cat.className = 'ir-haas-bucket';
+        cat.textContent = map.questionGoal;
+        wrap.appendChild(cat);
+      }
+      const list = document.createElement('ul');
+      list.className = 'ir-haas-guidance-list';
+      map.corePoints.forEach(function (text) {
+        const li = document.createElement('li');
+        li.textContent = text;
+        list.appendChild(li);
+      });
+      wrap.appendChild(list);
+      if (map.niceToHave && map.niceToHave.length) {
+        const sub = document.createElement('div');
+        sub.className = 'ir-haas-bucket';
+        sub.style.marginTop = '0.75rem';
+        sub.textContent = 'Also consider';
+        wrap.appendChild(sub);
+        const list2 = document.createElement('ul');
+        list2.className = 'ir-haas-guidance-list';
+        map.niceToHave.forEach(function (text) {
+          const li = document.createElement('li');
+          li.textContent = text;
+          list2.appendChild(li);
+        });
+        wrap.appendChild(list2);
+      }
+      return wrap;
+    },
+
+    buildCombinedGuidanceView(questionText, qObj) {
+      const map = qObj && qObj.expected_answer_map;
+      if (map && Array.isArray(map.corePoints) && map.corePoints.length) {
+        return this.buildExpectedMapGuidanceView(map);
+      }
+      return this.buildHaasRecommendationView(questionText);
+    },
+
+    hasGuidanceForQuestion(questionText, qObj) {
+      const map = qObj && qObj.expected_answer_map;
+      if (map && Array.isArray(map.corePoints) && map.corePoints.length) return true;
+      return !!(IR.getHaasRecommendation && IR.getHaasRecommendation(questionText));
     },
 
     buildHaasRecommendationView(questionText) {
@@ -744,7 +827,7 @@
           const panelsWrap = tabRow.nextElementSibling;
           if (panelsWrap && panelsWrap.classList.contains('ir-notes-panels')) {
             panelsWrap.querySelectorAll('.ir-notes-panel').forEach((p, idx) => {
-              p.classList.toggle('active', (panel === 'transcript' && idx === 0) || (panel === 'haas' && idx === 1));
+              p.classList.toggle('active', (panel === 'transcript' && idx === 0) || (panel === 'guidance' && idx === 1));
             });
           }
           return;
@@ -836,8 +919,8 @@
 
         const questionForNotes = IR.state.sessionQuestions[i];
         const questionText = questionForNotes && questionForNotes.text ? questionForNotes.text : '';
-        const hasHaas = IR.getHaasRecommendation && IR.getHaasRecommendation(questionText);
-        if (hasHaas) {
+        const hasGuidance = IR.ui.hasGuidanceForQuestion(questionText, questionForNotes);
+        if (hasGuidance) {
           const notesWrap = document.createElement('div');
           notesWrap.className = 'ir-review-notes-wrap';
           const tabRow = document.createElement('div');
@@ -848,22 +931,22 @@
           btnNotes.className = 'ir-notes-tab active';
           btnNotes.dataset.panel = 'transcript';
           btnNotes.textContent = 'Notes';
-          const btnHaas = document.createElement('button');
-          btnHaas.type = 'button';
-          btnHaas.className = 'ir-notes-tab';
-          btnHaas.dataset.panel = 'haas';
-          btnHaas.textContent = 'Haas recommendations';
+          const btnGuidance = document.createElement('button');
+          btnGuidance.type = 'button';
+          btnGuidance.className = 'ir-notes-tab';
+          btnGuidance.dataset.panel = 'guidance';
+          btnGuidance.textContent = 'School guidance';
           tabRow.appendChild(btnNotes);
-          tabRow.appendChild(btnHaas);
+          tabRow.appendChild(btnGuidance);
           notesWrap.appendChild(tabRow);
           const panelsWrap = document.createElement('div');
           panelsWrap.className = 'ir-notes-panels';
           const transcriptPanel = document.createElement('div');
           transcriptPanel.className = 'ir-notes-panel ir-notes-transcript active';
           transcriptPanel.appendChild(IR.ui.buildTranscriptViews(tr, i));
-          const haasPanel = IR.ui.buildHaasRecommendationView(questionText);
+          const guidancePanel = IR.ui.buildCombinedGuidanceView(questionText, questionForNotes);
           panelsWrap.appendChild(transcriptPanel);
-          panelsWrap.appendChild(haasPanel);
+          panelsWrap.appendChild(guidancePanel);
           notesWrap.appendChild(panelsWrap);
           body.appendChild(notesWrap);
         } else {
@@ -1114,8 +1197,39 @@
             body.appendChild(sec);
           };
           listBlock('Top strengths', enhSummary.top_strengths, 'ir-session-summary-strengths');
-          listBlock('Top issues', enhSummary.top_issues, 'ir-session-summary-issues');
-          listBlock('Recurring patterns', enhSummary.recurring_patterns, 'ir-session-summary-patterns');
+          listBlock(
+            'Top gaps',
+            enhSummary.top_gaps || enhSummary.top_issues,
+            'ir-session-summary-issues'
+          );
+          listBlock(
+            'Recurring themes',
+            enhSummary.repeated_missing_themes || enhSummary.recurring_patterns,
+            'ir-session-summary-patterns'
+          );
+          listBlock('Next steps', enhSummary.top_next_steps, 'ir-session-summary-plan');
+          listBlock('Warning flags', enhSummary.warning_flags, 'ir-session-summary-issues');
+          if (
+            Array.isArray(enhSummary.questions_most_in_need_of_revision) &&
+            enhSummary.questions_most_in_need_of_revision.length
+          ) {
+            const rev = document.createElement('div');
+            rev.className = 'ir-session-summary-plan';
+            const rt = document.createElement('div');
+            rt.className = 'ir-session-summary-subtitle';
+            rt.textContent = 'Questions to revise first';
+            rev.appendChild(rt);
+            const ul = document.createElement('ul');
+            enhSummary.questions_most_in_need_of_revision.forEach(function (row) {
+              const li = document.createElement('li');
+              li.textContent =
+                (row && row.question_id ? row.question_id + ': ' : '') +
+                (row && row.reason ? row.reason : '');
+              ul.appendChild(li);
+            });
+            rev.appendChild(ul);
+            body.appendChild(rev);
+          }
           if (enhSummary.highest_priority_fix && (enhSummary.highest_priority_fix.issue || enhSummary.highest_priority_fix.why_it_matters || enhSummary.highest_priority_fix.practice_drill)) {
             const hp = document.createElement('div');
             hp.className = 'ir-session-summary-priority';
@@ -1165,9 +1279,32 @@
 
     renderResources() {
       const list = document.getElementById('resourcesList');
-      if (!list || !IR.haasResourceSections) return;
+      if (!list) return;
+      const titleEl = document.getElementById('resourcesTitle');
+      const subEl = document.getElementById('resourcesSub');
+      const sid = IR.state && IR.state.selectedSchool;
+      const dname = (IR.state && IR.state.schoolDisplayName) || '';
+      if (titleEl) {
+        titleEl.textContent = dname ? dname + ' resources' : 'School resources';
+      }
+      if (subEl) {
+        if (dname) {
+          subEl.textContent =
+            'Handoff-sourced materials for ' +
+            dname +
+            ': answer framework (markdown), official/community URLs from step4/step5 packs, and question-level guidance in review.';
+        } else {
+          subEl.textContent =
+            'Select a programme on the home screen to load its answer framework and link lists from the dataset.';
+        }
+      }
+      const fwMd = IR.state && IR.state.answerFrameworkMd;
+      let sections = [];
+      if (IR.state && IR.state.schoolResourceSections && IR.state.schoolResourceSections.length) {
+        sections = IR.state.schoolResourceSections;
+      }
       list.innerHTML = '';
-      IR.haasResourceSections.forEach((section) => {
+      sections.forEach((section) => {
         const sec = document.createElement('section');
         sec.className = 'ir-resource-section';
         const header = document.createElement('div');
@@ -1206,6 +1343,34 @@
         sec.appendChild(grid);
         list.appendChild(sec);
       });
+      if (fwMd) {
+        const fwSec = document.createElement('section');
+        fwSec.className = 'ir-resource-section';
+        const fwHead = document.createElement('div');
+        fwHead.className = 'ir-resource-section-header';
+        const fwTitle = document.createElement('h2');
+        fwTitle.className = 'ir-h3';
+        fwTitle.textContent = 'Answer framework (dataset)';
+        fwHead.appendChild(fwTitle);
+        const fwBlurb = document.createElement('p');
+        fwBlurb.className = 'ir-resource-blurb';
+        fwBlurb.textContent =
+          'Generated from `answer_framework.md` for this programme (structure, evidence taxonomy, handoff URLs).';
+        fwHead.appendChild(fwBlurb);
+        fwSec.appendChild(fwHead);
+        const pre = document.createElement('pre');
+        pre.className = 'ir-resource-framework-md';
+        pre.textContent = fwMd;
+        fwSec.appendChild(pre);
+        list.appendChild(fwSec);
+      }
+      if (!sections.length && !fwMd) {
+        const empty = document.createElement('p');
+        empty.className = 'ir-body';
+        empty.textContent =
+          'Choose a programme from the home screen first so resources and the framework can load from the server.';
+        list.appendChild(empty);
+      }
     }
   };
 })(typeof window !== 'undefined' ? window : this);

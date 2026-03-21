@@ -1,0 +1,2 @@
+school_id,source_type,source_title,source_url,claim_or_pattern_supported,category,confidence
+mit-sloan,community_reported,Clear Admit archive hub / school-level interview reporting ecosystem,https://www.clearadmit.com/interview-reports/,Useful general archive entrypoint for later school-specific MIT Sloan interview reports and question harvesting.,archive_entrypoint,low

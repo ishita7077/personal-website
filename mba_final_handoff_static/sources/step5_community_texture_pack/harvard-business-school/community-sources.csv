@@ -1,0 +1,2 @@
+school_id,source_type,source_title,source_url,claim_or_pattern_supported,category,confidence
+harvard-business-school,community_reported,Clear Admit — Harvard Business School Interview Questions & Reports,https://www.clearadmit.com/interview-reports/school/harvard/,"Useful for recurring reports that HBS interviews are file-aware, application-specific, and can be detail-probing.",question_patterns,high

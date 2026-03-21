@@ -1,0 +1,23 @@
+{
+  "school_id": "chicago_booth",
+  "display_name": "Chicago Booth",
+  "validated_interview_format": "1:1 conversational interview; time for your questions.",
+  "unique_elements": "Single required interview; student, alum, or staff weighted equally in evaluation.",
+  "interviewer_type": "Student, alum, or admissions staff",
+  "community_texture": "Fit-aware conversational tone (handoff structure).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/chicago-booth/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/chicago-booth/"
+  },
+  "secondary_source_urls": [
+    "https://www.chicagobooth.edu/why-booth/leadership-impact",
+    "https://news.chicagobooth.edu/chicago-booth/home/why-booth/collaborative-community",
+    "https://www.chicagobooth.edu/mba/full-time/admissions/how-to-apply"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/schools/chicago-booth/",
+    "https://www.reddit.com/r/MBA/comments/1isfhxo/booth_r2_interview_questions/",
+    "https://www.reddit.com/r/MBA/comments/174ri2m/chicago_booth_interview_invites_waiting_room/"
+  ]
+}

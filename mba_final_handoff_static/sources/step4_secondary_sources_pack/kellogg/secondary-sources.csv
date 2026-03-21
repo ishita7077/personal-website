@@ -1,0 +1,4 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+kellogg,school_affiliated,How to Apply — Full-Time MBA,https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/,Official application page describing what the interview evaluates and how invitations roll out.,process_context,high
+kellogg,school_affiliated,Kellogg joins The Consortium: Advancing DEI,https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/,School-owned article that captures mission language around diverse teams and shaping solutions for impact.,mission_texture,medium
+kellogg,school_affiliated,Two-Year MBA program page,https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/,"Official program overview useful for collaboration, leadership, and student-experience resource building.",program_overview,medium

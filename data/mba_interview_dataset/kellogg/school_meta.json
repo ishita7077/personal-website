@@ -1,0 +1,21 @@
+{
+  "school_id": "kellogg",
+  "display_name": "Northwestern Kellogg",
+  "validated_interview_format": "1:1 behavioural interview; resume-only (blind) by design.",
+  "unique_elements": "Interviewer has not read full application; restate goals and motivations clearly.",
+  "interviewer_type": "Often alumni depending on cycle",
+  "community_texture": "Blind interview implies resume-grounded storytelling.",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/kellogg/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/kellogg/"
+  },
+  "secondary_source_urls": [
+    "https://www.kellogg.northwestern.edu/admissions/ft-admissions/ft-how-to-apply/",
+    "https://www.kellogg.northwestern.edu/news/blog/2022/11/17/kellogg-joins-consortium-advancing-dei/",
+    "https://www.kellogg.northwestern.edu/programs/full-time-mba/two-year-mba-program/"
+  ],
+  "community_source_urls": [
+    "https://www.reddit.com/r/MBA/comments/1jiwnu6/just_got_kellogg_interview_invitation_now/"
+  ]
+}

@@ -1,0 +1,4 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+chicago-booth,school_affiliated,Leadership Impact,https://www.chicagobooth.edu/why-booth/leadership-impact,Official leadership framing page; useful for school-specific evaluation themes.,leadership_texture,medium
+chicago-booth,school_affiliated,Our Collaborative Community,https://news.chicagobooth.edu/chicago-booth/home/why-booth/collaborative-community,"School-owned article describing culture as rigorous, idea-driven, and collaborative.",culture,medium
+chicago-booth,school_affiliated,How to Apply,https://www.chicagobooth.edu/mba/full-time/admissions/how-to-apply,Official process page remains the best grounded source for interview format and interviewer types.,process_context,high

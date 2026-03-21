@@ -1,0 +1,2 @@
+school_id,source_type,source_title,source_url,claim_or_pattern_supported,category,confidence
+yale-som,community_reported,Clear Admit — Yale SOM Interview Questions & Reports,https://www.clearadmit.com/interview-reports/school/yale-som/,"Recurring reported questions: accomplishment, conflict, quote, why MBA, why Yale, contribution to community, goals, closing reflections.",question_patterns,high

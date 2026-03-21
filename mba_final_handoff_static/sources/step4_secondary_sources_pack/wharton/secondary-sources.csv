@@ -1,0 +1,5 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+wharton,school_affiliated,Time for the Team Based Discussions!,https://mba.wharton.upenn.edu/time-team-based-discussions/,Official admissions blog post explaining intent of TBD and the qualities Wharton is trying to observe.,admissions_blog,high
+wharton,school_affiliated,Round 1 Interview Invitations for 2025 Released,https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/,"Official admissions post with current-cycle framing: collaboration, adaptability, empathy, strategic thinking.",admissions_blog,high
+wharton,school_affiliated,Student-Led Wharton MBA Overview Webinar,https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/,School-affiliated event page showing current students as a sanctioned source of school culture and program insight.,student_event,medium
+wharton,school_affiliated,Interview Process,https://mba.wharton.upenn.edu/interview-process/,Official process page remains a key source for the collaborative interview model.,process_context,high

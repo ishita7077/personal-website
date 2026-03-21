@@ -1,0 +1,1369 @@
+{
+  "version": 1,
+  "school_id": "berkeley_haas",
+  "prepTime": 45,
+  "answerTime": 180,
+  "totalQuestions": 6,
+  "timing_basis": "deep-research-report (2).md typical duration + structural components",
+  "pickMode": "random_set",
+  "sets": [
+    [
+      {
+        "id": "haas-S1-Q1",
+        "text": "Walk me through your career path and the decisions that led you to where you are today.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Explain the logic behind progression, key decisions, learning at each stage, and how it prepares your next step."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Explain the logic behind progression, key decisions, learning at each stage, and how it prepares your next step."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S1-Q2",
+        "text": "Why do you want an MBA at this point in your career?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Frame MBA as deliberate investment in skills, perspective, transition or acceleration."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Frame MBA as deliberate investment in skills, perspective, transition or acceleration."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S1-Q3",
+        "text": "Tell me about a time when you faced strong opposition to one of your ideas. What did you do?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Show listening, refining, persuading, or adapting; bold ideas with humility and evidence."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Show listening, refining, persuading, or adapting; bold ideas with humility and evidence."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S1-Q4",
+        "text": "Describe a situation where you had to motivate a team when morale was low.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Stress alignment and collaboration, not only individual motivation."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Stress alignment and collaboration, not only individual motivation."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S1-Q5",
+        "text": "What is the biggest transformation happening in your industry today?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Name a shift, why it matters, strategic implications."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Name a shift, why it matters, strategic implications."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S1-Q6",
+        "text": "If admitted, how would you contribute to the Haas community?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Answer in terms of us: perspective, involvement, what classmates gain."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Answer in terms of us: perspective, involvement, what classmates gain."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ],
+    [
+      {
+        "id": "haas-S2-Q1",
+        "text": "What are your short-term and long-term career goals?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Credible arc: near-term role/function/industry, then broader impact."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Credible arc: near-term role/function/industry, then broader impact."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S2-Q2",
+        "text": "Why Berkeley Haas specifically?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Defining Leadership Principles, Bay Area context, curriculum, culture, contribution."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Defining Leadership Principles, Bay Area context, curriculum, culture, contribution."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S2-Q3",
+        "text": "Tell me about a time when you were proven wrong in a professional debate. How did you react?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Composure, openness to evidence, humility, learning."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Composure, openness to evidence, humility, learning."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S2-Q4",
+        "text": "Describe a time when you had to work on a project where you initially lacked familiarity with the topic.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Curiosity, learning speed, resourcefulness, seeking perspectives."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Curiosity, learning speed, resourcefulness, seeking perspectives."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S2-Q5",
+        "text": "What is one professional accomplishment you are most proud of?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Impact, your role, why it mattered."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Impact, your role, why it mattered."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S2-Q6",
+        "text": "Which of Haas' four defining principles resonates most with you and why?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Pick one, define in your words, prove with a story."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Pick one, define in your words, prove with a story."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ],
+    [
+      {
+        "id": "haas-S3-Q1",
+        "text": "What motivates your career decisions?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Problems, opportunities, impact; tie to past and future."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Problems, opportunities, impact; tie to past and future."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S3-Q2",
+        "text": "Tell me about a time you demonstrated leadership without formal authority.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Influence through initiative, communication, collaboration."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Influence through initiative, communication, collaboration."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S3-Q3",
+        "text": "Describe a conflict you had with a teammate and how you handled it.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Trust, differences, improved outcome."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Trust, differences, improved outcome."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S3-Q4",
+        "text": "Tell me about a risk you took professionally. What happened?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Intelligent risk, not impulsive."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Intelligent risk, not impulsive."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S3-Q5",
+        "text": "What clubs, initiatives, or activities would you engage with at Haas?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Name specifics and what you would do there."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Name specifics and what you would do there."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": true,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S3-Q6",
+        "text": "What role do you typically play in teams?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Behaviors and values, not buzzwords."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Behaviors and values, not buzzwords."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ],
+    [
+      {
+        "id": "haas-S4-Q1",
+        "text": "Why do you believe now is the right time for you to pursue an MBA?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Tie needs to curriculum, peers, coaching, culture."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Tie needs to curriculum, peers, coaching, culture."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S4-Q2",
+        "text": "Tell me about the most challenging professional situation you have faced.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Character and growth; concise organized response."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Character and growth; concise organized response."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S4-Q3",
+        "text": "Describe a time when you had to persuade someone to change their mind.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Listen, reasoning, consensus."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Listen, reasoning, consensus."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S4-Q4",
+        "text": "What is something constructive feedback taught you about yourself?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Receptivity, reflection, change."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Receptivity, reflection, change."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S4-Q5",
+        "text": "How have you built consensus among people with differing opinions?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Empathy, structure, evidence, trust."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Empathy, structure, evidence, trust."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S4-Q6",
+        "text": "What impact do you want to have in your industry in the long term?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Grounded problems, environment, strengths and values."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Grounded problems, environment, strengths and values."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ],
+    [
+      {
+        "id": "haas-S5-Q1",
+        "text": "What distinguishes you from other MBA applicants?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Distinctive perspective and contribution to community."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Distinctive perspective and contribution to community."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S5-Q2",
+        "text": "Tell me about a time you worked within a diverse team.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Learning, adaptation, how difference improved work."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Learning, adaptation, how difference improved work."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S5-Q3",
+        "text": "Describe a project that did not initially go well. What did you do to address it?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Diagnosis, steps to improve, resilience."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Diagnosis, steps to improve, resilience."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S5-Q4",
+        "text": "What would your manager say are your greatest strengths?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Judgment, leadership, collaboration with examples."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Judgment, leadership, collaboration with examples."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S5-Q5",
+        "text": "What do you want out of your MBA experience personally and professionally?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Connect goals to Haas structure."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Connect goals to Haas structure."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S5-Q6",
+        "text": "If you were leading your organization today, what is one strategic change you would make?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Problem, move, why it matters."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Problem, move, why it matters."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ],
+    [
+      {
+        "id": "haas-S6-Q1",
+        "text": "Tell me about yourself beyond what is on your resume.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Values, community, perspective beyond resume."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Values, community, perspective beyond resume."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S6-Q2",
+        "text": "Describe a time when you had to learn something quickly in order to succeed.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Curiosity, speed, resources."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Curiosity, speed, resources."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S6-Q3",
+        "text": "Tell me about a time when humility played an important role in your work.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Self-awareness without arrogance."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Self-awareness without arrogance."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S6-Q4",
+        "text": "What is one weakness you are actively working to improve?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Self-awareness and credible MBA-linked plan."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Self-awareness and credible MBA-linked plan."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S6-Q5",
+        "text": "What role do you typically take within your group of friends or communities outside work?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Human dimension, community role."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Human dimension, community role."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S6-Q6",
+        "text": "What would your ideal post-MBA job look like?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Progression tied to skills and exploration."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Progression tied to skills and exploration."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ],
+    [
+      {
+        "id": "haas-S7-Q1",
+        "text": "How did you decide on your current career path?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Reasoning and reflection on evolution."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Reasoning and reflection on evolution."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S7-Q2",
+        "text": "Describe a time when you had to manage a stressful or complicated project.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Prioritization, communication, resilience."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Prioritization, communication, resilience."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S7-Q3",
+        "text": "Tell me about a time you promoted collaboration across different teams.",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Align goals, remove barriers."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Align goals, remove barriers."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S7-Q4",
+        "text": "What is the biggest lesson you have learned from a professional failure?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Growth and character."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Growth and character."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S7-Q5",
+        "text": "What will you bring to your MBA classmates that they may not already have?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "Contribution to class community."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "Contribution to class community."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      },
+      {
+        "id": "haas-S7-Q6",
+        "text": "Is there anything else you would like the admissions committee to know about you?",
+        "expected_answer_map": {
+          "questionGoal": "Respond with specificity and Haas-relevant values framing.",
+          "corePoints": [
+            "Answer the question directly in the first 1–2 sentences.",
+            "Include a concrete situation or example with your role and actions.",
+            "Close with outcome, learning, or how it shapes your MBA goals."
+          ],
+          "niceToHave": [
+            "One concise additive point."
+          ],
+          "redFlags": [
+            "Vague generalities with no example.",
+            "Contradicting your stated goals.",
+            "Negative framing about teammates without accountability."
+          ],
+          "examplesOfGoodDirection": [
+            "One concise additive point."
+          ]
+        },
+        "question_type": "behavioral_or_school_fit",
+        "interview_phase": "live_or_video",
+        "high_probability": false,
+        "tags": [
+          "leadership",
+          "goals"
+        ],
+        "prep_time_seconds": 45,
+        "answer_time_seconds": 180
+      }
+    ]
+  ]
+}

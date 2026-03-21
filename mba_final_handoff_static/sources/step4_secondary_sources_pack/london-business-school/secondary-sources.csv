@@ -1,0 +1,6 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+london-business-school,school_affiliated,Get to know the MBA Recruitment & Admissions Team,https://admissionsblog.london.edu/get-to-know-the-mba-team/,Admissions-blog post introducing the people guiding candidates and highlighting support surfaces and information events.,admissions_blog,high
+london-business-school,school_affiliated,Things I wish I knew about the MBA Application process,https://admissionsblog.london.edu/things-i-wish-i-knew-about-the-mba-application-process/,Student-voice admissions-blog post useful for applicant texture within a school-affiliated source.,student_blog,medium
+london-business-school,school_affiliated,Choosing to do an MBA: How we can help,https://admissionsblog.london.edu/guiding-decision-mba/,"Admissions-team post emphasizing research support, outreach, and school-choice decision help.",admissions_blog,medium
+london-business-school,school_affiliated,Meet the Class of MBA2027,https://admissionsblog.london.edu/meet-the-class-of-mba2027/,Recent student-voice post useful for community and class-profile texture.,student_blog,medium
+london-business-school,school_affiliated,How to apply | MBA,https://www.london.edu/masters-degrees/mba/apply,Official MBA apply page; remains central for process and admissions-blog linkage.,process_context,high

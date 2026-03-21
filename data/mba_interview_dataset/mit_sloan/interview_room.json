@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "school_id": "mit_sloan",
+  "prepTime": 45,
+  "answerTime": 255,
+  "totalQuestions": 6,
+  "timing_basis": "deep-research-report (2).md typical duration + structural components",
+  "pickMode": "shuffle_weighted",
+  "sets": null
+}

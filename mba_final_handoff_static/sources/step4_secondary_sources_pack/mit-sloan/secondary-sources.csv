@@ -1,0 +1,4 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+mit-sloan,school_affiliated,How to Apply to the MBA Program,https://mitsloan.mit.edu/mba/admissions/how-to-apply,Official application page includes interview tips with Assistant Dean Dawna Levenson; useful as school-affiliated nuance.,admissions_guidance,high
+mit-sloan,school_affiliated,MBA Admissions overview,https://mitsloan.mit.edu/mba/admissions,"Official admissions entry point useful for events, FAQs, financing, and contextual resource-pack building.",admissions_overview,medium
+mit-sloan,school_affiliated,How to apply — interview section,https://mitsloan.mit.edu/mba/admissions/how-to-apply,Official page states the short-answer-before-interview requirement and virtual format; also frames interview prep through dean video.,interview_guidance,high

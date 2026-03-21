@@ -1,0 +1,5 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+harvard-business-school,school_affiliated,Your Interview,https://www.hbs.edu/mba/your-interview,"Official post-invite interview hub with logistics, community, and get-to-know-us surfaces.",interview_hub,high
+harvard-business-school,school_affiliated,Get to Know Us,https://www.hbs.edu/mba/your-interview/get-to-know-us,"School-affiliated page for interview invitees that highlights campus, faculty, entrepreneurship ecosystem, and student access.",school_feel,high
+harvard-business-school,school_affiliated,Application Process,https://www.hbs.edu/mba/admissions/application-process,"Official process page that reinforces tailored, file-aware interview design.",process_context,high
+harvard-business-school,school_affiliated,Peek into the HBS MBA: A Virtual Event for College Students,https://www.hbs.edu/mba/blog/peek-event-for-college-students,"Admissions-blog post describing exposure to case discussion, current students, alumni, and leadership themes.",admissions_blog,medium

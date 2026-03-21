@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "school_id": "wharton",
+  "prepTime": 45,
+  "answerTime": 300,
+  "totalQuestions": 6,
+  "timing_basis": "deep-research-report (2).md typical duration + structural components",
+  "pickMode": "shuffle_weighted",
+  "sets": null
+}

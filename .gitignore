@@ -52,3 +52,6 @@ ARCHITECTURE.md
 SPEC.md
 prompts.db
 TODO-PERSONALIZE.md
+
+# local agent mistake log (do not commit)
+AGENT_MISTAKES_LOCAL.md

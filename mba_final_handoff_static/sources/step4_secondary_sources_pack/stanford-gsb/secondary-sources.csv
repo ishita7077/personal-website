@@ -1,0 +1,5 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+stanford-gsb,school_affiliated,MBA Ambassadors,https://www.gsb.stanford.edu/programs/mba/admission/ambassadors,Current-student ambassador directory for culture and student-life questions; useful for school-feel and resource-pack links.,student_ambassador,high
+stanford-gsb,school_affiliated,MBA Student Experience: Life at the GSB,https://www.gsb.stanford.edu/events/mba-student-experience-life-gsb,Admission-officer-moderated student panel about campus life and community; useful for culture texture.,student_panel,medium
+stanford-gsb,school_affiliated,MBA Student Experience: Life at the GSB (additional session),https://www.gsb.stanford.edu/events/mba-student-experience-life-gsb-0,"Same format, second event instance; confirms repeated official use of student-experience panels.",student_panel,low
+stanford-gsb,school_affiliated,Stanford MBA Program overview,https://www.gsb.stanford.edu/programs/mba,"Admissions events include panels, small group chats, and engagement with students, alumni, and admissions staff.",program_overview,medium

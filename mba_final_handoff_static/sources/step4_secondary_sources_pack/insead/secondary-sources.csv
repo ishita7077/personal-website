@@ -1,0 +1,6 @@
+school_id,source_type,source_title,source_url,why_it_matters,category,confidence
+insead,school_affiliated,MBA Video Interview Tips,https://intheknow.insead.edu/blog/mba-video-interview-tips,"School-affiliated article with concrete advice on Kira video interviews, practice, motivations, goals, and authenticity.",admissions_blog,high
+insead,school_affiliated,How to Apply for INSEAD's MBA Programme,https://intheknow.insead.edu/video/how-apply-inseads-mba-programme,School-affiliated video featuring MBA recruitment/admissions leadership on what INSEAD looks for in candidates.,admissions_video,high
+insead,school_affiliated,MBA Experience: Transforming Careers,https://intheknow.insead.edu/video/mba-experience-transforming-careers,Student-facing school-affiliated video useful for career-transformation and experience texture.,student_experience,medium
+insead,school_affiliated,MBA Ask us Anything | Online,https://www.insead.edu/events/mba-ask-us-anything-online-1,Official event format showing recruitment team + current students + alumni as sanctioned sources of school insight.,event,medium
+insead,school_affiliated,MBA Application Process,https://www.insead.edu/master-programmes/master-business-administration/application-process,Official process page remains key context for online interviews plus alumni interviews.,process_context,high

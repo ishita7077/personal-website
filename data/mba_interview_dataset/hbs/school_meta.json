@@ -1,0 +1,22 @@
+{
+  "school_id": "hbs",
+  "display_name": "Harvard Business School",
+  "validated_interview_format": "1:1 application-based interview tailored to your file; ~30 minutes.",
+  "unique_elements": "Post-Interview Reflection due within 24 hours (guidance often cited as ~300–450 words).",
+  "interviewer_type": "MBA Admissions Board member who reviewed your application",
+  "community_texture": "Reports emphasize file-aware, detail-probing questions (Clear Admit pattern in handoff CSV).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/harvard-business-school/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/harvard-business-school/"
+  },
+  "secondary_source_urls": [
+    "https://www.hbs.edu/mba/your-interview",
+    "https://www.hbs.edu/mba/your-interview/get-to-know-us",
+    "https://www.hbs.edu/mba/admissions/application-process",
+    "https://www.hbs.edu/mba/blog/peek-event-for-college-students"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/interview-reports/school/harvard/"
+  ]
+}

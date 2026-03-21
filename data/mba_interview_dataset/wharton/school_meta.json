@@ -1,0 +1,25 @@
+{
+  "school_id": "wharton",
+  "display_name": "The Wharton School",
+  "validated_interview_format": "Team Based Discussion ~35 minutes + ~10 minute 1:1 reflection.",
+  "unique_elements": "Group exercise evaluating collaboration, communication, leadership in a team setting.",
+  "interviewer_type": "Admissions team member for 1:1 segment",
+  "community_texture": "Community threads emphasize collaborative behavior over winning your own idea (handoff CSV).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/wharton/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/wharton/"
+  },
+  "secondary_source_urls": [
+    "https://mba.wharton.upenn.edu/time-team-based-discussions/",
+    "https://mba.wharton.upenn.edu/mba-admissions/wg28-r1-interviews-released/",
+    "https://mba.wharton.upenn.edu/events-hq/a1WHq00000PFc5jMAD/",
+    "https://mba.wharton.upenn.edu/interview-process/"
+  ],
+  "community_source_urls": [
+    "https://www.reddit.com/r/MBA/comments/1od7r2c/wharton_tbd_interview_advice_based_on_1k_admits/",
+    "https://www.reddit.com/r/MBA/comments/1it7q56/wharton_tbd_interview_tips_from_1000_admits/",
+    "https://www.reddit.com/r/MBA/comments/1r9xagk/wharton_tbd_invites_are_out_tips_from_1000_admits/",
+    "https://gmatclub.com/forum/how-to-ace-the-wharton-team-based-discussion-436570.html"
+  ]
+}

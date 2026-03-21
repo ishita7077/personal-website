@@ -1,0 +1,2 @@
+school_id,source_type,source_title,source_url,claim_or_pattern_supported,category,confidence
+insead,community_reported,Clear Admit — INSEAD school page / applicant activity,https://www.clearadmit.com/schools/insead/,Useful for applicant-cycle timing and evidence that interview reports and decision timelines are actively logged by applicants.,timing_texture,medium

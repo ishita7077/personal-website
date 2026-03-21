@@ -1,0 +1,4 @@
+school_id,source_type,source_title,source_url,claim_or_pattern_supported,category,confidence
+chicago-booth,community_reported,Clear Admit — Chicago Booth school page,https://www.clearadmit.com/schools/chicago-booth/,Useful secondary aggregation noting applicant-reported resume-based interview reputation.,question_patterns,medium
+chicago-booth,community_reported,Reddit — Booth R2 interview questions,https://www.reddit.com/r/MBA/comments/1isfhxo/booth_r2_interview_questions/,"Community-reported likely recurring questions: walk me through resume, why MBA now, why Booth, plus classic behavioral prompts.",question_patterns,medium
+chicago-booth,community_reported,Reddit — Chicago Booth Interview Invites Waiting Room,https://www.reddit.com/r/MBA/comments/174ri2m/chicago_booth_interview_invites_waiting_room/,Applicant timing/process thread useful for interview-invite rollout and portal-behavior texture.,timing_texture,low

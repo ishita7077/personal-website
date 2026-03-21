@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build"
+    "typecheck": "next typegen && tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run build",
+    "build:mba-dataset": "node scripts/build-mba-dataset.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.0.4",

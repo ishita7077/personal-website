@@ -1,0 +1,23 @@
+{
+  "school_id": "insead",
+  "display_name": "INSEAD",
+  "validated_interview_format": "Mandatory Kira video assessment + if pre-selected, two alumni interviews.",
+  "unique_elements": "Handoff cites Kira pattern: four video questions (45s prep / 60s response) + one written (5 minutes) within 48 hours of deadline; dual alumni reports.",
+  "interviewer_type": "Two alumni interviewers submitting reports",
+  "community_texture": "Applicant-cycle timing texture (Clear Admit in handoff CSV).",
+  "handoff_paths": {
+    "primary_structure_report": "mba_final_handoff_static/deep-research-report (2).md",
+    "step4_pack": "mba_final_handoff_static/sources/step4_secondary_sources_pack/insead/",
+    "step5_pack": "mba_final_handoff_static/sources/step5_community_texture_pack/insead/"
+  },
+  "secondary_source_urls": [
+    "https://intheknow.insead.edu/blog/mba-video-interview-tips",
+    "https://intheknow.insead.edu/video/how-apply-inseads-mba-programme",
+    "https://intheknow.insead.edu/video/mba-experience-transforming-careers",
+    "https://www.insead.edu/events/mba-ask-us-anything-online-1",
+    "https://www.insead.edu/master-programmes/master-business-administration/application-process"
+  ],
+  "community_source_urls": [
+    "https://www.clearadmit.com/schools/insead/"
+  ]
+}
