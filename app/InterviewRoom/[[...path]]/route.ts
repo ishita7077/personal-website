@@ -21,8 +21,10 @@ const MIME_TYPES: Record<string, string> = {
 /**
  * Standalone **Interview Room** (Haas-focused) — independent from MBA Interview Room.
  * Serves `public/InterviewRoom/index.html` for `/InterviewRoom` and any nested path so
- * shared links keep working. Assets (CSS/JS/images) are served directly by extension.
- * Assets resolve via `<base href="/InterviewRoom/">`.
+ * shared links keep working. The `<base href="/InterviewRoom/">` tag lives directly in
+ * index.html so assets resolve correctly whether Vercel serves the file statically (root
+ * path) or through this handler (sub-paths). Assets with known extensions are also served
+ * directly as a fallback.
  */
 export async function GET(_req: Request, { params }: RouteParams) {
   const { path: segments } = await params;
@@ -49,10 +51,7 @@ export async function GET(_req: Request, { params }: RouteParams) {
   try {
     const filePath = path.join(process.cwd(), "public", "InterviewRoom", "index.html");
     const html = await readFile(filePath, "utf-8");
-    const baseTag = '<base href="/InterviewRoom/">';
-    const withBase =
-      html.indexOf("<head>") !== -1 ? html.replace("<head>", `<head>${baseTag}`) : html;
-    return new NextResponse(withBase, {
+    return new NextResponse(html, {
       headers: {
         "Content-Type": "text/html; charset=utf-8",
       },
