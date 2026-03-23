@@ -10,6 +10,7 @@ import {
   uploadNoteImage,
   insertImageMarkdown,
 } from "@/lib/notes/image-upload";
+import { cn } from "@/lib/utils";
 
 function getTaskText(node: React.ReactNode): string {
   if (typeof node === "string" || typeof node === "number") {
@@ -294,7 +295,7 @@ export default function NoteContent({
       ) : (
         <div className="text-base md:text-sm" onClick={handleMarkdownClick}>
           <ReactMarkdown
-            className="markdown-body"
+            className={cn("markdown-body", note.slug === "about-me" && "about-me")}
             remarkPlugins={[remarkGfm]}
             components={{
               li: renderListItem,

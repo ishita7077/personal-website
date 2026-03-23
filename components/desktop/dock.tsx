@@ -251,6 +251,10 @@ export function Dock({ onTrashClick, onFinderClick }: DockProps) {
     }
   };
 
+  const handleInterviewRoomClick = () => {
+    window.location.href = "/InterviewRoom";
+  };
+
   // Get ordered list of apps to render (maintaining order from APPS array)
   // Render apps that should currently show OR are still in visibleApps (animating out)
   // Using visibleApps instead of animationStates avoids a one-frame flicker where the
@@ -308,6 +312,25 @@ export function Dock({ onTrashClick, onFinderClick }: DockProps) {
             </button>
           );
         })}
+        {/* Interview Room */}
+        <button
+          onClick={handleInterviewRoomClick}
+          onMouseEnter={() => setHoveredApp("interview-room")}
+          onMouseLeave={() => setHoveredApp(null)}
+          className="group relative flex flex-col items-center outline-none transition-all duration-300 hover:scale-110 active:scale-95 flex-shrink-0"
+        >
+          {hoveredApp === "interview-room" && <DockTooltip label="Interview Room" />}
+          <div className="w-12 h-12 relative flex items-center justify-center">
+            <img
+              src="/interview-room-icon.svg"
+              alt="Interview Room"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain [filter:drop-shadow(0_2px_4px_rgba(0,0,0,0.35))]"
+            />
+          </div>
+          <div className="w-1 h-1 rounded-full mt-1 opacity-0" />
+        </button>
         {/* Divider before Trash */}
         <div className="w-px h-12 bg-black/20 dark:bg-white/10 mx-1 self-center" />
 

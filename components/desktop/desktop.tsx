@@ -39,6 +39,28 @@ interface DesktopProps {
   initialPreviewFile?: string;
 }
 
+function InterviewRoomDesktopIcon() {
+  return (
+    <a
+      href="/InterviewRoom"
+      className="absolute right-8 top-12 z-0 flex w-24 flex-col items-center gap-1 rounded-md p-1 transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+      aria-label="Open Interview Room"
+      title="Interview Room"
+    >
+      <img
+        src="/interview-room-icon.svg"
+        alt=""
+        width={64}
+        height={64}
+        className="h-16 w-16 object-contain [filter:drop-shadow(0_4px_8px_rgba(0,0,0,0.35))]"
+      />
+      <span className="max-w-full text-center text-[11px] leading-tight font-medium text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.7)]">
+        Interview Room
+      </span>
+    </a>
+  );
+}
+
 // Constants for file paths (placeholder for Ish's machine)
 const HOME_DIR = "/Users/ish";
 const PROJECTS_DIR = `${HOME_DIR}/Projects`;
@@ -469,6 +491,8 @@ function DesktopContent({ initialNoteSlug, initialTextEditFile, initialPreviewFi
 
       {isActive && (
         <>
+          <InterviewRoomDesktopIcon />
+
           <Window appId="notes">
             <NotesApp inShell={true} initialSlug={initialNoteSlug} />
           </Window>

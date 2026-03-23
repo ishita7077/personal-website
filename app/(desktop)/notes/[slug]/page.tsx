@@ -30,6 +30,11 @@ const getNote = cache(async (slug: string) => {
       if (fallback) logger.info("notes/[slug]/getNote", "Using fallback after RPC error", { slug });
       return fallback || null;
     }
+    if (!note) {
+      const fallback = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === slug);
+      if (fallback) logger.info("notes/[slug]/getNote", "Using fallback when Supabase note missing", { slug });
+      return fallback || null;
+    }
     if (note) logger.info("notes/[slug]/getNote", "Returning note from Supabase", { slug, source: "supabase" });
     return note;
   } catch (e) {
@@ -102,7 +107,7 @@ export default async function NotePage({ params }: PageProps) {
 
     if (!note) {
       logger.info("notes/[slug]/page", "No note found; showing placeholder or redirecting", { cleanSlug });
-      if (cleanSlug === "about-me" || cleanSlug === "error") {
+      if (cleanSlug === "about-me" || cleanSlug === "interview-room" || cleanSlug === "error") {
         return <NotesDesktopPage slug={cleanSlug} />;
       }
       return redirect("/notes/error");

@@ -19,12 +19,9 @@ const MIME_TYPES: Record<string, string> = {
 };
 
 /**
- * Standalone **Interview Room** (Haas-focused) — independent from MBA Interview Room.
- * Serves `public/InterviewRoom/index.html` for `/InterviewRoom` and any nested path so
- * shared links keep working. The `<base href="/InterviewRoom/">` tag lives directly in
- * index.html so assets resolve correctly whether Vercel serves the file statically (root
- * path) or through this handler (sub-paths). Assets with known extensions are also served
- * directly as a fallback.
+ * Serve legacy multi-school MBA Interview Room on `/InterviewRoom`.
+ * We map this route to `public/MbaInterviewRoom` so existing links to `/InterviewRoom`
+ * open the multi-school experience.
  */
 export async function GET(_req: Request, { params }: RouteParams) {
   const { path: segments } = await params;
@@ -36,7 +33,7 @@ export async function GET(_req: Request, { params }: RouteParams) {
 
     if (mimeType) {
       try {
-        const assetPath = path.join(process.cwd(), "public", "InterviewRoom", ...segments);
+        const assetPath = path.join(process.cwd(), "public", "MbaInterviewRoom", ...segments);
         const data = await readFile(assetPath);
         return new NextResponse(data, {
           headers: { "Content-Type": mimeType },
@@ -49,15 +46,19 @@ export async function GET(_req: Request, { params }: RouteParams) {
 
   // Otherwise serve the SPA shell
   try {
-    const filePath = path.join(process.cwd(), "public", "InterviewRoom", "index.html");
+    const filePath = path.join(process.cwd(), "public", "MbaInterviewRoom", "index.html");
     const html = await readFile(filePath, "utf-8");
-    return new NextResponse(html, {
+    const baseTag = '<base href="/MbaInterviewRoom/">';
+    const withBase = html.includes("<head>")
+      ? html.replace("<head>", `<head>${baseTag}`)
+      : html;
+    return new NextResponse(withBase, {
       headers: {
         "Content-Type": "text/html; charset=utf-8",
       },
     });
   } catch (err) {
-    console.error("InterviewRoom route error:", err);
+    console.error("InterviewRoom legacy route error:", err);
     return new NextResponse("Interview Room not found", { status: 404 });
   }
 }

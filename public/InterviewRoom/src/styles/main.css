@@ -30,6 +30,10 @@ body{font-family:var(--ir-sans);background:var(--ir-bg);color:var(--ir-text);min
 .ir-logo-text{font-size:18px;font-weight:800;color:var(--ir-text);letter-spacing:-0.5px}
 .ir-logo-text span{color:var(--ir-accent)}
 .ir-nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.ir-nav-right #backToWebsiteBtn{margin-right:4px}
+.ir-nav-credit{font-size:12px;color:var(--ir-text-dim);margin-right:4px;white-space:nowrap}
+.ir-nav-credit a{color:var(--ir-accent);text-decoration:none;font-weight:600}
+.ir-nav-credit a:hover{text-decoration:underline}
 .ir-nav-status{font-family:var(--ir-mono);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid var(--ir-border);color:var(--ir-text-dim);transition:all var(--ir-transition)}
 .ir-nav-status[data-status="live"]{color:var(--ir-red);border-color:var(--ir-red);animation:ir-pulse 2s infinite}
 .ir-nav-status[data-status="recording"]{color:#fff;border-color:var(--ir-red);background:var(--ir-red);animation:ir-pulse 1.5s infinite}

@@ -191,3 +191,25 @@
   margin: 16px 0;
   border-radius: 4px;
 }
+
+/* About-me: indented commentary (reading-list style) */
+.markdown-body.about-me ul ul li {
+  color: #6a737d;
+  font-size: 0.95em;
+  margin-top: 0.25em;
+}
+
+.dark .markdown-body.about-me ul ul li {
+  color: #8b949e;
+}
+
+/* Inline company logos in about-me list items */
+.markdown-body.about-me li img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+  border-radius: 4px;
+  max-width: 20px;
+}

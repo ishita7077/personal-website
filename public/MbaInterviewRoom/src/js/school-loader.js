@@ -9,6 +9,40 @@
 
   const API_SCHOOLS = "/api/mba-interview-room/schools";
   const API_SCHOOL = "/api/mba-interview-room/school/";
+  const FALLBACK_SCHOOLS = [
+    {
+      id: "stanford_gsb",
+      display_name: "Stanford GSB",
+      listing: {
+        interview_style_summary:
+          "1:1 structured behavioural interview focused on past actions; trained alumni or admissions; ~45–60 minutes; deep probing.",
+      },
+    },
+    {
+      id: "hbs",
+      display_name: "Harvard Business School",
+      listing: {
+        interview_style_summary:
+          "1:1 application-based interview tailored to your file; ~30 minutes.",
+      },
+    },
+    {
+      id: "wharton",
+      display_name: "The Wharton School",
+      listing: {
+        interview_style_summary:
+          "Team-based discussion plus a short one-to-one with admissions; real TBD is in a group room.",
+      },
+    },
+    {
+      id: "mit_sloan",
+      display_name: "MIT Sloan",
+      listing: {
+        interview_style_summary:
+          "1:1 behavioural interview; virtual per official guidance in handoff.",
+      },
+    },
+  ];
 
   /** Subtle card accents (inspired by programme colours; not official marks). */
   const SCHOOL_ACCENTS = {
@@ -194,13 +228,8 @@
       await IR.fetchSchoolsRegistry();
       IR.renderSchoolCards();
     } catch (e) {
-      const mount = document.getElementById("schoolCardsMount");
-      if (mount) {
-        mount.innerHTML =
-          '<p class="ir-school-load-error">Could not load programme list. Serve this app from the site (e.g. <code>/mba-interview-room</code>) so <code>' +
-          API_SCHOOLS +
-          "</code> is reachable.</p>";
-      }
+      IR.SCHOOLS_LIST = FALLBACK_SCHOOLS.slice();
+      IR.renderSchoolCards();
     }
   };
 })(typeof window !== "undefined" ? window : this);

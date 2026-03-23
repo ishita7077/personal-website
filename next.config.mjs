@@ -50,7 +50,7 @@ const nextConfig = {
     ];
 
     return [
-      // InterviewRoom: redirect trailing slash to non-trailing (route handler serves at /InterviewRoom)
+      // InterviewRoom trailing slash: normalize to /InterviewRoom
       { source: "/InterviewRoom/", destination: "/InterviewRoom", permanent: false },
       // Legacy note slugs redirect to /notes/*
       ...legacyNoteSlugs.map((slug) => ({

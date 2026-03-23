@@ -5,13 +5,20 @@ import { createClient } from "@/utils/supabase/client";
 import { Note as NoteType } from "@/lib/notes/types";
 import { FALLBACK_PUBLIC_NOTES } from "@/lib/notes/fallback-public-notes";
 import { logger } from "@/lib/logger";
-
-const ABOUT_ME_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "about-me") ?? null;
 import { SessionNotesProvider } from "@/app/(desktop)/notes/session-notes";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useWindowFocus } from "@/lib/window-focus-context";
 import Sidebar from "./sidebar";
 import Note from "./note";
+
+const ABOUT_ME_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "about-me") ?? null;
+const INTERVIEW_ROOM_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "interview-room") ?? null;
+
+function withInterviewRoomNote(notes: NoteType[]): NoteType[] {
+  if (!INTERVIEW_ROOM_FALLBACK) return notes;
+  if (notes.some((note) => note.slug === "interview-room")) return notes;
+  return [INTERVIEW_ROOM_FALLBACK, ...notes];
+}
 
 interface NotesAppProps {
   isMobile?: boolean;
@@ -34,7 +41,7 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
     async function fetchNotes() {
       if (!supabase) {
         logger.warn("notes-app/fetchNotes", "No Supabase; using fallback notes");
-        const data = FALLBACK_PUBLIC_NOTES;
+        const data = withInterviewRoomNote(FALLBACK_PUBLIC_NOTES);
         setNotes(data);
         // On mobile without initialSlug, show sidebar only (no note selected)
         if (isMobile && !initialSlug) {
@@ -61,7 +68,8 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
         return;
       }
       if (data) {
-        setNotes(data);
+        const notesWithInterviewRoom = withInterviewRoomNote(data as NoteType[]);
+        setNotes(notesWithInterviewRoom);
         // On mobile without initialSlug, show sidebar only (no note selected)
         // On desktop or with initialSlug, select a note
         if (isMobile && !initialSlug) {
@@ -72,13 +80,16 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
 
         // Use initialSlug if provided, otherwise "about-me", otherwise first note
         const targetSlug = initialSlug || "about-me";
-        const defaultNote = data.find((n: NoteType) => n.slug === targetSlug);
+        const defaultNote = notesWithInterviewRoom.find((n: NoteType) => n.slug === targetSlug);
 
         if (defaultNote && !selectedNote) {
           // about-me: always use fallback so content/notes/about-me.md is source of truth
           if (defaultNote.slug === "about-me" && ABOUT_ME_FALLBACK) {
             logger.info("notes-app/fetchNotes", "Using fallback for about-me (source of truth)");
             setSelectedNote(ABOUT_ME_FALLBACK);
+          } else if (defaultNote.slug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for interview-room");
+            setSelectedNote(INTERVIEW_ROOM_FALLBACK);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: defaultNote.slug })
@@ -91,6 +102,9 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
           if (initialSlug === "about-me" && ABOUT_ME_FALLBACK) {
             logger.info("notes-app/fetchNotes", "Using fallback for about-me (direct slug)");
             setSelectedNote(ABOUT_ME_FALLBACK);
+          } else if (initialSlug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for interview-room (direct slug)");
+            setSelectedNote(INTERVIEW_ROOM_FALLBACK);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: initialSlug })
@@ -141,6 +155,13 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
       if (note.slug === "about-me" && ABOUT_ME_FALLBACK) {
         logger.info("notes-app/handleNoteSelect", "Using fallback for about-me");
         setSelectedNote(ABOUT_ME_FALLBACK);
+        window.history.replaceState(null, "", `/notes/${note.slug}`);
+        if (isMobile) setShowSidebar(false);
+        return;
+      }
+      if (note.slug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
+        logger.info("notes-app/handleNoteSelect", "Using fallback for interview-room");
+        setSelectedNote(INTERVIEW_ROOM_FALLBACK);
         window.history.replaceState(null, "", `/notes/${note.slug}`);
         if (isMobile) setShowSidebar(false);
         return;
