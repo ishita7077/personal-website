@@ -6,18 +6,65 @@ import { siteConfig } from "@/config/site";
 
 const substackLine = `for long-form writing, see [The Numismatica](${siteConfig.substackUrl}).`;
 
-const ABOUT_ME_CONTENT = `Hello! I'm Ishita  
-I am building and experimenting at the intersection of Blockchains and AI.
+const ABOUT_ME_CONTENT = `# about me
 
-## currently
+## Hello!
+
+I am an electronics engineer (BITS Pilani; two research papers in Physics). I've spent my life hopping between Mumbai, Dubai and Bangkok. I'm a researcher and early-stage operator. I was an early member of the Elixir Capital and Woodstock Fund teams, where I led investments and research for 4 years. I have helped founders raise $70M+ from investors like Founders Fund, Dr. Gavin Wood etc.
+
+Most recently, I was the VP of Strategic Initiatives at Polkassembly - which shut down a month ago. I am now building, experimenting, learning, and increasing my surface area for "luck".
+
+## Get in touch
+
+AI is my second rodeo at world changing technologies and I know one thing for sure: community is everything. I love connecting with founders, researchers, and tinkerers. If something here resonates - reach out to me at [ishita@polkafoundation.com](mailto:ishita@polkafoundation.com)
+
+<details>
+<summary>I love contributing to open source projects</summary>
+
+- Share your github / bluesky / twitter link
+
+</details>
+
+<details>
+<summary>I'm an active product hunter, I love helping companies launch</summary>
+
+- Count me as a beta tester
+
+</details>
+
+<details>
+<summary>I occasionally take fundraising calls</summary>
+
+- My forte is deep tech, early stage
+- For 2026 I am only doing pitch deck reviews
+
+</details>
+
+<details>
+<summary>I love book clubs</summary>
+
+- I used to host Ravensvest Unions - an introverted researcher's paradise
+- Send me your fav whitepaper, book, blogpost and I will write back with my notes within 1 week
+
+</details>
+
+<details>
+<summary>$100: Hire me for a week</summary>
+
+- Founders always have a side experiment they never get to run. I'll run yours.
+- The rule: describe the experiment with a clear goal at the end of one week. I go explore it, ship it, or come back with a map of what it'd take.
+
+</details>`;
+
+const MY_JOURNEY_CONTENT = `# my journey
+
+## previously
 
 - **Polkassembly - Remote (Bangkok)**
   - VP of strategic initiatives · $25M SaaS company · 40+ enterprise clients
   - Built and shipped GavBot, an AI fundraising co-pilot used by 1,200+ founders
   - Led polkassembly's $250K raise with Gavin Wood (Ethereum co-founder) as lead investor
   - Scaled Polkasafe (treasury tooling for blockchain protocols) from $35M to $300M AUM in 6 months - 2nd largest in the Polkadot ecosystem
-
-## previously
 
 - **Avail · Blockchain Infra Builder · $800M Series A backed by Founders Fund - Dubai**
   - Led and executed their $70M raise - Peter Thiel's Founders Fund co-led both Seed and Series A
@@ -33,11 +80,11 @@ I am building and experimenting at the intersection of Blockchains and AI.
   - Speed ran Analyst to Research Partner in 2 years; featured in YourStory (49M readers), KR Asia
   - Deployed $4.5M across 15 deals; brought Sequoia as co-lead on MetaSky
 
-- **Deutsche bank· Germany's largest bank · Intern - Mumbai office**
+- **Deutsche Bank · Germany's largest bank · Intern - Mumbai office**
   - Built Python automations for equities market risk desk
-  - Decline pre-placement offer to join Woodstock Fund
+  - Declined pre-placement offer to join Woodstock Fund
 
-- **Bits Pilani · Electronics and Instrumentation (EIE), with a Minor in Finance**
+- **BITS Pilani · Electronics and Instrumentation (EIE), with a Minor in Finance**
   - Publications:
     - Paper on Antenna design presented at European Conf. on Antenna & Propagation
     - Paper in Physics published in Begell House's Telecommunications & Radio Engineering journal
@@ -50,7 +97,7 @@ I am building and experimenting at the intersection of Blockchains and AI.
 - Mentoring: Helped 50+ entrepreneurs via programs with Polkadot Decoded, Women in Web3 and Builder's Tribe; hosted and moderated 3 panels with 300+ audience
 - Paws 2 Whiskers Volunteer: Conduct online foster trainings and adopted my rescue dog
 - McKinsey NGWL: Invited to McKinsey's Next Generation Women Leaders' summit (Asia, 2020)
-- Economic Times Award : Won Economic Times' 4-phased national competition; in the top 0.3% (2020)
+- Economic Times Award: Won Economic Times' 4-phased national competition; in the top 0.3% (2020)
 - Interests: acted in 3 college drama productions, 4 years of training in Hindustani Classical Singing, and traveled across SE Asia and Europe, visited 15 countries since 2020`;
 
 export const FALLBACK_PUBLIC_NOTES: Note[] = [
@@ -82,6 +129,17 @@ export const FALLBACK_PUBLIC_NOTES: Note[] = [
     title: "about me",
     content: ABOUT_ME_CONTENT,
     emoji: "👋",
+    public: true,
+    created_at: new Date().toISOString(),
+    session_id: null,
+    category: "about",
+  },
+  {
+    id: "my-journey-fallback",
+    slug: "my-journey",
+    title: "my journey",
+    content: MY_JOURNEY_CONTENT,
+    emoji: "🗺️",
     public: true,
     created_at: new Date().toISOString(),
     session_id: null,

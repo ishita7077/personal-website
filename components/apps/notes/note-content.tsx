@@ -4,6 +4,7 @@ import React, { useCallback, useRef, useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { Note } from "@/lib/notes/types";
 import {
   getImageFromClipboard,
@@ -295,8 +296,12 @@ export default function NoteContent({
       ) : (
         <div className="text-base md:text-sm" onClick={handleMarkdownClick}>
           <ReactMarkdown
-            className={cn("markdown-body", note.slug === "about-me" && "about-me")}
+            className={cn(
+              "markdown-body",
+              (note.slug === "about-me" || note.slug === "my-journey") && "about-me"
+            )}
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
             components={{
               li: renderListItem,
               a: renderLink,

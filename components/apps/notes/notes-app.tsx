@@ -13,11 +13,17 @@ import Note from "./note";
 
 const ABOUT_ME_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "about-me") ?? null;
 const INTERVIEW_ROOM_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "interview-room") ?? null;
+const MY_JOURNEY_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "my-journey") ?? null;
 
 function withInterviewRoomNote(notes: NoteType[]): NoteType[] {
-  if (!INTERVIEW_ROOM_FALLBACK) return notes;
-  if (notes.some((note) => note.slug === "interview-room")) return notes;
-  return [INTERVIEW_ROOM_FALLBACK, ...notes];
+  let result = notes;
+  if (MY_JOURNEY_FALLBACK && !result.some((n) => n.slug === "my-journey")) {
+    result = [MY_JOURNEY_FALLBACK, ...result];
+  }
+  if (INTERVIEW_ROOM_FALLBACK && !result.some((n) => n.slug === "interview-room")) {
+    result = [INTERVIEW_ROOM_FALLBACK, ...result];
+  }
+  return result;
 }
 
 interface NotesAppProps {
@@ -90,6 +96,9 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
           } else if (defaultNote.slug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
             logger.info("notes-app/fetchNotes", "Using fallback for interview-room");
             setSelectedNote(INTERVIEW_ROOM_FALLBACK);
+          } else if (defaultNote.slug === "my-journey" && MY_JOURNEY_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for my-journey");
+            setSelectedNote(MY_JOURNEY_FALLBACK);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: defaultNote.slug })
@@ -105,6 +114,9 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
           } else if (initialSlug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
             logger.info("notes-app/fetchNotes", "Using fallback for interview-room (direct slug)");
             setSelectedNote(INTERVIEW_ROOM_FALLBACK);
+          } else if (initialSlug === "my-journey" && MY_JOURNEY_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for my-journey (direct slug)");
+            setSelectedNote(MY_JOURNEY_FALLBACK);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: initialSlug })
@@ -162,6 +174,13 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
       if (note.slug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
         logger.info("notes-app/handleNoteSelect", "Using fallback for interview-room");
         setSelectedNote(INTERVIEW_ROOM_FALLBACK);
+        window.history.replaceState(null, "", `/notes/${note.slug}`);
+        if (isMobile) setShowSidebar(false);
+        return;
+      }
+      if (note.slug === "my-journey" && MY_JOURNEY_FALLBACK) {
+        logger.info("notes-app/handleNoteSelect", "Using fallback for my-journey");
+        setSelectedNote(MY_JOURNEY_FALLBACK);
         window.history.replaceState(null, "", `/notes/${note.slug}`);
         if (isMobile) setShowSidebar(false);
         return;
