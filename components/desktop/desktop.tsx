@@ -39,25 +39,67 @@ interface DesktopProps {
   initialPreviewFile?: string;
 }
 
-function InterviewRoomDesktopIcon() {
+const MINDREADER_URL = "https://mindreaderai.vercel.app/";
+
+function DesktopShortcut({
+  href,
+  icon,
+  label,
+  external = false,
+  ariaLabel,
+  title,
+  className,
+}: {
+  href: string;
+  icon: string;
+  label: string;
+  external?: boolean;
+  ariaLabel?: string;
+  title?: string;
+  className?: string;
+}) {
   return (
     <a
-      href="/InterviewRoom"
-      className="absolute right-8 top-12 z-0 flex w-24 flex-col items-center gap-1 rounded-md p-1 transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-      aria-label="Open Interview Room"
-      title="Interview Room"
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noreferrer" : undefined}
+      className={`flex w-24 flex-col items-center gap-1 rounded-md p-1 transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${className ?? ""}`}
+      aria-label={ariaLabel ?? `Open ${label}`}
+      title={title ?? label}
     >
       <img
-        src="/interview-room-icon.svg"
+        src={icon}
         alt=""
         width={64}
         height={64}
         className="h-16 w-16 object-contain [filter:drop-shadow(0_4px_8px_rgba(0,0,0,0.35))]"
       />
       <span className="max-w-full text-center text-[11px] leading-tight font-medium text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.7)]">
-        Interview Room
+        {label}
       </span>
     </a>
+  );
+}
+
+function DesktopShortcuts() {
+  return (
+    <>
+      <DesktopShortcut
+        href={MINDREADER_URL}
+        icon="/mindreader-icon.svg"
+        label="MindReader"
+        external
+        ariaLabel="Open MindReader - EQ in AI"
+        title="MindReader - EQ in AI"
+        className="absolute left-8 top-12 z-0"
+      />
+      <DesktopShortcut
+        href="/InterviewRoom"
+        icon="/interview-room-icon.svg"
+        label="Interview Room"
+        className="absolute right-8 top-12 z-0"
+      />
+    </>
   );
 }
 
@@ -491,7 +533,7 @@ function DesktopContent({ initialNoteSlug, initialTextEditFile, initialPreviewFi
 
       {isActive && (
         <>
-          <InterviewRoomDesktopIcon />
+          <DesktopShortcuts />
 
           <Window appId="notes">
             <NotesApp inShell={true} initialSlug={initialNoteSlug} />

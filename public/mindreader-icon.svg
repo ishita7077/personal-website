@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="#031020"/>
+  <rect x="4" y="4" width="120" height="120" rx="30" stroke="rgba(255,255,255,0.78)" stroke-width="2"/>
+  <rect x="20" y="20" width="88" height="88" rx="24" fill="url(#mindreaderGradient)"/>
+  <circle cx="89" cy="39" r="27" fill="url(#warmSignal)"/>
+  <path d="M39 73C48 48 80 46 89 73" stroke="#031020" stroke-width="8" stroke-linecap="round"/>
+  <path d="M50 76C56 63 72 62 78 76" stroke="#031020" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="64" cy="82" r="5" fill="#031020"/>
+  <defs>
+    <linearGradient id="mindreaderGradient" x1="24" y1="104" x2="104" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62E4FF"/>
+      <stop offset=".46" stop-color="#5AA2FF"/>
+      <stop offset="1" stop-color="#FFD94A"/>
+    </linearGradient>
+    <radialGradient id="warmSignal" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(89 39) rotate(90) scale(31)">
+      <stop stop-color="#FF914D"/>
+      <stop offset="1" stop-color="#FF914D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

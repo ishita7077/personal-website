@@ -12,7 +12,7 @@ const ABOUT_ME_CONTENT = `# about me
 
 I am an electronics engineer (BITS Pilani; two research papers in Physics). I've spent my life hopping between Mumbai, Dubai and Bangkok. I'm a researcher and early-stage operator. I was an early member of the Elixir Capital and Woodstock Fund teams, where I led investments and research for 4 years. I have helped founders raise $70M+ from investors like Founders Fund, Dr. Gavin Wood etc.
 
-Most recently, I was the VP of Strategic Initiatives at Polkassembly - which shut down a month ago. I am now building, experimenting, learning, and increasing my surface area for "luck".
+Most recently, I was the VP of Strategic Initiatives at Polkassembly - which shut down a month ago. I'm now a core contributor to Cassini Research, where my latest product is MindReader. Exploring EQ in AI.
 
 ## Get in touch
 
@@ -57,6 +57,11 @@ AI is my second rodeo at world changing technologies and I know one thing for su
 </details>`;
 
 const MY_JOURNEY_CONTENT = `# my journey
+
+## current
+
+- **Cassini Research · Core Contributor**
+  - Building MindReader, a product that simulates how multimodal content lands across an average brain. Exploring EQ in AI.
 
 ## previously
 
@@ -154,6 +159,8 @@ export const FALLBACK_PUBLIC_NOTES: Note[] = [
       "",
       "selected work and references that are a good starting point if you're trying to understand what i’ve been building and thinking about lately.",
       "",
+      "- **MindReader - EQ in AI** · [Open MindReader](https://mindreaderai.vercel.app/)",
+      "- **Interview Room - timed video practice** · [Open Interview Room](https://www.ishitasrivastava.xyz/InterviewRoom)",
       "- **Avail – $27M seed (Founders Fund)** · [Reuters](https://www.reuters.com/technology/peter-thiels-founders-fund-backs-27-mln-funding-avail-2024-02-26/)",
       "- **Avail – $43M Series A** · [The Block](https://www.theblock.co/post/298374/peter-thiel-founders-fund-series-a-avail)",
       "- **Hub71 crypto accelerator** · [Program overview](https://www.hub71.com/program/hub71-plus-digital-assets)",
@@ -310,5 +317,3 @@ export const FALLBACK_PUBLIC_NOTES: Note[] = [
     category: "reading",
   },
 ];
-
-
