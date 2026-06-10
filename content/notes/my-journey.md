@@ -3,7 +3,7 @@
 ## current
 
 - **Cassini Research · Core Contributor**
-  - Building MindReader, a product that simulates how multimodal content lands across an average brain. Exploring EQ in AI.
+  - Building MindReader, a product that simulates how multimodal content lands across an average brain - exploring EQ in AI.
 
 ## previously
 
