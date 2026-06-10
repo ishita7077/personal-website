@@ -39,7 +39,7 @@ interface DesktopProps {
   initialPreviewFile?: string;
 }
 
-const MINDREADER_URL = "https://mindreaderai.vercel.app/?top=1";
+const MINDREADER_URL = "https://mindreaderai.vercel.app/";
 
 function DesktopShortcut({
   href,

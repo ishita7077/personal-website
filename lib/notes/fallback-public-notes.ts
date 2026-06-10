@@ -159,7 +159,7 @@ export const FALLBACK_PUBLIC_NOTES: Note[] = [
       "",
       "selected work and references that are a good starting point if you're trying to understand what i’ve been building and thinking about lately.",
       "",
-      "- **MindReader - EQ in AI** · [Open MindReader](https://mindreaderai.vercel.app/?top=1)",
+      "- **MindReader - EQ in AI** · [Open MindReader](https://mindreaderai.vercel.app/)",
       "- **Interview Room - timed video practice** · [Open Interview Room](https://www.ishitasrivastava.xyz/InterviewRoom)",
       "- **Avail – $27M seed (Founders Fund)** · [Reuters](https://www.reuters.com/technology/peter-thiels-founders-fund-backs-27-mln-funding-avail-2024-02-26/)",
       "- **Avail – $43M Series A** · [The Block](https://www.theblock.co/post/298374/peter-thiel-founders-fund-series-a-avail)",
