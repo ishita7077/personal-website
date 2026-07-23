@@ -40,6 +40,7 @@ interface DesktopProps {
 }
 
 const MINDREADER_URL = "https://mindreaderai.vercel.app/";
+const DATACITY_URL = "https://datacity-pi.vercel.app/";
 
 function DesktopShortcut({
   href,
@@ -92,6 +93,15 @@ function DesktopShortcuts() {
         ariaLabel="Open MindReader - EQ in AI"
         title="MindReader - EQ in AI"
         className="absolute left-8 top-12 z-0"
+      />
+      <DesktopShortcut
+        href={DATACITY_URL}
+        icon="/datacity-icon.svg"
+        label="DataCity"
+        external
+        ariaLabel="Open GTA DataCity: San Francisco"
+        title="GTA DataCity: San Francisco"
+        className="absolute left-8 top-32 z-0"
       />
       <DesktopShortcut
         href="/InterviewRoom"

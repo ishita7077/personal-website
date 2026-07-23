@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="datacitySky" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8bd5ff"/>
+      <stop offset="0.5" stop-color="#f7efe4"/>
+      <stop offset="1" stop-color="#65b86f"/>
+    </linearGradient>
+    <linearGradient id="datacityRoad" x1="18" y1="54" x2="48" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#27323f"/>
+      <stop offset="1" stop-color="#5b6472"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#142033"/>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#datacitySky)"/>
+  <path d="M8 46L22 32L34 39L56 17V58H8V46Z" fill="#4f9d6b" opacity="0.92"/>
+  <path d="M28 58L38 37L49 58H28Z" fill="url(#datacityRoad)"/>
+  <path d="M39 40L42 58" stroke="#f8d84d" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 43H25V58H16V43Z" fill="#23415d"/>
+  <path d="M28 35H35V58H28V35Z" fill="#2f5978"/>
+  <path d="M39 29H47V58H39V29Z" fill="#1f3b57"/>
+  <path d="M18 47H22M30 40H33M41 35H45" stroke="#f7efe4" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="49" cy="19" r="4" fill="#ff775f"/>
+</svg>

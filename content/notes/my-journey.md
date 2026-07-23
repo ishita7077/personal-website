@@ -5,6 +5,10 @@
 - **Cassini Research · Core Contributor**
   - Building MindReader, a product that simulates how multimodal content lands across an average brain - exploring EQ in AI.
 
+- **[GTA DataCity: San Francisco](https://datacity-pi.vercel.app/)**
+  - Built a playable 3D map of SF AI coworking spaces - turning a research spreadsheet into a game.
+  - Started at a Stanford x DeepMind hackathon and launched as a public city exploration project.
+
 ## previously
 
 - **Polkassembly - Remote (Bangkok)**

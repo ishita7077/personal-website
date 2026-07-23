@@ -4,7 +4,7 @@
 
 I am an electronics engineer (BITS Pilani; two research papers in Physics). I've spent my life hopping between Mumbai, Dubai and Bangkok. I'm a researcher and early-stage operator. I was an early member of the Elixir Capital and Woodstock Fund teams, where I led investments and research for 4 years. I have helped founders raise $70M+ from investors like Founders Fund, Dr. Gavin Wood etc.
 
-Most recently, I was the VP of Strategic Initiatives at Polkassembly - which shut down a month ago. I'm now a core contributor to Cassini Research, where my latest product is MindReader - EQ in AI.
+Most recently, I was the VP of Strategic Initiatives at Polkassembly - which shut down a month ago. I'm now a core contributor to Cassini Research. Recent builds include [MindReader - EQ in AI](https://mindreaderai.vercel.app/) and [GTA DataCity: San Francisco](https://datacity-pi.vercel.app/), a playable 3D atlas of SF AI coworking spaces.
 
 ## Get in touch
 

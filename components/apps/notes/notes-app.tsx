@@ -14,14 +14,18 @@ import Note from "./note";
 const ABOUT_ME_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "about-me") ?? null;
 const INTERVIEW_ROOM_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "interview-room") ?? null;
 const MY_JOURNEY_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "my-journey") ?? null;
+const QUICK_LINKS_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "quick-links") ?? null;
 
-function withInterviewRoomNote(notes: NoteType[]): NoteType[] {
+function withRequiredFallbackNotes(notes: NoteType[]): NoteType[] {
   let result = notes;
   if (MY_JOURNEY_FALLBACK && !result.some((n) => n.slug === "my-journey")) {
     result = [MY_JOURNEY_FALLBACK, ...result];
   }
   if (INTERVIEW_ROOM_FALLBACK && !result.some((n) => n.slug === "interview-room")) {
     result = [INTERVIEW_ROOM_FALLBACK, ...result];
+  }
+  if (QUICK_LINKS_FALLBACK && !result.some((n) => n.slug === "quick-links")) {
+    result = [QUICK_LINKS_FALLBACK, ...result];
   }
   return result;
 }
@@ -47,7 +51,7 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
     async function fetchNotes() {
       if (!supabase) {
         logger.warn("notes-app/fetchNotes", "No Supabase; using fallback notes");
-        const data = withInterviewRoomNote(FALLBACK_PUBLIC_NOTES);
+        const data = withRequiredFallbackNotes(FALLBACK_PUBLIC_NOTES);
         setNotes(data);
         // On mobile without initialSlug, show sidebar only (no note selected)
         if (isMobile && !initialSlug) {
@@ -74,7 +78,7 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
         return;
       }
       if (data) {
-        const notesWithInterviewRoom = withInterviewRoomNote(data as NoteType[]);
+        const notesWithInterviewRoom = withRequiredFallbackNotes(data as NoteType[]);
         setNotes(notesWithInterviewRoom);
         // On mobile without initialSlug, show sidebar only (no note selected)
         // On desktop or with initialSlug, select a note
@@ -99,6 +103,9 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
           } else if (defaultNote.slug === "my-journey" && MY_JOURNEY_FALLBACK) {
             logger.info("notes-app/fetchNotes", "Using fallback for my-journey");
             setSelectedNote(MY_JOURNEY_FALLBACK);
+          } else if (defaultNote.slug === "quick-links" && QUICK_LINKS_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for quick-links");
+            setSelectedNote(QUICK_LINKS_FALLBACK);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: defaultNote.slug })
@@ -117,6 +124,9 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
           } else if (initialSlug === "my-journey" && MY_JOURNEY_FALLBACK) {
             logger.info("notes-app/fetchNotes", "Using fallback for my-journey (direct slug)");
             setSelectedNote(MY_JOURNEY_FALLBACK);
+          } else if (initialSlug === "quick-links" && QUICK_LINKS_FALLBACK) {
+            logger.info("notes-app/fetchNotes", "Using fallback for quick-links (direct slug)");
+            setSelectedNote(QUICK_LINKS_FALLBACK);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: initialSlug })
@@ -181,6 +191,13 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
       if (note.slug === "my-journey" && MY_JOURNEY_FALLBACK) {
         logger.info("notes-app/handleNoteSelect", "Using fallback for my-journey");
         setSelectedNote(MY_JOURNEY_FALLBACK);
+        window.history.replaceState(null, "", `/notes/${note.slug}`);
+        if (isMobile) setShowSidebar(false);
+        return;
+      }
+      if (note.slug === "quick-links" && QUICK_LINKS_FALLBACK) {
+        logger.info("notes-app/handleNoteSelect", "Using fallback for quick-links");
+        setSelectedNote(QUICK_LINKS_FALLBACK);
         window.history.replaceState(null, "", `/notes/${note.slug}`);
         if (isMobile) setShowSidebar(false);
         return;
