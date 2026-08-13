@@ -31,6 +31,7 @@ import { useFileMenu } from "@/lib/file-menu-context";
 import { createNote } from "@/lib/notes/create-note";
 
 const HIDDEN_PUBLIC_SLUGS = new Set(["on-repeat", "favorite-blogs", "bookmarks"]);
+const PINNED_NOTES_SEED_VERSION = "2";
 
 const labels = {
   pinned: (
@@ -146,20 +147,30 @@ export default function Sidebar({
 
   useEffect(() => {
     const storedPinnedNotes = localStorage.getItem("pinnedNotes");
-    if (storedPinnedNotes) {
-      setPinnedNotes(new Set(JSON.parse(storedPinnedNotes)));
-    } else {
-      const initialPinnedNotes = new Set(
+    const initialPinnedNotes = storedPinnedNotes
+      ? new Set<string>(JSON.parse(storedPinnedNotes))
+      : new Set(
         notes
           .filter(
             (note) =>
               note.slug === "about-me" ||
               note.slug === "quick-links" ||
+              note.slug === "fav-papers" ||
               note.session_id === sessionId
           )
           .map((note) => note.slug)
       );
-      setPinnedNotes(initialPinnedNotes);
+
+    if (
+      localStorage.getItem("pinnedNotesSeedVersion") !== PINNED_NOTES_SEED_VERSION &&
+      notes.some((note) => note.slug === "fav-papers")
+    ) {
+      initialPinnedNotes.add("fav-papers");
+      localStorage.setItem("pinnedNotesSeedVersion", PINNED_NOTES_SEED_VERSION);
+    }
+
+    setPinnedNotes(initialPinnedNotes);
+    if (!storedPinnedNotes || initialPinnedNotes.has("fav-papers")) {
       localStorage.setItem(
         "pinnedNotes",
         JSON.stringify(Array.from(initialPinnedNotes))

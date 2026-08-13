@@ -11,23 +11,27 @@ import { useWindowFocus } from "@/lib/window-focus-context";
 import Sidebar from "./sidebar";
 import Note from "./note";
 
-const ABOUT_ME_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "about-me") ?? null;
-const INTERVIEW_ROOM_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "interview-room") ?? null;
-const MY_JOURNEY_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "my-journey") ?? null;
-const QUICK_LINKS_FALLBACK = FALLBACK_PUBLIC_NOTES.find((n) => n.slug === "quick-links") ?? null;
+const AUTHORITATIVE_FALLBACK_SLUGS = new Set([
+  "about-me",
+  "interview-room",
+  "my-journey",
+  "quick-links",
+  "fav-papers",
+]);
+
+function getAuthoritativeFallback(slug: string): NoteType | null {
+  if (!AUTHORITATIVE_FALLBACK_SLUGS.has(slug)) return null;
+  return FALLBACK_PUBLIC_NOTES.find((note) => note.slug === slug) ?? null;
+}
 
 function withRequiredFallbackNotes(notes: NoteType[]): NoteType[] {
-  let result = notes;
-  if (MY_JOURNEY_FALLBACK && !result.some((n) => n.slug === "my-journey")) {
-    result = [MY_JOURNEY_FALLBACK, ...result];
-  }
-  if (INTERVIEW_ROOM_FALLBACK && !result.some((n) => n.slug === "interview-room")) {
-    result = [INTERVIEW_ROOM_FALLBACK, ...result];
-  }
-  if (QUICK_LINKS_FALLBACK && !result.some((n) => n.slug === "quick-links")) {
-    result = [QUICK_LINKS_FALLBACK, ...result];
-  }
-  return result;
+  const existingSlugs = new Set(notes.map((note) => note.slug));
+  const requiredSlugs = ["fav-papers", "quick-links", "my-journey", "interview-room"];
+  const missingNotes = requiredSlugs
+    .map(getAuthoritativeFallback)
+    .filter((note): note is NoteType => Boolean(note && !existingSlugs.has(note.slug)));
+
+  return [...missingNotes, ...notes];
 }
 
 interface NotesAppProps {
@@ -78,8 +82,8 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
         return;
       }
       if (data) {
-        const notesWithInterviewRoom = withRequiredFallbackNotes(data as NoteType[]);
-        setNotes(notesWithInterviewRoom);
+        const notesWithFallbacks = withRequiredFallbackNotes(data as NoteType[]);
+        setNotes(notesWithFallbacks);
         // On mobile without initialSlug, show sidebar only (no note selected)
         // On desktop or with initialSlug, select a note
         if (isMobile && !initialSlug) {
@@ -90,22 +94,15 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
 
         // Use initialSlug if provided, otherwise "about-me", otherwise first note
         const targetSlug = initialSlug || "about-me";
-        const defaultNote = notesWithInterviewRoom.find((n: NoteType) => n.slug === targetSlug);
+        const defaultNote = notesWithFallbacks.find((n: NoteType) => n.slug === targetSlug);
 
         if (defaultNote && !selectedNote) {
-          // about-me: always use fallback so content/notes/about-me.md is source of truth
-          if (defaultNote.slug === "about-me" && ABOUT_ME_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for about-me (source of truth)");
-            setSelectedNote(ABOUT_ME_FALLBACK);
-          } else if (defaultNote.slug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for interview-room");
-            setSelectedNote(INTERVIEW_ROOM_FALLBACK);
-          } else if (defaultNote.slug === "my-journey" && MY_JOURNEY_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for my-journey");
-            setSelectedNote(MY_JOURNEY_FALLBACK);
-          } else if (defaultNote.slug === "quick-links" && QUICK_LINKS_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for quick-links");
-            setSelectedNote(QUICK_LINKS_FALLBACK);
+          const authoritativeFallback = getAuthoritativeFallback(defaultNote.slug);
+          if (authoritativeFallback) {
+            logger.info("notes-app/fetchNotes", "Using authoritative fallback note", {
+              slug: defaultNote.slug,
+            });
+            setSelectedNote(authoritativeFallback);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: defaultNote.slug })
@@ -115,18 +112,12 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
             }
           }
         } else if (!defaultNote && initialSlug && !selectedNote) {
-          if (initialSlug === "about-me" && ABOUT_ME_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for about-me (direct slug)");
-            setSelectedNote(ABOUT_ME_FALLBACK);
-          } else if (initialSlug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for interview-room (direct slug)");
-            setSelectedNote(INTERVIEW_ROOM_FALLBACK);
-          } else if (initialSlug === "my-journey" && MY_JOURNEY_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for my-journey (direct slug)");
-            setSelectedNote(MY_JOURNEY_FALLBACK);
-          } else if (initialSlug === "quick-links" && QUICK_LINKS_FALLBACK) {
-            logger.info("notes-app/fetchNotes", "Using fallback for quick-links (direct slug)");
-            setSelectedNote(QUICK_LINKS_FALLBACK);
+          const authoritativeFallback = getAuthoritativeFallback(initialSlug);
+          if (authoritativeFallback) {
+            logger.info("notes-app/fetchNotes", "Using authoritative fallback note for direct slug", {
+              slug: initialSlug,
+            });
+            setSelectedNote(authoritativeFallback);
           } else {
             const { data: fullNote } = await supabase
               .rpc("select_note", { note_slug_arg: initialSlug })
@@ -174,30 +165,12 @@ export function NotesApp({ isMobile = false, inShell = false, initialSlug }: Not
         if (isMobile) setShowSidebar(false);
         return;
       }
-      if (note.slug === "about-me" && ABOUT_ME_FALLBACK) {
-        logger.info("notes-app/handleNoteSelect", "Using fallback for about-me");
-        setSelectedNote(ABOUT_ME_FALLBACK);
-        window.history.replaceState(null, "", `/notes/${note.slug}`);
-        if (isMobile) setShowSidebar(false);
-        return;
-      }
-      if (note.slug === "interview-room" && INTERVIEW_ROOM_FALLBACK) {
-        logger.info("notes-app/handleNoteSelect", "Using fallback for interview-room");
-        setSelectedNote(INTERVIEW_ROOM_FALLBACK);
-        window.history.replaceState(null, "", `/notes/${note.slug}`);
-        if (isMobile) setShowSidebar(false);
-        return;
-      }
-      if (note.slug === "my-journey" && MY_JOURNEY_FALLBACK) {
-        logger.info("notes-app/handleNoteSelect", "Using fallback for my-journey");
-        setSelectedNote(MY_JOURNEY_FALLBACK);
-        window.history.replaceState(null, "", `/notes/${note.slug}`);
-        if (isMobile) setShowSidebar(false);
-        return;
-      }
-      if (note.slug === "quick-links" && QUICK_LINKS_FALLBACK) {
-        logger.info("notes-app/handleNoteSelect", "Using fallback for quick-links");
-        setSelectedNote(QUICK_LINKS_FALLBACK);
+      const authoritativeFallback = getAuthoritativeFallback(note.slug);
+      if (authoritativeFallback) {
+        logger.info("notes-app/handleNoteSelect", "Using authoritative fallback note", {
+          slug: note.slug,
+        });
+        setSelectedNote(authoritativeFallback);
         window.history.replaceState(null, "", `/notes/${note.slug}`);
         if (isMobile) setShowSidebar(false);
         return;
